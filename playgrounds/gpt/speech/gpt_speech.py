@@ -12,7 +12,7 @@ from kani.engines.openai import OpenAIEngine
 import simpleaudio as sa
 import soundfile as sf
 import sounddevice as sd
-import pyautogui
+import time
 
 
 def set_api_key():
@@ -48,16 +48,21 @@ def text_to_speech(text):
 def record_audio(filepath, sample_rate=44100):
     print("Recording... Press 'Enter' to stop.")
     audio_data = []
-    while True:
-        try:
-            chunk = sd.rec(1024, samplerate=sample_rate, channels=1, dtype='int16')
-            sd.wait()
-            audio_data.extend(chunk.flatten())
-            if input() == "":
-                break
-        except KeyboardInterrupt:
-            break
-    sf.write(filepath, np.array(audio_data, dtype=np.int16), sample_rate)
+    try:
+        duration = 10
+        start_time = time.time()
+        audio_data = sd.rec(int(duration * sample_rate), samplerate=sample_rate, channels=1, dtype='int16')
+        sd.wait()
+        # audio_data.extend(chunk.flatten())
+        end_time = time.time()
+        sf.write(filepath, np.array(audio_data, dtype=np.int16), sample_rate)
+    except KeyboardInterrupt:
+        return
+    # diff = round(end_time - start_time)
+    # slice_ind = round(len(audio_data) * (diff / duration))
+    # audio_data = audio_data[:slice_ind]
+    # print(audio_data, len(audio_data))
+
 
 
 def speech_to_text():
@@ -68,19 +73,23 @@ def speech_to_text():
             model="whisper-1",
             file=audiofile
         )
+        print("transcription: ", transcription.text)
         return transcription.text
 
 
 async def language_chat(tutor):
     while (True):
-        if pyautogui.keyDown('q'):
+        try:
+            user_input = speech_to_text()
+            response = await tutor.chat_round_str(user_input)
+            print("Tutor: ", response)
+            text_to_speech(response)
+        except KeyboardInterrupt:
             await clean_up(tutor.engine)
             break
-        user_input = speech_to_text()
-        response = await tutor.chat_round_str(user_input)
-        print("Tutor: ", response)
-        text_to_speech(response)
-
+        except asyncio.exceptions.CancelledError:
+            await clean_up(tutor.engine)
+            break
 
 
 async def clean_up(engine):
@@ -103,7 +112,11 @@ def main():
 
     engine = OpenAIEngine(my_key, model="gpt-4")
     tutor = Kani(engine, chat_history=chat_history)
-    asyncio.run(language_chat(tutor))
+    try:
+        asyncio.run(language_chat(tutor))
+    except Exception:
+        exit(1)
+    # record_audio("input.wav")
 
 
 if __name__ == "__main__":
