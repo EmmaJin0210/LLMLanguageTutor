@@ -6,7 +6,6 @@ GPT Speech-to-Text and Text-to-Speech playground
 ### but is there a way to just detect user's speaking as is?
 ### maybe tell the model that it is doing audio
 ## NEED TO SET RESPONSE FORMAT TO VERBOSE_JSON
-
 """
 import os
 import warnings
@@ -37,15 +36,29 @@ class AudioRecorder:
         self.is_recording = False
         self.stream = None
         self.recording_thread = None
+        self.listener = keyboard.Listener(on_press=self.on_press)
+
+    def on_press(self, key):
+        if hasattr(key, 'char') and key.char == 'q':  # Exit condition
+            if self.is_recording:
+                self.stop_recording()
+            self.listener.stop()  # Stop listening for key press, exits the program
+        elif key == keyboard.Key.space:
+            if self.is_recording:
+                self.stop_recording()
+                self.listener.stop()  # Stop listening for key press
+            else:
+                self.start_recording()
 
     def start_recording(self):
         self.is_recording = True
-        self.frames = []  # Clear previous recording
+        self.frames = []  # Clear previous recordings
         self.stream = self.audio.open(format=FORMAT, channels=CHANNELS,
                                       rate=RATE, input=True,
                                       frames_per_buffer=CHUNK)
         print("Recording started...")
-        self.recording_thread = threading.Thread(target=self.record)
+        if not self.recording_thread:
+            self.recording_thread = threading.Thread(target=self.record)
         self.recording_thread.start()
 
     def record(self):
@@ -54,35 +67,29 @@ class AudioRecorder:
             self.frames.append(data)
 
     def stop_recording(self):
-        if self.is_recording:
-            self.is_recording = False
-            self.recording_thread.join()  # Wait for recording to finish
-            self.stream.stop_stream()
-            self.stream.close()
-            print("Recording stopped.")
-            wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-            wf.setnchannels(CHANNELS)
-            wf.setsampwidth(self.audio.get_sample_size(FORMAT))
-            wf.setframerate(RATE)
-            wf.writeframes(b''.join(self.frames))
-            wf.close()
-            print(f"File saved as {WAVE_OUTPUT_FILENAME}")
+        self.is_recording = False
+        self.stream.stop_stream()
+        self.stream.close()
+        self.stream = None
+        print("Recording stopped.")
+        wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(self.audio.get_sample_size(FORMAT))
+        wf.setframerate(RATE)
+        wf.writeframes(b''.join(self.frames))
+        wf.close()
+        print(f"File saved as {WAVE_OUTPUT_FILENAME}")
 
-def on_press(key, recorder):
-    if key == keyboard.Key.space:
-        if recorder.is_recording:
-            recorder.stop_recording()
-        else:
-            recorder.start_recording()
+    def run(self):
+        self.listener.start()
+        self.listener.join()
+        self.audio.terminate()
 
 
 def record_audio():
     print("Press the space key to start/stop recording.")
     recorder = AudioRecorder()
-    listener = keyboard.Listener(on_press=lambda key: on_press(key, recorder))
-    listener.start()
-    listener.join()
-    recorder.audio.terminate()
+    recorder.run()
 
 
 def set_api_key():
@@ -113,7 +120,6 @@ def text_to_speech(text):
     )
     response.stream_to_file("output.wav")
     play_wav("output.wav")
-
 
 
 def speech_to_text():
@@ -167,7 +173,6 @@ def main():
         asyncio.run(language_chat(tutor))
     except Exception:
         exit(1)
-    # record_audio("input.wav")
 
 
 if __name__ == "__main__":
