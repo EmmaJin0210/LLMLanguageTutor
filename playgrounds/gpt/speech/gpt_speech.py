@@ -1,5 +1,12 @@
 """
 GPT Speech-to-Text and Text-to-Speech playground
+## Whisper confidence score
+## if any of the chunks have low confidence score, make user respeak entire chunk
+## adjust temperature??
+### but is there a way to just detect user's speaking as is?
+### maybe tell the model that it is doing audio
+## NEED TO SET RESPONSE FORMAT TO VERBOSE_JSON
+
 """
 import os
 import warnings
@@ -11,8 +18,71 @@ from kani import Kani, ChatMessage #, chat_in_terminal
 from kani.engines.openai import OpenAIEngine
 import simpleaudio as sa
 import soundfile as sf
-import sounddevice as sd
-import time
+import pyaudio
+import wave
+from pynput import keyboard
+import threading
+
+# Audio recording parameters
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 44100
+CHUNK = 1024
+WAVE_OUTPUT_FILENAME = "input.wav"
+
+class AudioRecorder:
+    def __init__(self):
+        self.audio = pyaudio.PyAudio()
+        self.frames = []
+        self.is_recording = False
+        self.stream = None
+        self.recording_thread = None
+
+    def start_recording(self):
+        self.is_recording = True
+        self.frames = []  # Clear previous recording
+        self.stream = self.audio.open(format=FORMAT, channels=CHANNELS,
+                                      rate=RATE, input=True,
+                                      frames_per_buffer=CHUNK)
+        print("Recording started...")
+        self.recording_thread = threading.Thread(target=self.record)
+        self.recording_thread.start()
+
+    def record(self):
+        while self.is_recording:
+            data = self.stream.read(CHUNK, exception_on_overflow=False)
+            self.frames.append(data)
+
+    def stop_recording(self):
+        if self.is_recording:
+            self.is_recording = False
+            self.recording_thread.join()  # Wait for recording to finish
+            self.stream.stop_stream()
+            self.stream.close()
+            print("Recording stopped.")
+            wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+            wf.setnchannels(CHANNELS)
+            wf.setsampwidth(self.audio.get_sample_size(FORMAT))
+            wf.setframerate(RATE)
+            wf.writeframes(b''.join(self.frames))
+            wf.close()
+            print(f"File saved as {WAVE_OUTPUT_FILENAME}")
+
+def on_press(key, recorder):
+    if key == keyboard.Key.space:
+        if recorder.is_recording:
+            recorder.stop_recording()
+        else:
+            recorder.start_recording()
+
+
+def record_audio():
+    print("Press the space key to start/stop recording.")
+    recorder = AudioRecorder()
+    listener = keyboard.Listener(on_press=lambda key: on_press(key, recorder))
+    listener.start()
+    listener.join()
+    recorder.audio.terminate()
 
 
 def set_api_key():
@@ -45,28 +115,9 @@ def text_to_speech(text):
     play_wav("output.wav")
 
 
-def record_audio(filepath, sample_rate=44100):
-    print("Recording... Press 'Enter' to stop.")
-    audio_data = []
-    try:
-        duration = 10
-        start_time = time.time()
-        audio_data = sd.rec(int(duration * sample_rate), samplerate=sample_rate, channels=1, dtype='int16')
-        sd.wait()
-        # audio_data.extend(chunk.flatten())
-        end_time = time.time()
-        sf.write(filepath, np.array(audio_data, dtype=np.int16), sample_rate)
-    except KeyboardInterrupt:
-        return
-    # diff = round(end_time - start_time)
-    # slice_ind = round(len(audio_data) * (diff / duration))
-    # audio_data = audio_data[:slice_ind]
-    # print(audio_data, len(audio_data))
-
-
 
 def speech_to_text():
-    record_audio("input.wav")
+    record_audio()
     client = OpenAI()
     with open("input.wav", "rb") as audiofile:
         transcription = client.audio.transcriptions.create(
