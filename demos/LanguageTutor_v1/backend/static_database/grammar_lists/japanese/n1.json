@@ -1,0 +1,757 @@
+{
+    "あえて": {
+      "meaning": "dare to; daringly; deliberately; purposely ~"
+    },
+    "あくまでも": {
+      "meaning": "to the end; persistently; absolutely; is still very ~"
+    },
+    "案の定": {
+      "meaning": "just as one thought; as usual; sure enough"
+    },
+    "あらかじめ": {
+      "meaning": "beforehand; in advance; previously​"
+    },
+    "あっての": {
+      "meaning": "which can exist solely due to the presence of; which owes everything to"
+    },
+    "ばこそ": {
+      "meaning": "only because ~"
+    },
+    "ばそれまでだ / たらそれまでだ": {
+      "meaning": "if… then it’s over"
+    },
+    "べからず / べからざる": {
+      "meaning": "must not; should not; do not ~"
+    },
+    "べく": {
+      "meaning": "in order to; for the purpose of ~"
+    },
+    "べくもない": {
+      "meaning": "cannot possibly be ~"
+    },
+    "べくして": {
+      "meaning": "as it is bound to (happen); following the natural course"
+    },
+    "びる / びて / びた": {
+      "meaning": "to seem to be; to appear; to behave as ~"
+    },
+    "ぶり / っぷり": {
+      "meaning": "style; manner; way​"
+    },
+    "ぶる / ぶって / ぶった": {
+      "meaning": "assuming the air of; behaving like; to pretend / act like ~"
+    },
+    "だに / だにしない": {
+      "meaning": "even; not even ~"
+    },
+    "だの～だの": {
+      "meaning": "and; and the like; and so forth ~"
+    },
+    "だろうに": {
+      "meaning": "(1) surely..., but ~; although... is likely, ~ (2) should have (regret); might / must have been ~"
+    },
+    "であれ / であろうと": {
+      "meaning": "whoever; whatever; however; even ~"
+    },
+    "であれ～であれ": {
+      "meaning": "whether [A] or [B]"
+    },
+    "でもあり～でもある": {
+      "meaning": "to also be; both… and ~"
+    },
+    "でも何でもない / くも何ともない": {
+      "meaning": "not in the least; nothing like that"
+    },
+    "でなくてなんだろう": {
+      "meaning": "must be; is definitely ~"
+    },
+    "ではあるまいか": {
+      "meaning": "isn't it; I wonder if it’s not ~"
+    },
+    "ではあるまいし": {
+      "meaning": "it’s not like; it isn’t as if ~"
+    },
+    "では済まない": {
+      "meaning": "it doesn’t end with just ~; it will take more than ~"
+    },
+    "どうにも～ない": {
+      "meaning": "not … by any means; no matter how hard one tries, cannot ~"
+    },
+    "が早いか": {
+      "meaning": "no sooner than; as soon as ~"
+    },
+    "が/も～なら、～も～だ": {
+      "meaning": "negative connection/comparison (like father like son)"
+    },
+    "がましい": {
+      "meaning": "look like; sound like; approximate; similar to; somewhat like ~"
+    },
+    "がてら": {
+      "meaning": "while; on the same occasion; at the same time; coincidentally ~"
+    },
+    "ごとき / ごとく / ごとし": {
+      "meaning": "like; as if; the same as ~"
+    },
+    "ぐるみ": {
+      "meaning": "together (with); -wide"
+    },
+    "羽目になる": {
+      "meaning": "to get stuck with; to end up with (something unpleasant)"
+    },
+    "ほどのことではない": {
+      "meaning": "it's not worth; no need to ~"
+    },
+    "ほうがましだ": {
+      "meaning": "better than; would rather ~"
+    },
+    "放題": {
+      "meaning": "doing as one pleases; to one's heart's content; leaving uncontrolled"
+    },
+    "いかんだ / いかんでは / いかんによっては": {
+      "meaning": "in accordance with; depending on; whether or not ~"
+    },
+    "いかんにかかわらず / いかんによらず / いかんをとわず": {
+      "meaning": "regardless of; whether or not; doesn't matter whether ~"
+    },
+    "いかなる": {
+      "meaning": "any kind of; every; whatsoever; whatever"
+    },
+    "いかに": {
+      "meaning": "how; in what way; how much; to what extent"
+    },
+    "いかにも": {
+      "meaning": "indeed; really; truly; just (like); very; extremely ~"
+    },
+    "いずれにしても / いずれにしろ / いずれにせよ": {
+      "meaning": "anyhow; anyway; either way; in any case ~"
+    },
+    "じみた": {
+      "meaning": "to become; to appear like; to look like; tainted with ~"
+    },
+    "か否か": {
+      "meaning": "whether or not ~"
+    },
+    "かと思いきや": {
+      "meaning": "contrary to expectations; or so we thought, but ~"
+    },
+    "限りだ": {
+      "meaning": "to feel strongly"
+    },
+    "甲斐もなく": {
+      "meaning": "despite; even though ~"
+    },
+    "可能性がある": {
+      "meaning": "may/might; there’s a possibility that ~"
+    },
+    "からある / からする / からの": {
+      "meaning": "at least; as much as; as many as ~"
+    },
+    "かれ～かれ": {
+      "meaning": "sooner or later; more or less"
+    },
+    "かたがた": {
+      "meaning": "while; at the same time; incidentally; for the purpose of ~"
+    },
+    "かたわら": {
+      "meaning": "while; besides; at the same time; in addition"
+    },
+    "かつて": {
+      "meaning": "once; before; formerly; ever; former; ex-"
+    },
+    "嫌いがある": {
+      "meaning": "bad habit; to have a tendency to ~"
+    },
+    "切りがない": {
+      "meaning": "endless; boundless; going on forever​; there’s no end to ~"
+    },
+    "きっての": {
+      "meaning": "the most / greatest … of all"
+    },
+    "極まる / 極まりない": {
+      "meaning": "extremely; very ~"
+    },
+    "こそあれ": {
+      "meaning": "although; even though ~"
+    },
+    "こそすれ": {
+      "meaning": "and; although; but ~"
+    },
+    "こそ～が・けれど": {
+      "meaning": "but; although (emphasis)"
+    },
+    "ことごとく": {
+      "meaning": "altogether; entirely; completely ~"
+    },
+    "ことのないように": {
+      "meaning": "so as not to; to not ~"
+    },
+    "こととて": {
+      "meaning": "because; since ~"
+    },
+    "くらいなら": {
+      "meaning": "rather than (do ...)​"
+    },
+    "くらいのものだ": {
+      "meaning": "only (emphasis)"
+    },
+    "までだ / までのことだ": {
+      "meaning": "only; just; nothing else"
+    },
+    "までもない / までもなく": {
+      "meaning": "there's no need to; it’s not necessary to ~"
+    },
+    "まじき": {
+      "meaning": "should not; must not ~"
+    },
+    "まくる": {
+      "meaning": "to do over and over again; to do relentlessly"
+    },
+    "まみれ": {
+      "meaning": "covered with; stained; smeared with ~"
+    },
+    "まるっきり": {
+      "meaning": "completely; absolutely; totally; (not) at all​ ~"
+    },
+    "めく": {
+      "meaning": "seems; show signs of; to have the appearance of ~"
+    },
+    "も同然だ": {
+      "meaning": "just like; same as ~"
+    },
+    "もさることながら": {
+      "meaning": "one may well say so, but~; not only... but also ~"
+    },
+    "もしないで": {
+      "meaning": "without even doing ~"
+    },
+    "もはや": {
+      "meaning": "already; now; no longer; not anymore"
+    },
+    "もので": {
+      "meaning": "because; for that reason"
+    },
+    "ものを": {
+      "meaning": "if only; I wish; I'm sorry it's not actually (regret)"
+    },
+    "ものと思われる / ものと見られる": {
+      "meaning": "to think; to suppose; it is believed/expected that ~"
+    },
+    "ものとする": {
+      "meaning": "shall; to assume; understood as ~"
+    },
+    "ものとして": {
+      "meaning": "to assume; to suppose; on the presumption that ~"
+    },
+    "もしくは": {
+      "meaning": "or; otherwise"
+    },
+    "んばかりに": {
+      "meaning": "as if; as though ~"
+    },
+    "んがために": {
+      "meaning": "in order to ~"
+    },
+    "ながらに / ながらの": {
+      "meaning": "while; during; without change; performed in this condition"
+    },
+    "ないまでも": {
+      "meaning": "not to say; although it does not reach the level of ~"
+    },
+    "ないものでもない": {
+      "meaning": "is not entirely impossible"
+    },
+    "ないものか / ないものだろうか": {
+      "meaning": "isn't there; can’t we…?; can’t I…?"
+    },
+    "ないとも限らない": {
+      "meaning": "not necessarily; I can't say that; maybe; might ~"
+    },
+    "なくしては": {
+      "meaning": "cannot do without ~"
+    },
+    "並み": {
+      "meaning": "average; ordinary; same level as; equal to; on par with ~"
+    },
+    "なんという / なんと / なんて": {
+      "meaning": "how (beautiful, etc.); what a ~"
+    },
+    "何しろ": {
+      "meaning": "at any rate; after all; anyhow; anyway; in any case; because; as you know ~"
+    },
+    "ならでは": {
+      "meaning": "distinctive of; uniquely applying to; special to ~"
+    },
+    "ならいざしらず / はいざしらず": {
+      "meaning": "I don't know about ... but; it may be possible for ... but ~"
+    },
+    "なり": {
+      "meaning": "as soon as; right after ~"
+    },
+    "なりに / なりの": {
+      "meaning": "suitable; in one's own way/style"
+    },
+    "なりとも": {
+      "meaning": "at least; even just a little (adverbial particle)"
+    },
+    "なり～なり": {
+      "meaning": "[A] or [B] or something; for instance ~"
+    },
+    "なしに / なしで": {
+      "meaning": "without; without doing ~"
+    },
+    "に": {
+      "meaning": "and; in addition to; the combination of ~"
+    },
+    "に値する": {
+      "meaning": "to be worth; to be worthy of; to deserve; to merit​ ~"
+    },
+    "にあって": {
+      "meaning": "at; on; during; in the condition of​ ~"
+    },
+    "に引き換え": {
+      "meaning": "compared to; in contrast to; unlike; while; whereas ~"
+    },
+    "に至る / に至った": {
+      "meaning": "leads to; come to a conclusion"
+    },
+    "に至るまで": {
+      "meaning": "as far as; up until; everything from ... to ~"
+    },
+    "に至っても": {
+      "meaning": "even if; even though; although something reached the point ~"
+    },
+    "に至っては": {
+      "meaning": "when it comes to; as for ~"
+    },
+    "に言わせれば": {
+      "meaning": "if you ask; if one may say ~"
+    },
+    "に限ったことではない": {
+      "meaning": "not limited to only ~"
+    },
+    "にかかっては / にかかったら / にかかると / かかれば": {
+      "meaning": "when handled by (N), becomes a completely different result"
+    },
+    "にかかっている": {
+      "meaning": "depending on; to depend on; whether or not"
+    },
+    "にかこつけて": {
+      "meaning": "to use as a pretext; to use as an excuse"
+    },
+    "にかまけて": {
+      "meaning": "to be too busy; to focus / concentrate only on ~"
+    },
+    "に難くない": {
+      "meaning": "easy to do; it’s not hard to (imagine, understand, guess)"
+    },
+    "にまつわる": {
+      "meaning": "to be related to; to concern; associated with ~"
+    },
+    "にのっとって": {
+      "meaning": "based on; according to; in accordance with ~"
+    },
+    "に先駆けて": {
+      "meaning": "prior to; to be the first (pioneer); being ahead of ~"
+    },
+    "に忍びない": {
+      "meaning": "cannot bring oneself (to do); unable to bear ~"
+    },
+    "にしたところで / としたところで": {
+      "meaning": "even if; even supposing that ~"
+    },
+    "にして": {
+      "meaning": "at / on / under certain conditions (time, position, age, number of times)"
+    },
+    "に即して": {
+      "meaning": "according to; in keeping with; to be based on ~"
+    },
+    "に耐える / に耐えない": {
+      "meaning": "worth doing; can do; cannot bear doing ~"
+    },
+    "に足らない / に足りない": {
+      "meaning": "cannot; not worthy; not worth doing ~"
+    },
+    "に足る / に足りる": {
+      "meaning": "can do; worthy; worth doing"
+    },
+    "に照らして": {
+      "meaning": "according to; in view of; in light of ~"
+    },
+    "にとどまらず": {
+      "meaning": "not limited to; not only… but also ~"
+    },
+    "には無理がある": {
+      "meaning": "difficult to do; is unreasonable / unrealistic / impossible"
+    },
+    "によらず": {
+      "meaning": "regardless of ~"
+    },
+    "に～を重ねて": {
+      "meaning": "success after continuous (effort, work, adjustments, etc.)"
+    },
+    "にもほどがある": {
+      "meaning": "there is a limit to what is acceptable; to go too far"
+    },
+    "にも増して": {
+      "meaning": "more than…; above ~"
+    },
+    "には当たらない": {
+      "meaning": "it’s not worth; there’s no need to; does not correspond to ~"
+    },
+    "には及ばない": {
+      "meaning": "there is no need to; unnecessary; no match for ~"
+    },
+    "の至り": {
+      "meaning": "utmost; extremely ~"
+    },
+    "の極み": {
+      "meaning": "utmost; extremely ~"
+    },
+    "のなんのって": {
+      "meaning": "extremely ~ (cannot be expressed in words)"
+    },
+    "のやら / ものやら / ことやら": {
+      "meaning": "I wonder...; unsure; I don’t know ~"
+    },
+    "のやら～のやら": {
+      "meaning": "or ~ (I don't know)"
+    },
+    "を踏まえて": {
+      "meaning": "to be based on; to take into account ~"
+    },
+    "を経て": {
+      "meaning": "through; by way of; after; via ~"
+    },
+    "を控えて": {
+      "meaning": "to be soon; the time has come to; nearby; ahead of ~"
+    },
+    "をいいことに": {
+      "meaning": "to take advantage of ~"
+    },
+    "を顧みず / も顧みず": {
+      "meaning": "despite; without considering; not worrying about; regardless of ~"
+    },
+    "を限りに": {
+      "meaning": "starting from; the last time (ending a continued action)"
+    },
+    "を兼ねて": {
+      "meaning": "also for the purpose of ~"
+    },
+    "を皮切りに": {
+      "meaning": "one after another; starting with ~"
+    },
+    "を機に": {
+      "meaning": "as an opportunity/chance to ~"
+    },
+    "を禁じ得ない": {
+      "meaning": "can’t help but; can’t refrain from ~"
+    },
+    "をものともせずに": {
+      "meaning": "in defiance of; not losing to / afraid / worrying about ~"
+    },
+    "をもって / をもちまして": {
+      "meaning": "by means of; with; on / at / as of (time)​"
+    },
+    "をおいて～ない": {
+      "meaning": "only; can only be; there is no alternative, only ~"
+    },
+    "を押して / を押し切って": {
+      "meaning": "to overcome (opposition); to push past ~"
+    },
+    "を境に": {
+        "meaning": "since ~ (indicates a large change before & after)"
+    },
+    "を余儀なくされる": {
+        "meaning": "to be forced to do something because one has no other choice"
+    },
+    "をよそに": {
+        "meaning": "despite; without regards to ~"
+    },
+    "を前提として": {
+        "meaning": "with the intention to; on the condition / assumption ~"
+    },
+    "思いをする（おもいをする）": {
+      "meaning": "to think; to feel ~"
+    },
+    "折に（おりに）": {
+      "meaning": "when; at the time; on the occasion ~"
+    },
+    "およそ": {
+      "meaning": "about; roughly; generally; approximately; completely​ ~"
+    },
+    "さ": {
+      "meaning": "ending particle; indicates assertion"
+    },
+    "さも": {
+      "meaning": "really (seem, appear, etc.); truly; as if ~"
+    },
+    "さもないと": {
+      "meaning": "otherwise; or else; if not ~"
+    },
+    "さぞ": {
+      "meaning": "surely; certainly; no doubt; indeed​ ~"
+    },
+    "始末だ（しまつだ）": {
+      "meaning": "end up; in the end; as a result (negative)"
+    },
+    "そばから": {
+      "meaning": "as soon as; right after​ ~"
+    },
+    "そびれる": {
+      "meaning": "to miss a chance; to fail to do ~"
+    },
+    "損なう / 損ねる / 損じる（そこなう / そこねる / そんじる）": {
+      "meaning": "to do something wrong; by mistake; to miss a chance; to fail to ~"
+    },
+    "術がない（すべがない）": {
+      "meaning": "there is no way / means; cannot do ~"
+    },
+    "すら / ですら": {
+      "meaning": "even ~ (with emphasis)"
+    },
+    "た弾みに / た拍子に（たはずみに / たひょうしに）": {
+      "meaning": "the moment [A], unintentionally / inadvertently caused something to happen"
+    },
+    "たことにする / たことになる": {
+      "meaning": "pretend to; see things as untrue; contrary to the truth ~"
+    },
+    "たところで": {
+      "meaning": "even if; no matter (who, what, when, where, why, how)"
+    },
+    "たつもりはない": {
+      "meaning": "have no intention to / didn't mean to ~"
+    },
+    "ただ～のみだ": {
+      "meaning": "all we can do is; can do nothing but; only ~"
+    },
+    "ためしがない": {
+      "meaning": "is never the case; has never happened; I have never seen or heard of ~"
+    },
+    "たら最後 / たが最後（たらさいご / たがさいご）": {
+      "meaning": "if you do... negative result"
+    },
+    "たら～たで": {
+      "meaning": "if / in the case... of course / should ~"
+    },
+    "たら～ところだ": {
+      "meaning": "if... (counterfactual condition), then would be ~"
+    },
+    "たりとも": {
+      "meaning": "not even; not any ~"
+    },
+    "たるもの / たる": {
+      "meaning": "(those) who are; (that) which is; in the capacity of ... should ~"
+    },
+    "て敵わない（てかなわない）": {
+      "meaning": "can't bear to; unable to; troublesome to; can’t stand to ~"
+    },
+    "てからというもの": {
+      "meaning": "ever since ~"
+    },
+    "てみせる": {
+      "meaning": "I’ll do my best; I'll definitely do; I'll show you ~"
+    },
+    "てしかるべきだ": {
+      "meaning": "should; appropriate; it is natural to do ~"
+    },
+    "て済むことではない（てすむことではない）": {
+      "meaning": "~ is not enough to solve the problem; cannot be resolved by ~"
+    },
+    "てやまない": {
+      "meaning": "always; never stop; can’t help but ~"
+    },
+    "手前（てまえ）": {
+      "meaning": "considering; before; in front of; one’s standpoint"
+    },
+    "てもどうにもならない": {
+      "meaning": "it's no use; can't do anything"
+    },
+    "ても差し支えない（てもさしつかえない）": {
+      "meaning": "can ~; it’s okay if ~ (indicates permission or compromise)"
+    },
+    "ても知らない（てもしらない）": {
+      "meaning": "if (you) continue... you'll end up / I don't care about it"
+    },
+    "と相まって（とあいまって）": {
+      "meaning": "together with..., more; because of the influence of..., more ~"
+    },
+    "とあれば": {
+      "meaning": "if it is the case that; if ~"
+    },
+    "とあって": {
+      "meaning": "due to the fact that; because of ~"
+    },
+    "とばかりに": {
+      "meaning": "as if to say; as though~"
+    },
+    "といえども": {
+      "meaning": "even if; even though; despite ~"
+    },
+    "と言えなくもない（といえなくもない）": {
+      "meaning": "one can even say that; it can also be said that ~"
+    },
+    "といい～といい": {
+      "meaning": "both ... and; not only ... also; whether it be ... or ~"
+    },
+    "といったらない": {
+      "meaning": "extremely; very; nothing more ... than this; as ... as it could possibly be"
+    },
+    "という": {
+      "meaning": "all; every single ~ (no exceptions)"
+    },
+    "というか～というか": {
+      "meaning": "or rather; or perhaps I should say; I mean ~"
+    },
+    "というもの": {
+      "meaning": "during; for; since; over a period of time"
+    },
+    "というところだ / といったところだ": {
+      "meaning": "at the most; no more than​; at best; roughly; about ~"
+    },
+    "というわけだ": {
+      "meaning": "that's why; no wonder; this means; it is the case that ~"
+    },
+    "というわけではない": {
+      "meaning": "it’s not that; it doesn’t mean that ~"
+    },
+    "といわず～といわず": {
+      "meaning": "both; not only A or B, but (overall) ~"
+    },
+    "ときている": {
+      "meaning": "because of ~"
+    },
+    "とみると": {
+      "meaning": "as soon as one realizes ..., then ~"
+    },
+    "とみるや（とみるや）": {
+      "meaning": "at the sight of; upon seeing; after confirming ~"
+    },
+    "となると / となれば": {
+      "meaning": "when it comes to; in such a case; if that happens"
+    },
+    "とされる": {
+      "meaning": "is considered to; it is said that ~"
+    },
+    "ときたら": {
+      "meaning": "when it comes to; concerning ~"
+    },
+    "ところを": {
+      "meaning": "although (it is a certain time/condition); even though normally"
+    },
+    "ともあろうものが": {
+      "meaning": "of all people (expression showing surprise at a high standing person's misbehavior)"
+    },
+    "ともなく / ともなしに": {
+      "meaning": "somehow; without knowing; without thinking; unconsciously​ ~"
+    },
+    "ともすれば": {
+      "meaning": "apt to (do); tend to; liable to; prone to ~"
+    },
+    "とも～とも": {
+      "meaning": "unable to draw a conclusion; unable to judge"
+    },
+    "とりわけ": {
+      "meaning": "especially; above all ~"
+    },
+    "としたことが": {
+      "meaning": "of all people, who would have thought?"
+    },
+    "とっさに": {
+      "meaning": "at once; right away; promptly"
+    },
+    "とて": {
+      "meaning": "even; even if/though ~"
+    },
+    "とは": {
+      "meaning": "I didn't know; I was surprised that; the fact that ~"
+    },
+    "とはいえ": {
+      "meaning": "though; although; be that as it may; nonetheless"
+    },
+    "とは比べものにならない（とはくらべものにならない）": {
+      "meaning": "can't compare with ~"
+    },
+    "とは打って変わって / とは打って変わり（とはうってかわって / とはうってかわり）": {
+      "meaning": "unlike; totally different; very different from ~"
+    },
+    "つ～つ": {
+      "meaning": "and ~ (indicates two contrasting actions)"
+    },
+    "尽くす（つくす）": {
+      "meaning": "to use up (completely without anything remaining); to exhaust; to run out of ~"
+    },
+    "ってば / ったら": {
+      "meaning": "speaking of; I told you already; come on (annoyance / dissatisfaction)"
+    },
+    "うちに入らない（うちにはいらない）": {
+      "meaning": "not really; can't be regarded as ~"
+    },
+    "わ": {
+      "meaning": "feminine sentence ending particle"
+    },
+    "はどうであれ": {
+      "meaning": "however; whatever​ ~"
+    },
+    "はおろか": {
+      "meaning": "let alone; not to mention; needless to say ~"
+    },
+    "はさておき": {
+      "meaning": "setting aside ~"
+    },
+    "はそっちのけで / をそっちのけで": {
+      "meaning": "ignoring (one thing) for (another)​​; instead of ~"
+    },
+    "わ〜わで": {
+      "meaning": "and (listing negative things happening at the same time)"
+    },
+    "や否や（やいなや）": {
+      "meaning": "as soon as; the moment ~"
+    },
+    "やしない": {
+      "meaning": "should do, but don't; absolutely not; there's no way ~"
+    },
+    "やれ～やれ": {
+      "meaning": "pattern to give two representative examples (usually negative)"
+    },
+    "ようが / ようと": {
+      "meaning": "even if; no matter how/what ~"
+    },
+    "ようが～ようが / ようと～ようと": {
+      "meaning": "no matter; whether; even if [A] or [B]"
+    },
+    "ようによっては / ようでは": {
+      "meaning": "depending on the way; depending on how; according to how ~"
+    },
+    "ようにも～ない": {
+      "meaning": "even if I wanted to… I couldn’t ~"
+    },
+    "ようと～まいと / ようが～まいが": {
+      "meaning": "whether or not; regardless"
+    },
+    "ゆえに": {
+      "meaning": "therefore; consequently​; because of; due to ~"
+    },
+    "ぞ・ぜ": {
+      "meaning": "ending particle; adds force or indicates command"
+    },
+    "ずじまい": {
+      "meaning": "ended up not doing ~"
+    },
+    "ずにはおかない / ないではおかない": {
+      "meaning": "will definitely/certainly do something; cannot not ~"
+    },
+    "ずには済まない / ないでは済まない（ずにはすまない / ないではすまない）": {
+      "meaning": "must; will definitely; can’t help but to ~"
+    },
+    "ずとも": {
+      "meaning": "even without doing; even without being​ ~"
+    },
+    "ずくめ": {
+      "meaning": "completely; entirely; nothing but ~"
+    }
+}
+  
+      
+     
+  
+    
