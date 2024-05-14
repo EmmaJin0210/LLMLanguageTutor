@@ -1,0 +1,257 @@
+{
+  "ちゃいけない・じゃいけない": {
+    "meaning": "must not do (spoken Japanese)"
+  },
+  "だ / です": {
+    "meaning": "to be (am, is, are, were, used to)"
+  },
+  "だけ": {
+    "meaning": "only; just; as much as ~"
+  },
+  "だろう": {
+    "meaning": "I think; it seems; probably; right?"
+  },
+  "で": {
+    "meaning": "in; at; on; by; with; via ~"
+  },
+  "でも": {
+    "meaning": "but; however; though ~"
+  },
+  "でしょう": {
+    "meaning": "I think; it seems; probably; right?"
+  },
+  "どんな": {
+    "meaning": "what kind of; what sort of"
+  },
+  "どうして": {
+    "meaning": "why; for what reason; how"
+  },
+  "どうやって": {
+    "meaning": "how; in what way; by what means"
+  },
+  "が": {
+    "meaning": "subject marker; however; but ~"
+  },
+  "があります": {
+    "meaning": "there is; is (non-living things)"
+  },
+  "がほしい": {
+    "meaning": "to want something"
+  },
+  "がいます": {
+    "meaning": "there is; to be; is (living things)"
+  },
+  "ほうがいい": {
+    "meaning": "had better; it'd be better to; should ~"
+  },
+  "い-adjectives": {
+    "meaning": "i-adjectives"
+  },
+  "一番（いちばん）": {
+    "meaning": "the most; the best"
+  },
+  "一緒に（いっしょに）": {
+    "meaning": "together"
+  },
+  "いつも": {
+    "meaning": "always; usually; habitually"
+  },
+  "じゃない・ではない": {
+    "meaning": "to not be (am not; is not; are not)"
+  },
+  "か": {
+    "meaning": "question particle"
+  },
+  "か～か": {
+    "meaning": "or"
+  },
+  "から": {
+    "meaning": "because; since; from"
+  },
+  "方（かた）": {
+    "meaning": "the way of doing something; how to do ~"
+  },
+  "けど": {
+    "meaning": "but; however; although ~"
+  },
+  "けれども": {
+    "meaning": "but; however; although ~"
+  },
+  "まだ": {
+    "meaning": "still; not yet"
+  },
+  "まだ～ていません": {
+    "meaning": "have not yet ~"
+  },
+  "まで": {
+    "meaning": "until; as far as; to (an extent); even ~"
+  },
+  "前に（まえに）": {
+    "meaning": "before; in front of ~"
+  },
+  "ませんか": {
+    "meaning": "would you; do you want to; shall we ~"
+  },
+  "ましょう": {
+    "meaning": "let's ~; shall we ~"
+  },
+  "ましょうか": {
+    "meaning": "shall I ~; used to offer help to the listener"
+  },
+  "も": {
+    "meaning": "too; also; as well"
+  },
+  "もう": {
+    "meaning": "already; anymore; again; other"
+  },
+  "な-adjectives": {
+    "meaning": "na-adjectives"
+  },
+  "なあ": {
+    "meaning": "sentence ending particle; confirmation; admiration, etc"
+  },
+  "ないで": {
+    "meaning": "without doing ~; to do [B] without doing [A]"
+  },
+  "ないでください": {
+    "meaning": "please don't do ~"
+  },
+  "ないといけない": {
+    "meaning": "must do; have an obligation to do ~"
+  },
+  "なくてもいい": {
+    "meaning": "don't have to"
+  },
+  "なくちゃ": {
+    "meaning": "must do; need to; gotta do ~"
+  },
+  "なくてはいけない": {
+    "meaning": "must do; need to do"
+  },
+  "なくてはならない": {
+    "meaning": "must do; need to do ~"
+  },
+  "なる": {
+    "meaning": "to become"
+  },
+  "んです": {
+    "meaning": "to explain something; show emphasis"
+  },
+  "ね": {
+    "meaning": "isn't it? right? eh?"
+  },
+  "に": {
+    "meaning": "destination particle; in; at; on; to"
+  },
+  "に行く（にいく）": {
+    "meaning": "go to do ~"
+  },
+  "にする": {
+    "meaning": "to decide on"
+  },
+  "に/へ": {
+    "meaning": "to (indicates direction / destination)"
+  },
+  "の": {
+    "meaning": "possessive particle"
+  },
+  "のです": {
+    "meaning": "to explain something; show emphasis"
+  },
+  "のが下手（のがへた）": {
+    "meaning": "to be bad at doing something"
+  },
+  "のが上手（のがじょうず）": {
+    "meaning": "to be good at"
+  },
+  "のが好き（のがすき）": {
+    "meaning": "to like doing something"
+  },
+  "の中で[A]が一番（のなかで[A]がいちばん）": {
+    "meaning": "out of this group, [A] is best"
+  },
+  "ので": {
+    "meaning": "because of; given that; since ~"
+  },
+  "お / ご": {
+    "meaning": "polite marker; honorific prefix particle"
+  },
+  "を": {
+    "meaning": "object marker particle"
+  },
+  "をください": {
+    "meaning": "please give me ~"
+  },
+  "しかし": {
+    "meaning": "but; however ~"
+  },
+  "それから": {
+    "meaning": "and; and then; after that; since then"
+  },
+  "そして": {
+    "meaning": "and; and then; thus; and now ~"
+  },
+  "すぎる": {
+    "meaning": "too much"
+  },
+  "たことがある": {
+    "meaning": "to have done something before"
+  },
+  "たい": {
+    "meaning": "want to do something"
+  },
+  "たり～たり": {
+    "meaning": "do such things as A and B"
+  },
+  "てある": {
+    "meaning": "is/has been done (resulting state)"
+  },
+  "ている": {
+    "meaning": "ongoing action or current state"
+  },
+  "てから": {
+    "meaning": "after doing ~"
+  },
+  "てください": {
+    "meaning": "please do"
+  },
+  "てはいけない": {
+    "meaning": "must not; may not; cannot"
+  },
+  "てもいいです": {
+    "meaning": "is OK to ~; is alright to ~; may I ~?"
+  },
+  "と": {
+    "meaning": "and; with; as; connecting particle"
+  },
+  "とき": {
+    "meaning": "when; at this time"
+  },
+  "とても": {
+    "meaning": "very; awfully; exceedingly​"
+  },
+  "つもり": {
+    "meaning": "plan to ~; intend to ~"
+  },
+  "は": {
+    "meaning": "topic marker"
+  },
+  "は〜より・・・です": {
+    "meaning": "[Noun-1] is more ~ than [Noun-2]"
+  },
+  "はどうですか": {
+    "meaning": "how about; how is"
+  },
+  "や": {
+    "meaning": "and; or; connecting particle"
+  },
+  "よ": {
+    "meaning": "you know; emphasis (ending particle)"
+  },
+  "より～ほうが": {
+    "meaning": "[2] is more than [1]"
+  }
+}
+  
+
+

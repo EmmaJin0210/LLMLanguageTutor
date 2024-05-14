@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pyknp
+Version: 0.6.1
+Summary: Python module for JUMAN/KNP
+Home-page: https://github.com/ku-nlp/pyknp
+License: See COPYING
+Keywords: NLP,JUMAN,KNP
+Author: Kurohashi-Kawahara Lab, Kyoto Univ
+Author-email: contact@nlp.ist.i.kyoto-u.ac.jp
+Maintainer: Nobuhiro Ueda
+Maintainer-email: ueda@nlp.ist.i.kyoto-u.ac.jp
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: six
+Project-URL: Documentation, https://pyknp.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/ku-nlp/pyknp
+Description-Content-Type: text/markdown
+
+# pyknp: Python Module for JUMAN++/KNP
+
+形態素解析器JUMAN++(JUMAN)と構文解析器KNPのPythonバインディング (Python2系と3系の両方に対応)。
+
+## Requirements
+- Python
+    - Verified Versions: 2.7.15,  3.7.11
+- 形態素解析器 [JUMAN++](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN++) [[EN](http://nlp.ist.i.kyoto-u.ac.jp/EN/index.php?JUMAN++)]
+(or [JUMAN](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN)[[EN](http://nlp.ist.i.kyoto-u.ac.jp/EN/index.php?JUMAN)])
+    - JUMAN++ はJUMANの後継にあたる形態素解析器
+- 構文解析器 [KNP](http://nlp.ist.i.kyoto-u.ac.jp/index.php?KNP) [[EN](http://nlp.ist.i.kyoto-u.ac.jp/EN/index.php?KNP)]
+
+## Installation
+```
+$ pip install pyknp
+```
+
+## Documents
+https://pyknp.readthedocs.io/en/latest/
+
+
+## Authors/Contact
+京都大学 黒橋・河原研究室 (contact@nlp.ist.i.kyoto-u.ac.jp)
+- John Richardson, Tomohide Shibata, Yuta Hayashibe, Tomohiro Sakaguchi
+

@@ -22,6 +22,7 @@ import wave
 from pynput import keyboard
 import threading
 
+
 # Audio recording parameters
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -37,12 +38,14 @@ class AudioRecorder:
         self.stream = None
         self.recording_thread = None
         self.listener = keyboard.Listener(on_press=self.on_press)
+        self.quit = False
 
     def on_press(self, key):
         if hasattr(key, 'char') and key.char == 'q':  # Exit condition
             if self.is_recording:
                 self.stop_recording()
             self.listener.stop()  # Stop listening for key press, exits the program
+            self.quit = True
         elif key == keyboard.Key.space:
             if self.is_recording:
                 self.stop_recording()
@@ -90,6 +93,16 @@ def record_audio():
     print("Press the space key to start/stop recording.")
     recorder = AudioRecorder()
     recorder.run()
+    if recorder.quit:
+        return 1
+    return 0
+
+
+class ExitProgram(Exception):
+    def __init__(self, message="User wants to exit program"):
+        self.message = message
+        super().__init__(self.message)
+
 
 
 def set_api_key():
@@ -122,8 +135,10 @@ def text_to_speech(text):
     play_wav("output.wav")
 
 
-def speech_to_text():
-    record_audio()
+async def speech_to_text():
+    status = record_audio()
+    if status == 1:
+        raise ExitProgram()
     client = OpenAI()
     with open("input.wav", "rb") as audiofile:
         transcription = client.audio.transcriptions.create(
@@ -134,13 +149,17 @@ def speech_to_text():
         return transcription.text
 
 
+
 async def language_chat(tutor):
     while (True):
         try:
-            user_input = speech_to_text()
+            user_input = await speech_to_text()
             response = await tutor.chat_round_str(user_input)
             print("Tutor: ", response)
             text_to_speech(response)
+        except ExitProgram:
+            await clean_up(tutor.engine)
+            break
         except KeyboardInterrupt:
             await clean_up(tutor.engine)
             break

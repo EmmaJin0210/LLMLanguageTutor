@@ -1,0 +1,347 @@
+Sentence: 薬を飲み忘れちゃいけないよ。
+Correct label: ちゃいけない・じゃいけない
+Detector result: ['ちゃいけない・じゃいけない', 'を', 'よ']
+
+Sentence: 私は学生です。
+Correct label: だ / です
+Detector result: ['だ / です', 'は']
+
+Sentence: 彼は英語だけ話せます。
+Correct label: だけ
+Detector result: ['だけ', 'は']
+
+Sentence: 彼は明日来るだろう
+Correct label: だろう
+Detector result: ['だろう', 'は']
+
+Sentence: 私は毎日電車で学校へ行きます。
+Correct label: で
+Detector result: ['で', 'に行く（にいく）', 'は']
+
+Sentence: 彼は才能があるんです。でも、態度が良くない。
+Correct label: でも
+Detector result: ['んです', 'でも', 'が', 'は']
+
+Sentence: 今日は雨が降るでしょう
+Correct label: でしょう
+Detector result: ['でしょう', 'は', 'が']
+
+Sentence: 彼女はどんな音楽が好きですか？
+Correct label: どんな
+Detector result: ['どんな', 'だ / です', 'か', 'は']
+
+Sentence: どうして学校に行かなかったのですか？
+Correct label: どうして
+Detector result: ['のです', 'どうして', 'か', 'に行く（にいく）']
+
+Sentence: どうやって日本語を学びましたか。
+Correct label: どうやって
+Detector result: ['どうやって', 'か']
+
+Sentence: 彼は勉強は好きだが、運動は苦手だ。
+Correct label: が
+Detector result: ['だ / です', 'が', 'は']
+
+Sentence: 図書館にたくさんの本があります。
+Correct label: があります
+Detector result: ['があります', 'に']
+
+Sentence: 新しい自転車がほしいです。
+Correct label: がほしい
+Detector result: ['がほしい', 'だ / です']
+
+Sentence: 庭には可愛い子猫がいます
+Correct label: がいます
+Detector result: ['がいます', 'は']
+
+Sentence: 試験が近いので、もっと勉強したほうがいいです。
+Correct label: ほうがいい
+Detector result: ['だ / です', 'ので', 'も', 'ほうがいい', 'が']
+
+Sentence: 彼女の猫はとてもかわいいです。
+Correct label: い-adjectives
+Detector result: ['だ / です', 'とても', 'は', 'い-adjectives']
+
+Sentence: 彼はクラスで一番背が高いです。
+Correct label: 一番（いちばん）
+Detector result: ['だ / です', '一番（いちばん）', 'は', 'で']
+
+Sentence: 私たちは一緒に公園でピクニックをしました。
+Correct label: 一緒に（いっしょに）
+Detector result: ['一緒に（いっしょに）', 'で', 'を']
+
+Sentence: 彼はいつも10時にベッドに入ります。
+Correct label: いつも
+Detector result: ['は', 'いつも', 'に']
+
+Sentence: 私の犬は大きいではないです。
+Correct label: じゃない・ではない
+Detector result: ['だ / です', 'は', 'じゃない・ではない']
+
+Sentence: 彼は学生ですか？
+Correct label: か
+Detector result: ['だ / です', 'は', 'か']
+
+Sentence: あなたはコーヒーかお茶かどちらが好きですか。
+Correct label: か～か
+Detector result: ['か', 'か～か', 'だ / です', 'は']
+
+Sentence: 私は風邪を引いているから、今日は学校を休みます。
+Correct label: から
+Detector result: ['ている', 'から', 'は', 'を']
+
+Sentence: この部分の解き方を教えていただけますか？
+Correct label: 方（かた）
+Detector result: ['を', 'てください', 'ませんか']
+Label 方（かた） is not in result.
+
+Sentence: 僕は野球が得意だけど、サッカーは苦手です。
+Correct label: けど
+Detector result: ['だ / です', 'けど', 'が', 'は']
+
+Sentence: 私はそれをするつもりでしたけれども、時間がありませんでした。
+Correct label: けれども
+Detector result: ['だ / です', 'けれども', 'つもり', 'は', 'を', 'があります']
+
+Sentence: 彼はまだ家に帰っていません。
+Correct label: まだ
+Detector result: ['まだ', 'に', 'ている', 'は']
+
+Sentence: 私はまだ昼ごはんを食べていません
+Correct label: まだ～ていません
+Detector result: ['まだ', 'を', 'は', 'ている']
+Label まだ～ていません is not in result.
+
+Sentence: 彼は朝まで勉強しました。
+Correct label: まで
+Detector result: ['は', 'まで']
+
+Sentence: 手術をする前に、医師と話すべきです。
+Correct label: 前に（まえに）
+Detector result: ['を', 'する', '前に（まえに）', 'と', 'だ / です']
+The grammar points ['する']are not in the original dictionary.
+
+Sentence: 一緒に映画を見ませんか?
+Correct label: ませんか
+Detector result: ['一緒に（いっしょに）', 'を', 'ませんか']
+
+Sentence: 公園でピクニックをしましょう
+Correct label: ましょう
+Detector result: ['で', 'を', 'ましょう']
+
+Sentence: 荷物を持ちましょうか。
+Correct label: ましょうか
+Detector result: ['を', 'ましょうか']
+
+Sentence: 彼女も映画を見に行きました
+Correct label: も
+Detector result: ['も', 'を', 'に行く（にいく）']
+
+Sentence: 彼はもう帰りました。
+Correct label: もう
+Detector result: ['は', 'もう']
+
+Sentence: 彼は静かな性格の人です。
+Correct label: な-adjectives
+Detector result: ['だ / です', 'は', 'な-adjectives', 'の']
+
+Sentence: 彼は優しいなあ。
+Correct label: なあ
+Detector result: ['なあ', 'は', 'い-adjectives']
+
+Sentence: うちを出る前に、鍵をかけないで行ってしまった。
+Correct label: ないで
+Detector result: ['ないで', 'まで', '前に（まえに）']
+
+Sentence: ここで写真を撮らないでください。
+Correct label: ないでください
+Detector result: ['で', 'を', 'ないでください']
+
+Sentence: 明日テストがあるから今夜勉強しないといけないです。
+Correct label: ないといけない
+Detector result: ['から', 'がある', 'だ / です', 'ないといけない']
+The grammar points ['がある']are not in the original dictionary.
+
+Sentence: 今日は仕事に行かなくてもいいです。
+Correct label: なくてもいい
+Detector result: ['だ / です', 'に行く（にいく）', 'なくてもいい', 'は']
+
+Sentence: 宿題をしなくちゃならないです。
+Correct label: なくちゃ
+Detector result: ['を', 'ならない', 'なくちゃ', 'だ / です']
+The grammar points ['ならない']are not in the original dictionary.
+
+Sentence: 宿題を早く終えなくてはいけません。
+Correct label: なくてはいけない
+Detector result: ['を', 'なくてはいけない']
+
+Sentence: 試験が近いので、もっと勉強しなくてはならない。
+Correct label: なくてはならない
+Detector result: ['が', 'ので', 'なくてはならない']
+
+Sentence: 彼女は医者になることを決めました。
+Correct label: なる
+Detector result: ['は', 'に', 'なる']
+
+Sentence: 明日はテストなんですから、今夜勉強する必要があります。
+Correct label: んです
+Detector result: ['だ / です', 'から', 'があります', 'んです']
+
+Sentence: きれいな花ですね。
+Correct label: ね
+Detector result: ['だ / です', 'ね', 'な-adjectives']
+
+Sentence: 私は学校に行きます。
+Correct label: に
+Detector result: ['に行く（にいく）', 'は']
+Label に is not in result.
+
+Sentence: 私は本を買うために図書館に行きます。
+Correct label: に行く（にいく）
+Detector result: ['は', 'を', 'に行く（にいく）']
+
+Sentence: 私は明日の晩ご飯にすしを食べることにしました。
+Correct label: にする
+Detector result: ['に', 'を', 'にする', 'だ / です', 'は']
+
+Sentence: 私は学校へ行きます
+Correct label: に/へ
+Detector result: ['は', 'に行く（にいく）']
+Label に/へ is not in result.
+
+Sentence: 彼の本はとても面白いです。
+Correct label: の
+Detector result: ['だ / です', 'とても', 'は', 'の', 'い-adjectives']
+
+Sentence: 私が先に行ったのです、だから道を知っています。
+Correct label: のです
+Detector result: ['が', '前に（まえに）', 'のです', 'だから']
+The grammar points ['だから']are not in the original dictionary.
+
+Sentence: 私は歌うのが下手です。
+Correct label: のが下手（のがへた）
+Detector result: ['だ / です', 'は', 'のが下手（のがへた）']
+
+Sentence: 彼はピアノを弾くのが上手です。
+Correct label: のが上手（のがじょうず）
+Detector result: ['だ / です', 'は', 'を', 'のが上手（のがじょうず）']
+
+Sentence: 私は音楽を聴くのが好きです。
+Correct label: のが好き（のがすき）
+Detector result: ['のが好き（のがすき）', 'だ / です', 'を', 'は']
+
+Sentence: 友達の中で、彼が一番背が高いです。
+Correct label: の中で[A]が一番（のなかで[A]がいちばん）
+Detector result: ['の', 'だ / です', 'の中で[A]が一番（のなかで[A]がいちばん）']
+
+Sentence: 彼は病気なので、学校に来れませんでした。
+Correct label: ので
+Detector result: ['ので', 'は']
+
+Sentence: お客様、お茶をお楽しみいただけますか？
+Correct label: お / ご
+Detector result: ['を', 'お / ご', 'ませんか']
+
+Sentence: 私はドーナツを食べました。
+Correct label: を
+Detector result: ['を', 'は']
+
+Sentence: 水をください。
+Correct label: をください
+Detector result: ['をください']
+
+Sentence: 私は朝ごはんを食べたいです。しかし、時間がありません。
+Correct label: しかし
+Detector result: ['だ / です', 'を', 'は', 'たい', 'しかし']
+
+Sentence: 映画を見ました。それから、晩ごはんを食べました。
+Correct label: それから
+Detector result: ['それから', 'を']
+
+Sentence: 彼は本を読んで、そしてその後で寝ました。
+Correct label: そして
+Detector result: ['て', 'そして']
+The grammar points ['て']are not in the original dictionary.
+
+Sentence: この部屋は暑すぎます。
+Correct label: すぎる
+Detector result: ['は', 'すぎる', 'だ / です']
+
+Sentence: 私は以前に富士山に登ったことがあります。
+Correct label: たことがある
+Detector result: ['に', 'は', 'たことがある', '前に（まえに）']
+
+Sentence: 私は寿司を食べたいです。
+Correct label: たい
+Detector result: ['だ / です', 'は', 'を', 'たい']
+
+Sentence: 私は休みの日に公園で散歩したり、音楽を聴いたりします。
+Correct label: たり～たり
+Detector result: ['で', 'たり～たり', 'は', 'に', 'を']
+
+Sentence: 窓が開けてあります
+Correct label: てある
+Detector result: ['が', 'てある']
+
+Sentence: 彼は今、本を読んでいます。
+Correct label: ている
+Detector result: ['は', 'ている']
+
+Sentence: 宿題をしてから遊びに行きました。
+Correct label: てから
+Detector result: ['を', 'に行く（にいく）', 'てから']
+
+Sentence: 書類を提出してください。
+Correct label: てください
+Detector result: ['を', 'てください']
+
+Sentence: 電話中は大声で話してはいけません。
+Correct label: てはいけない
+Detector result: ['は', 'てはいけない']
+
+Sentence: ここで写真を取ってもいいですか？
+Correct label: てもいいです
+Detector result: ['で', 'を', 'てもいいです', 'か']
+
+Sentence: 彼と私は一緒に映画を見た.
+Correct label: と
+Detector result: ['一緒に（いっしょに）', 'を', 'と']
+
+Sentence: 私が学校に行くとき、いつもバスを利用します。
+Correct label: とき
+Detector result: ['が', 'に行く（にいく）', 'とき', 'いつも', 'を']
+
+Sentence: 彼女の新しいドレスはとても美しいです。
+Correct label: とても
+Detector result: ['だ / です', 'とても', 'は', 'い-adjectives', 'の']
+
+Sentence: 私は来週の火曜日に図書館に行くつもりです。
+Correct label: つもり
+Detector result: ['に', 'に行く（にいく）', 'つもり', 'だ / です', 'は']
+
+Sentence: 僕はテニスが大好きです。
+Correct label: は
+Detector result: ['だ / です', 'は', 'が']
+
+Sentence: 東京は大阪より人口が多いです。
+Correct label: は〜より・・・です
+Detector result: ['は〜より・・・です', 'だ / です']
+
+Sentence: 新しい仕事はどうですか？
+Correct label: はどうですか
+Detector result: ['はどうですか', 'い-adjectives']
+
+Sentence: 私は紅茶やコーヒーが好きです
+Correct label: や
+Detector result: ['だ / です', 'は', 'や', 'が']
+
+Sentence: あなたが一番好きだよ。
+Correct label: よ
+Detector result: ['だ / です', '一番（いちばん）', 'が', 'よ']
+
+Sentence: 彼は日本語より英語の方が上手です。
+Correct label: より～ほうが
+Detector result: ['は', 'のが上手（のがじょうず）', 'だ / です', 'より～ほうが']
+
+Accuracy: 0.9523809523809523
+Consistency: 0.9404761904761905

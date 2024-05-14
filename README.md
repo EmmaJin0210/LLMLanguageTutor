@@ -4,6 +4,9 @@
 
 ### GPT
 
+#### Speech
+* Whisper doesn't seem to work all that well? Need to experiement more on if it autocorrects too much
+
 #### Difficulty
 * Adding to the system prompt "Try to limit yourself to words and grammar in the N5 and N4 level"
 seems to make no significant difference in output.

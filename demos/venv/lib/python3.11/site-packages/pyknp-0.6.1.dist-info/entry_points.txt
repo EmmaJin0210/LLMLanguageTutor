@@ -1,0 +1,3 @@
+[console_scripts]
+knp-drawtree=pyknp.scripts.knp_drawtree:main
+
