@@ -199,6 +199,7 @@ async def websocket_endpoint_learning(websocket: WebSocket):
                         continue
                     if msg.role == ChatRole.FUNCTION:
                         continue
+                    print(msg.text)
                     await websocket.send_text("Tutor:" + msg.text)
                     audio_url = await generate_audio_response(msg.text)
                     await websocket.send_text(audio_url)

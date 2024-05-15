@@ -22,6 +22,7 @@ def detect_grammar_level_sys_prompt(grammar_keys, language):
     system_prompt += "output them separated by ||, like this: grammar_1||grammar_2||grammar_3||...."
     system_prompt += "Remember, each grammar point you output needs to EXACTLY match an item in the list provided, not a character more or less."
     system_prompt += "Do not output anything that does not match EXACTLY with an item in the list."
+    system_prompt += "Before you return the output, check again that every grammar point you are outputting is actually used in the sentence given by the user."
     return system_prompt
 
 def detect_grammar_plain_sys_prompt(language):

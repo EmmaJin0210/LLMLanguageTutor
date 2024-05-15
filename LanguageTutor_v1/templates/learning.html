@@ -259,7 +259,7 @@
                     awaitingTutorResponse = false;
                 }
 
-                msgDiv.textContent = message.split(":")[1].trim();
+                msgDiv.textContent = message.split(":", 2)[1].trim();
                 chatContainer.appendChild(msgDiv);
                 chatContainer.scrollTop = chatContainer.scrollHeight;
                 if (awaitingTutorResponse) {
