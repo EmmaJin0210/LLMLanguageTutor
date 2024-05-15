@@ -3,7 +3,7 @@ name: Deploy FastAPI Application
 on:
   push:
     branches:
-      - main
+      - demo-v1
 
 jobs:
   deploy:
