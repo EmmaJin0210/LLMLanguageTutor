@@ -26,5 +26,6 @@ pip install -r requirements.txt
 
 #### run the main program
 ```
-python3 LanguageTutor_v1/app.py
+cd LanguageTutor_v1
+python3 app.py
 ```
