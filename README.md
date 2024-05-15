@@ -1,15 +1,22 @@
 # LLMLanguageTutor
 
-## Playgrounds
+### Python Version: 
+3.11
 
-### GPT
+### Instructions to Run
+```
+# Install the virtualenv package if it's not installed
+python -m pip install --user virtualenv
 
-#### Speech
-* Whisper doesn't seem to work all that well? Need to experiement more on if it autocorrects too much
+# Create a virtual environment in the project directory
+python -m venv venv
 
-#### Difficulty
-* Adding to the system prompt "Try to limit yourself to words and grammar in the N5 and N4 level"
-seems to make no significant difference in output.
-* Prompting model to limit itself to a certain list of words works a little bit but not that well.
-* Prompting model to limit verbs to a list of verbs seem to work slightly better
--> will experiment with nouns, adj, and adv as well.
+# activate venv
+source venv/bin/activate
+
+# install all requirements
+pip install -r requirements.txt
+
+# run the main program
+python3 LanguageTutor_v1/app.py
+```
