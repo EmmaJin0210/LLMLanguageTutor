@@ -4,19 +4,27 @@
 3.11
 
 ### Instructions to Run
+#### Install the virtualenv package if it's not installed
 ```
-# Install the virtualenv package if it's not installed
 python -m pip install --user virtualenv
+```
 
-# Create a virtual environment in the project directory
+#### Create a virtual environment in the project directory
+```
 python -m venv venv
+```
 
-# activate venv
+#### activate venv
+```
 source venv/bin/activate
+```
 
-# install all requirements
+#### install all requirements
+```
 pip install -r requirements.txt
+```
 
-# run the main program
+#### run the main program
+```
 python3 LanguageTutor_v1/app.py
 ```
