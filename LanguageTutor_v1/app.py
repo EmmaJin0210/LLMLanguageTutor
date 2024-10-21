@@ -175,7 +175,11 @@ async def websocket_endpoint_learning(websocket: WebSocket):
     tutor = LearningKani(user_profile=user_profile, engine=engine, system_prompt=sys_prompt)
     try:
         while True:
-            data = await websocket.receive()
+            try:
+                data = await websocket.receive()
+            except WebSocketDisconnect:
+                print("WebSocket disconnected")
+                break  # Exit the loop if the client disconnects
             if "text" in data:
                 try:
                     data = json.loads(data["text"])

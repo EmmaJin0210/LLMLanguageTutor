@@ -1,6 +1,7 @@
 import os
 import asyncio
 from random import sample
+from copy import deepcopy
 from kani import ChatMessage, ChatRole
 from kani.engines.openai import OpenAIEngine
 from core.kanis.LearningKani import LearningKani
@@ -27,7 +28,9 @@ async def clean_up(engine):
     await engine.client.close()
     await engine.close()
 
-
+# TODO: add instructions for teaching vocabulary before teaching grammar, as well as choosing vocabulary
+# TODO: add in instructions for letting the user indicate they already know some grammar point and skip to the role-play.
+# TODO: maybe add in a kani function to draw more expressions to teach from the database if the user wants to learn more
 def construct_learning_sys_prompt(name, level_general, language, instruction_lang, grammar_to_teach):
     sys_prompt = f"""You are a helpful and patient 1-on-1 {language} language tutor.
 Your instruction language is {instruction_lang}.
@@ -36,7 +39,10 @@ Your student is {name}, who is learning {language} and currently at the {level_g
 Today, you are having a lesson with your student,
 and the grammar points you need to teach to the user are {grammar_to_teach}.
 
-First, greet the user and ask if they have any questions before you begin today's lesson.
+First, greet the user and ask if they have any questions before you begin today's lesson. This should be a pure
+greeting and asking for questions, don't dive into the material just yet.
+
+If the user has questions or anything else to say, address those first; if not, then you can start with the material you will be teaching.
 
 For each grammar point, follow these steps to teach it to the user:
 
@@ -76,8 +82,13 @@ def pick_words_to_teach():
 
 def pick_grammars_to_teach(schema, grammar_dict, user_profile):
     to_teach = []
+    taught = user_profile["taught-log"]["grammar"]
+    to_teach_keys = []
     if schema == "random-sample":
-        to_teach_keys = sample(list(grammar_dict.keys()), 3)
+        trimmed = deepcopy(grammar_dict)
+        for gp in taught:
+            del trimmed[gp]
+        to_teach_keys = sample(list(trimmed.keys()), 3)
     for key in to_teach_keys:
         to_teach.append({ key : grammar_dict[key]})
     return to_teach
