@@ -16,7 +16,7 @@ class AudioRecorder:
         self.stream = None
         self.recording_thread = None
         self.listener = keyboard.Listener(on_press=self.on_press)
-        self.stop_event = threading.Event()  # Use event for better thread control
+        self.stop_event = threading.Event()
         self.FORMAT = pyaudio.paInt16
         self.CHANNELS = 1
         self.RATE = 44100
@@ -107,7 +107,6 @@ async def speech_to_text():
     if status == 1:
         raise ExitProgram()
     client = OpenAI()
-    print("right before reading")
     with open("temp-data/input.wav", "rb") as audiofile:
         transcription = client.audio.transcriptions.create(
             model="whisper-1",
