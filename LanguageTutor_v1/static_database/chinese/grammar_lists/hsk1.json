@@ -1,0 +1,59 @@
+{
+    "什么": {
+      "meaning": "Used to ask 'What'",
+      "level": "hsk1"
+    },
+    "怎么": {
+      "meaning": "Used to ask 'How'",
+      "level": "hsk1"
+    },
+    "哪里": {
+      "meaning": "Used to ask 'Where'",
+      "level": "hsk1"
+    },
+    "谁": {
+      "meaning": "Used to ask 'Who'",
+      "level": "hsk1"
+    },
+    "为什么": {
+      "meaning": "Used to ask 'Why'",
+      "level": "hsk1"
+    },
+    "几": {
+      "meaning": "Used to ask 'How many'",
+      "level": "hsk1"
+    },
+    "多少": {
+      "meaning": "Used to ask 'How much'",
+      "level": "hsk1"
+    },
+    "是...的": {
+      "meaning": "Used to emphasize the time, place, or method of an action",
+      "level": "hsk1"
+    },
+    "不/没": {
+      "meaning": "Used for negation; '不' for general and future actions, '没' for past actions",
+      "level": "hsk1"
+    },
+    "二/两": {
+      "meaning": "'二' for counting and numerical position, '两' for quantities before measure words",
+      "level": "hsk1"
+    },
+    "会/能": {
+      "meaning": "'会' for abilities through learning, '能' for general capabilities and permissions",
+      "level": "hsk1"
+    },
+    "了": {
+      "meaning": "Used as a modal particle to indicate completion or change",
+      "level": "hsk1"
+    },
+    "吗": {
+      "meaning": "Turns statements into yes/no questions",
+      "level": "hsk1"
+    },
+    "呢": {
+      "meaning": "Used to inquire about a situation or continue a topic in questions",
+      "level": "hsk1"
+    }
+}
+  

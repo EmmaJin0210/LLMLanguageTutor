@@ -1,342 +1,302 @@
 {
-  "ちゃいけない・じゃいけない": {
-    "meaning": "must not do (spoken Japanese)",
-    "level": "n5"
-  },
-  "だ / です": {
-    "meaning": "to be (am, is, are, were, used to)",
-    "level": "n5"
-  },
-  "だけ": {
-    "meaning": "only; just; as much as ~",
-    "level": "n5"
-  },
-  "だろう": {
-    "meaning": "I think; it seems; probably; right?",
-    "level": "n5"
-  },
-  "で": {
-    "meaning": "in; at; on; by; with; via ~",
-    "level": "n5"
-  },
-  "でも": {
-    "meaning": "but; however; though ~",
-    "level": "n5"
-  },
-  "でしょう": {
-    "meaning": "I think; it seems; probably; right?",
-    "level": "n5"
-  },
-  "どんな": {
-    "meaning": "what kind of; what sort of",
-    "level": "n5"
-  },
-  "どうして": {
-    "meaning": "why; for what reason; how",
-    "level": "n5"
-  },
-  "どうやって": {
-    "meaning": "how; in what way; by what means",
-    "level": "n5"
-  },
-  "が": {
-    "meaning": "subject marker; however; but ~",
-    "level": "n5"
-  },
-  "があります": {
-    "meaning": "there is; is (non-living things)",
-    "level": "n5"
-  },
-  "がほしい": {
-    "meaning": "to want something",
-    "level": "n5"
-  },
-  "がいます": {
-    "meaning": "there is; to be; is (living things)",
-    "level": "n5"
-  },
-  "ほうがいい": {
-    "meaning": "had better; it'd be better to; should ~",
-    "level": "n5"
-  },
-  "い-adjectives": {
-    "meaning": "i-adjectives",
-    "level": "n5"
-  },
-  "一番（いちばん）": {
-    "meaning": "the most; the best",
-    "level": "n5"
-  },
-  "一緒に（いっしょに）": {
-    "meaning": "together",
-    "level": "n5"
-  },
-  "いつも": {
-    "meaning": "always; usually; habitually",
-    "level": "n5"
-  },
-  "じゃない・ではない": {
-    "meaning": "to not be (am not; is not; are not)",
-    "level": "n5"
-  },
-  "か": {
-    "meaning": "question particle",
-    "level": "n5"
-  },
-  "か～か": {
-    "meaning": "or",
-    "level": "n5"
-  },
-  "から": {
-    "meaning": "because; since; from",
-    "level": "n5"
-  },
-  "方（かた）": {
-    "meaning": "the way of doing something; how to do ~",
-    "level": "n5"
-  },
-  "けど": {
-    "meaning": "but; however; although ~",
-    "level": "n5"
-  },
-  "けれども": {
-    "meaning": "but; however; although ~",
-    "level": "n5"
-  },
-  "まだ": {
-    "meaning": "still; not yet",
-    "level": "n5"
-  },
-  "まだ～ていません": {
-    "meaning": "have not yet ~",
-    "level": "n5"
-  },
-  "まで": {
-    "meaning": "until; as far as; to (an extent); even ~",
-    "level": "n5"
-  },
-  "前に（まえに）": {
-    "meaning": "before; in front of ~",
-    "level": "n5"
-  },
-  "ませんか": {
-    "meaning": "would you; do you want to; shall we ~",
-    "level": "n5"
-  },
-  "ましょう": {
-    "meaning": "let's ~; shall we ~",
-    "level": "n5"
-  },
-  "ましょうか": {
-    "meaning": "shall I ~; used to offer help to the listener",
-    "level": "n5"
-  },
-  "も": {
-    "meaning": "too; also; as well",
-    "level": "n5"
-  },
-  "もう": {
-    "meaning": "already; anymore; again; other",
-    "level": "n5"
-  },
-  "な-adjectives": {
-    "meaning": "na-adjectives",
-    "level": "n5"
-  },
-  "なあ": {
-    "meaning": "sentence ending particle; confirmation; admiration, etc",
-    "level": "n5"
-  },
-  "ないで": {
-    "meaning": "without doing ~; to do [B] without doing [A]",
-    "level": "n5"
-  },
-  "ないでください": {
-    "meaning": "please don't do ~",
-    "level": "n5"
-  },
-  "ないといけない": {
-    "meaning": "must do; have an obligation to do ~",
-    "level": "n5"
-  },
-  "なくてもいい": {
-    "meaning": "don't have to",
-    "level": "n5"
-  },
-  "なくちゃ": {
-    "meaning": "must do; need to; gotta do ~",
-    "level": "n5"
-  },
-  "なくてはいけない": {
-    "meaning": "must do; need to do",
-    "level": "n5"
-  },
-  "なくてはならない": {
-    "meaning": "must do; need to do ~",
-    "level": "n5"
-  },
-  "なる": {
-    "meaning": "to become",
-    "level": "n5"
-  },
-  "んです": {
-    "meaning": "to explain something; show emphasis",
-    "level": "n5"
-  },
-  "ね": {
-    "meaning": "isn't it? right? eh?",
-    "level": "n5"
-  },
-  "に": {
-    "meaning": "destination particle; in; at; on; to",
-    "level": "n5"
-  },
-  "に行く": {
-    "meaning": "go to do ~",
-    "level": "n5"
-  },
-  "にする": {
-    "meaning": "to decide on",
-    "level": "n5"
-  },
-  "に/へ": {
-    "meaning": "to (indicates direction / destination)",
-    "level": "n5"
-  },
-  "の": {
-    "meaning": "possessive particle",
-    "level": "n5"
-  },
-  "のです": {
-    "meaning": "to explain something; show emphasis",
-    "level": "n5"
-  },
-  "のが下手（のがへた）": {
-    "meaning": "to be bad at doing something",
-    "level": "n5"
-  },
-  "のが上手（のがじょうず）": {
-    "meaning": "to be good at",
-    "level": "n5"
-  },
-  "のが好き（のがすき）": {
-    "meaning": "to like doing something",
-    "level": "n5"
-  },
-  "の中で[A]が一番（のなかで[A]がいちばん）": {
-    "meaning": "out of this group, [A] is best",
-    "level": "n5"
-  },
-  "ので": {
-    "meaning": "because of; given that; since ~",
-    "level": "n5"
-  },
-  "お / ご": {
-    "meaning": "polite marker; honorific prefix particle",
-    "level": "n5"
-  },
-  "を": {
-    "meaning": "object marker particle",
-    "level": "n5"
-  },
-  "をください": {
-    "meaning": "please give me ~",
-    "level": "n5"
-  },
-  "しかし": {
-    "meaning": "but; however ~",
-    "level": "n5"
-  },
-  "それから": {
-    "meaning": "and; and then; after that; since then",
-    "level": "n5"
-  },
-  "そして": {
-    "meaning": "and; and then; thus; and now ~",
-    "level": "n5"
-  },
-  "すぎる": {
-    "meaning": "too much",
-    "level": "n5"
-  },
-  "たことがある": {
-    "meaning": "to have done something before",
-    "level": "n5"
-  },
-  "たい": {
-    "meaning": "want to do something",
-    "level": "n5"
-  },
-  "たり～たり": {
-    "meaning": "do such things as A and B",
-    "level": "n5"
-  },
-  "てある": {
-    "meaning": "is/has been done (resulting state)",
-    "level": "n5"
-  },
-  "ている": {
-    "meaning": "ongoing action or current state",
-    "level": "n5"
-  },
-  "てから": {
-    "meaning": "after doing ~",
-    "level": "n5"
-  },
-  "てください": {
-    "meaning": "please do",
-    "level": "n5"
-  },
-  "てはいけない": {
-    "meaning": "must not; may not; cannot",
-    "level": "n5"
-  },
-  "てもいいです": {
-    "meaning": "is OK to ~; is alright to ~; may I ~?",
-    "level": "n5"
-  },
-  "と": {
-    "meaning": "and; with; as; connecting particle",
-    "level": "n5"
-  },
-  "とき": {
-    "meaning": "when; at this time",
-    "level": "n5"
-  },
-  "とても": {
-    "meaning": "very; awfully; exceedingly​",
-    "level": "n5"
-  },
-  "つもり": {
-    "meaning": "plan to ~; intend to ~",
-    "level": "n5"
-  },
-  "は": {
-    "meaning": "topic marker",
-    "level": "n5"
-  },
-  "は〜より・・・です": {
-    "meaning": "[Noun-1] is more ~ than [Noun-2]",
-    "level": "n5"
-  },
-  "はどうですか": {
-    "meaning": "how about; how is",
-    "level": "n5"
-  },
-  "や": {
-    "meaning": "and; or; connecting particle",
-    "level": "n5"
-  },
-  "よ": {
-    "meaning": "you know; emphasis (ending particle)",
-    "level": "n5"
-  },
-  "より～ほうが": {
-    "meaning": "[2] is more than [1]",
-    "level": "n5"
-  }
+    "ちゃいけない": {
+        "meaning": "must not do (spoken Japanese)"
+    },
+    "じゃいけない": {
+        "meaning": "must not do (spoken Japanese)"
+    },
+    "だ": {
+        "meaning": "to be (am, is, are, were, used to)"
+    },
+    "です": {
+        "meaning": "to be (am, is, are, were, used to)"
+    },
+    "ます": {
+        "meaning": "polite ending for verbs"
+    },
+    "だけ": {
+        "meaning": "only; just; as much as ~"
+    },
+    "だろう": {
+        "meaning": "I think; it seems; probably; right?"
+    },
+    "でも": {
+        "meaning": "but; however; though ~"
+    },
+    "でしょう": {
+        "meaning": "I think; it seems; probably; right?"
+    },
+    "どんな": {
+        "meaning": "what kind of; what sort of"
+    },
+    "どうして": {
+        "meaning": "why; for what reason; how"
+    },
+    "どうやって": {
+        "meaning": "how; in what way; by what means"
+    },
+    "があります": {
+        "meaning": "there is; is (non-living things)"
+    },
+    "がほしい": {
+        "meaning": "to want something"
+    },
+    "がいます": {
+        "meaning": "there is; to be; is (living things)"
+    },
+    "ほうがいい": {
+        "meaning": "had better; it'd be better to; should ~"
+    },
+    "一番": {
+        "meaning": "the most; the best"
+    },
+    "一緒に": {
+        "meaning": "together"
+    },
+    "いつも": {
+        "meaning": "always; usually; habitually"
+    },
+    "じゃない": {
+        "meaning": "to not be (am not; is not; are not)"
+    },
+    "ではない": {
+        "meaning": "to not be (am not; is not; are not)"
+    },
+    ".*か.*か.*": {
+        "meaning": "or"
+    },
+    "から": {
+        "meaning": "because; since; from"
+    },
+    "方": {
+        "meaning": "the way of doing something; how to do ~"
+    },
+    "けど": {
+        "meaning": "but; however; although ~"
+    },
+    "けれども": {
+        "meaning": "but; however; although ~"
+    },
+    "まだ": {
+        "meaning": "still; not yet"
+    },
+    ".*まだ.*ていません.*": {
+        "meaning": "have not yet ~"
+    },
+    "まで": {
+        "meaning": "until; as far as; to (an extent); even ~"
+    },
+    "前に": {
+        "meaning": "before; in front of ~"
+    },
+    "ませんか": {
+        "meaning": "would you; do you want to; shall we ~"
+    },
+    "ましょう": {
+        "meaning": "let's ~; shall we ~"
+    },
+    "ましょうか": {
+        "meaning": "shall I ~; used to offer help to the listener"
+    },
+    "もう": {
+        "meaning": "already; anymore; again; other"
+    },
+    "なあ": {
+        "meaning": "sentence ending particle; confirmation; admiration, etc"
+    },
+    "ないで": {
+        "meaning": "without doing ~; to do [B] without doing [A]"
+    },
+    "ないでください": {
+        "meaning": "please don't do ~"
+    },
+    "ないといけない": {
+        "meaning": "must do; have an obligation to do ~"
+    },
+    "なくてもいい": {
+        "meaning": "don't have to"
+    },
+    "なくちゃ": {
+        "meaning": "must do; need to; gotta do ~"
+    },
+    "なくてはいけない": {
+        "meaning": "must do; need to do"
+    },
+    "なくてはならない": {
+        "meaning": "must do; need to do ~"
+    },
+    ".*なる": {
+        "meaning": "to become"
+    },
+    "んです": {
+        "meaning": "to explain something; show emphasis"
+    },
+    "に行く": {
+        "meaning": "go to do ~"
+    },
+    "にする": {
+        "meaning": "to decide on"
+    },
+    "のです": {
+        "meaning": "to explain something; show emphasis"
+    },
+    "のが下手": {
+        "meaning": "to be bad at doing something"
+    },
+    "のが上手": {
+        "meaning": "to be good at"
+    },
+    "のが好き": {
+        "meaning": "to like doing something"
+    },
+    ".*の中で.*が一番.*": {
+        "meaning": "out of this group, [A] is best"
+    },
+    "ので": {
+        "meaning": "because of; given that; since ~"
+    },
+    "をください": {
+        "meaning": "please give me ~"
+    },
+    "しかし": {
+        "meaning": "but; however ~"
+    },
+    "それから": {
+        "meaning": "and; and then; after that; since then"
+    },
+    "そして": {
+        "meaning": "and; and then; thus; and now ~"
+    },
+    "すぎる": {
+        "meaning": "too much"
+    },
+    "たことがある": {
+        "meaning": "to have done something before"
+    },
+    "たい": {
+        "meaning": "want to do something"
+    },
+    ".*たり.*たり.*": {
+        "meaning": "do such things as A and B"
+    },
+    "てある": {
+        "meaning": "is/has been done (resulting state)"
+    },
+    "ている": {
+        "meaning": "ongoing action or current state"
+    },
+    "てから": {
+        "meaning": "after doing ~"
+    },
+    "てください": {
+        "meaning": "please do"
+    },
+    "てはいけない": {
+        "meaning": "must not; may not; cannot"
+    },
+    "てもいいです": {
+        "meaning": "is OK to ~; is alright to ~; may I ~?"
+    },
+    "とき": {
+        "meaning": "when; at this time"
+    },
+    "とても": {
+        "meaning": "very; awfully; exceedingly​"
+    },
+    "つもり": {
+        "meaning": "plan to ~; intend to ~"
+    },
+    "は.*より.*です": {
+        "meaning": "[Noun-1] is more ~ than [Noun-2]"
+    },
+    "はどうですか": {
+        "meaning": "how about; how is"
+    },
+    "や": {
+        "meaning": "and; or; connecting particle"
+    },
+    "よ": {
+        "meaning": "you know; emphasis (ending particle)"
+    },
+    ".*より.*ほうが.*": {
+        "meaning": "[2] is more than [1]"
+    },
+    ".*ましょう": {
+        "meaning": "Let’s; shall we"
+    },
+    ".*のがじょうずです": {
+        "meaning": "Good at doing something"
+    },
+    ".*まえに": {
+        "meaning": "Before; prior to"
+    },
+    ".*のほうが.*より": {
+        "meaning": "More than; rather than"
+    },
+    ".*にいく": {
+        "meaning": "Go to do something"
+    },
+    ".*がいます": {
+        "meaning": "There is (animate); have"
+    },
+    ".*く": {
+        "meaning": "Become; get"
+    },
+    ".*になる": {
+        "meaning": "Become; get"
+    },
+    ".*のがへたです": {
+        "meaning": "Bad at doing something"
+    },
+    ".*てください": {
+        "meaning": "Please do"
+    },
+    ".*たり.*たりする": {
+        "meaning": "Do things like; such as"
+    },
+    ".*てもいいです": {
+        "meaning": "It’s okay to; you may"
+    },
+    ".*があります": {
+        "meaning": "There is (inanimate); have"
+    },
+    ".*なくちゃいけない": {
+        "meaning": "Have to; must"
+    },
+    ".*のがすきです": {
+        "meaning": "Like doing something"
+    },
+    ".*ている": {
+        "meaning": "Be doing; continuous state"
+    },
+    ".*てはいけません": {
+        "meaning": "Must not; prohibited"
+    },
+    ".*ませんか": {
+        "meaning": "Won’t you; shall we"
+    },
+    "まだ.*ていません": {
+        "meaning": "Haven’t yet; still not"
+    },
+    ".*から": {
+        "meaning": "From; because"
+    },
+    ".*すぎる": {
+        "meaning": "Too much; excessive"
+    },
+    ".*ほうがいい": {
+        "meaning": "It’s better to; you should"
+    },
+    ".*のなかで.*がいちばん.*": {
+        "meaning": "Among (things)"
+    },
+    ".*ましょうか": {
+        "meaning": "Shall we; shall I"
+    },
+    ".*てから": {
+        "meaning": "After doing"
+    },
+    ".*たことがある": {
+        "meaning": "Have done before"
+    }
 }
-
-
-
-

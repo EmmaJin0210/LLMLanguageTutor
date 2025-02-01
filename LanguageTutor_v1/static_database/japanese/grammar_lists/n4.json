@@ -1,20 +1,17 @@
 {
-    "間（あいだ）": {
+    "間": {
         "meaning": "while; during; between ~"
     },
-    "間に（あいだに）": {
+    "間に": {
         "meaning": "while; during~ something happened"
     },
-    "あまり～ない": {
+    "あまり.*ない": {
         "meaning": "not very, not much ~"
     },
-    "後で（あとで）": {
+    "後で": {
         "meaning": "after~; later"
     },
-    "ば": {
-        "meaning": "conditional form; If [A] then [B]"
-    },
-    "場合は（ばあいは）": {
+    "場合は": {
         "meaning": "in the event of; in the case that ~"
     },
     "ばかり": {
@@ -23,7 +20,7 @@
     "だけで": {
         "meaning": "just by; just by doing"
     },
-    "出す（だす）": {
+    "出す": {
         "meaning": "to begin to; to start to; to burst into; ... out (e.g. to jump out, to carry out)​"
     },
     "でございます": {
@@ -35,7 +32,7 @@
     "ではないか": {
         "meaning": "right?; isn't it?"
     },
-    "が必要（がひつよう）": {
+    "が必要": {
         "meaning": "need; necessary"
     },
     "がする": {
@@ -44,13 +41,16 @@
     "がり": {
         "meaning": "personality (someone tends to; has a tendency to; has a sensitivity to ~)"
     },
-    "がる / がっている": {
+    "がる": {
+        "meaning": "to show signs of; to appear; to feel, to think ~"
+    },
+    "がっている": {
         "meaning": "to show signs of; to appear; to feel, to think ~"
     },
     "ございます": {
         "meaning": "to be, to exist (the polite form of いる/ある)"
     },
-    "始める（はじめる）": {
+    "始める": {
         "meaning": "to start; to begin to ~"
     },
     "はずだ": {
@@ -59,10 +59,10 @@
     "はずがない": {
         "meaning": "cannot be (impossible)"
     },
-    "必要がある（ひつようがある）": {
+    "必要がある": {
         "meaning": "need to; it is necessary to"
     },
-    "意向形 （いこうけい）": {
+    "意向形 ": {
         "meaning": "volitional form​; let's do ~"
     },
     "いらっしゃる": {
@@ -89,13 +89,13 @@
     "かな": {
         "meaning": "I wonder; should I?"
     },
-    "から作る（からつくる）": {
+    "から作る": {
         "meaning": "made from; made with"
     },
     "きっと": {
         "meaning": "surely; undoubtedly; almost certainly; most likely"
     },
-    "頃（ころ / ごろ）": {
+    "頃": {
         "meaning": "around; about; when"
     },
     "こと": {
@@ -116,7 +116,7 @@
     "くする": {
         "meaning": "to make something ~"
     },
-    "急に（きゅうに）": {
+    "急に": {
         "meaning": "quickly; immediately; hastily; suddenly; abruptly; unexpectedly ~"
     },
     "までに": {
@@ -137,19 +137,13 @@
     "みたいに": {
         "meaning": "like; similar to ~"
     },
-    "も": {
-        "meaning": "as many as; as much as; up to; nearly ~"
-    },
-    "な": {
-        "meaning": "don’t ~ (order somebody to not do something)"
-    },
     "など": {
         "meaning": "such as; things like ~"
     },
     "ながら": {
         "meaning": "while; during; as; simultaneously"
     },
-    "なかなか～ない": {
+    "なかなか.*ない": {
         "meaning": "not easy to; struggling to; not able to ~"
     },
     "なければいけない": {
@@ -167,10 +161,10 @@
     "なさる": {
         "meaning": "to do (honorific)"
     },
-    "に気がつく（にきがつく）": {
+    "に気がつく": {
         "meaning": "to notice; to realize"
     },
-    "に見える（にみえる）": {
+    "に見える": {
         "meaning": "to look; to seem; to appear"
     },
     "にする": {
@@ -179,28 +173,25 @@
     "にくい": {
         "meaning": "difficult to do ~"
     },
-    "の中で（のなかで）": {
+    "の中で": {
         "meaning": "in; among ~"
     },
-    "のに-1": {
-        "meaning": "although, in spite of, even though ~"
+    "のに": {
+        "meaning": "although, in spite of, even though ~; to (do something); in order to ~"
     },
-    "のに-2": {
-        "meaning": "to (do something); in order to ~"
-    },
-    "のは〜だ": {
+    "のは.*だ": {
         "meaning": "[A] is [B]; the reason for [A] is [B]"
     },
-    "お～ください": {
+    "お.*ください": {
         "meaning": "please do ~ (honorific)"
     },
-    "お～になる": {
+    "お.*になる": {
         "meaning": "to do (honorific)"
     },
     "おきに": {
         "meaning": "repeated at intervals, every ~"
     },
-    "終わる（おわる）": {
+    "終わる": {
         "meaning": "to finish; to end~"
     },
     "られる": {
@@ -208,9 +199,6 @@
     },
     "らしい": {
         "meaning": "it seems like; I heard; apparently ~"
-    },
-    "さ": {
-        "meaning": "-ness​ ; nominalizer for adjective"
     },
     "さっき": {
         "meaning": "some time ago; just now"
@@ -227,9 +215,6 @@
     "さすが": {
         "meaning": "as one would expect; as is to be expected; even ~"
     },
-    "し": {
-        "meaning": "and; and what’s more ~ (emphasis)"
-    },
     "そんなに": {
         "meaning": "so much; so; like that"
     },
@@ -239,13 +224,13 @@
     "それに": {
         "meaning": "besides; in addition; also; moreover ~"
     },
-    "そうだ-1": {
-        "meaning": "I heard that; it is said that ~"
+    "そうだ": {
+        "meaning": "I heard that; it is said that ~; looks like; appears like; seeming ~"
     },
-    "そうだ-2": {
-        "meaning": "looks like; appears like; seeming ~"
+    "そうに": {
+        "meaning": "seems like; looks like ~"
     },
-    "そうに / そうな": {
+    "そうな": {
         "meaning": "seems like; looks like ~"
     },
     "たばかり": {
@@ -253,9 +238,6 @@
     },
     "たところ": {
         "meaning": "just finished doing, was just doing"
-    },
-    "他動詞 & 自動詞（たどうし & じどうし）": {
-        "meaning": "Transitive & Intransitive Verbs"
     },
     "たがる": {
         "meaning": "wants to do ~ (third person)"
@@ -268,9 +250,6 @@
     },
     "たらいいですか": {
         "meaning": "what should I do?; speaker seeking instructions from listener"
-    },
-    "て / で": {
-        "meaning": "conjunctive particle; so; because of [A], [B]..."
     },
     "てあげる": {
         "meaning": "to do for; to do a favor"
@@ -302,7 +281,10 @@
     "ておく": {
         "meaning": "to do something in advance"
     },
-    "てしまう / ちゃう": {
+    "てしまう": {
+        "meaning": "to do something by accident, to finish completely"
+    },
+    "ちゃう": {
         "meaning": "to do something by accident, to finish completely"
     },
     "てすみません": {
@@ -320,10 +302,7 @@
     "ても": {
         "meaning": "even; even if; even though ~"
     },
-    "と": {
-        "meaning": "whenever [A] happens, [B] also happens"
-    },
-    "と言ってもいい（といってもいい）": {
+    "と言ってもいい": {
         "meaning": "you could say; one might say; I'd say ~"
     },
     "という": {
@@ -332,70 +311,196 @@
     "ということ": {
         "meaning": "convert phrase into noun"
     },
-    "といわれている（といわれている）": {
+    "といわれている": {
         "meaning": "it is said that ~"
     },
-    "と聞いた（ときいた）": {
+    "と聞いた": {
         "meaning": "I heard..."
     },
-    "と思う（とおもう）": {
+    "と思う": {
         "meaning": "to think…; I think…; you think…"
     },
-    "とか～とか": {
+    "とか.*とか": {
         "meaning": "among other things; such as; like ~"
     },
     "ところ": {
         "meaning": "just about to; on the verge of doing something"
     },
-    "続ける（つづける）": {
+    "続ける": {
         "meaning": "continue to; keen on ~"
     },
     "って": {
         "meaning": "named; called ~"
     },
-    "受身形（うけみけい）": {
+    "受身形": {
         "meaning": "passive form; passive voice"
     },
-    "は〜が… は": {
+    "は.*が.*は": {
         "meaning": "[A] but [B]; however; comparison"
     },
     "やすい": {
-      "meaning": "easy to; likely to; prone to; have a tendency to ~"
+        "meaning": "easy to; likely to; prone to; have a tendency to ~"
     },
     "やっと": {
-      "meaning": "at last; finally; barely; narrowly ~"
+        "meaning": "at last; finally; barely; narrowly ~"
     },
     "より": {
-      "meaning": "than; rather than; more than ~"
+        "meaning": "than; rather than; more than ~"
     },
-    "予定だ（よていだ）": {
-      "meaning": "plan to, intend to"
+    "予定だ": {
+        "meaning": "plan to, intend to"
     },
     "ようだ": {
-      "meaning": "appears; seems; looks as if ~"
+        "meaning": "appears; seems; looks as if ~"
     },
-    "ように / ような": {
-      "meaning": "like; as; similar to ~"
+    "ように": {
+        "meaning": "like; as; similar to ~"
+    },
+    "ような": {
+        "meaning": "like; as; similar to ~"
     },
     "ようになる": {
-      "meaning": "to reach the point that; to come to be that; to turn into ~"
+        "meaning": "to reach the point that; to come to be that; to turn into ~"
     },
     "ようにする": {
-      "meaning": "to try to; to make sure that ~"
+        "meaning": "to try to; to make sure that ~"
     },
-    "ようと思う（ようとおもう）": {
-      "meaning": "thinking of doing; planning to ~"
+    "ようと思う": {
+        "meaning": "thinking of doing; planning to ~"
     },
     "ぜひ": {
-      "meaning": "by all means; certainly; definitely ~"
+        "meaning": "by all means; certainly; definitely ~"
     },
-    "全然～ない（ぜんぜん～ない）": {
-      "meaning": "(not) at all"
+    "全然.*ない": {
+        "meaning": "(not) at all"
     },
     "づらい": {
-      "meaning": "difficult to do ~"
+        "meaning": "difficult to do ~"
+    },
+    ".*はずです": {
+        "meaning": "It should be; it is expected"
+    },
+    ".*てある": {
+        "meaning": "Something has been done; is in a state of"
+    },
+    ".*がほしい": {
+        "meaning": "Want; desire"
+    },
+    ".*なさい": {
+        "meaning": "Command form; do it"
+    },
+    ".*てもらう": {
+        "meaning": "To have someone do something for you"
+    },
+    "しか.*ない": {
+        "meaning": "Only; nothing but"
+    },
+    ".*よう": {
+        "meaning": "In order to; so that"
+    },
+    ".*てあげる": {
+        "meaning": "To do something for someone"
+    },
+    "(period)に(frequency)": {
+        "meaning": "(Frequency) per (period)"
+    },
+    "そうです": {
+        "meaning": "I heard that; it is said"
+    },
+    ".*ていただけませんか": {
+        "meaning": "Would you please"
+    },
+    ".*やすい": {
+        "meaning": "Easy to; likely to"
+    },
+    ".*かもしれない": {
+        "meaning": "Might; maybe"
+    },
+    ".*ば": {
+        "meaning": "If; when"
+    },
+    ".*れば": {
+        "meaning": "If; when"
+    },
+    ".*たらどうですか": {
+        "meaning": "How about; why don’t you"
+    },
+    ".*く": {
+        "meaning": "To make something (adjective)"
+    },
+    ".*にする": {
+        "meaning": "To make something (adjective)"
+    },
+    ".*ばよかった": {
+        "meaning": "I wish I had; should have"
+    },
+    ".*てすみません": {
+        "meaning": "I’m sorry for"
+    },
+    ".*ないで": {
+        "meaning": "Without doing"
+    },
+    ".*といいです": {
+        "meaning": "It would be good if; I hope"
+    },
+    ".*てくれる": {
+        "meaning": "Someone does something for me"
+    },
+    ".*のように": {
+        "meaning": "Like; similar to"
+    },
+    ".*させる": {
+        "meaning": "To make someone do"
+    },
+    ".*させられる": {
+        "meaning": "To be made to do; to be forced to do"
+    },
+    ".*し": {
+        "meaning": "And; also; moreover"
+    },
+    ".*ことにする": {
+        "meaning": "Decide to; make a decision"
+    },
+    ".*てくれてありがとう": {
+        "meaning": "Thank you for doing"
+    },
+    ".*ておく": {
+        "meaning": "To do something in advance"
+    },
+    ".*てしまう": {
+        "meaning": "To end up; completely"
+    },
+    ".*のような": {
+        "meaning": "Like; similar to"
+    },
+    ".*ても": {
+        "meaning": "Even if; although"
+    },
+    ".*みたい": {
+        "meaning": "Seems like; looks like"
+    },
+    ".*ながら": {
+        "meaning": "While; at the same time"
+    },
+    ".*なくてもいい": {
+        "meaning": "Don’t have to; no need to"
+    },
+    ".*てよかった": {
+        "meaning": "I’m glad that"
+    },
+    ".*たら": {
+        "meaning": "If; when"
+    },
+    ".*にくい": {
+        "meaning": "Hard to; difficult to"
+    },
+    ".*られる": {
+        "meaning": "Potential form; can do"
+    },
+    ".*そうです": {
+        "meaning": "Looks like; seems"
+    },
+    ".*たがる": {
+        "meaning": "Want to; shows desire"
     }
 }
-  
-  
-    

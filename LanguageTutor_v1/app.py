@@ -4,10 +4,13 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from core.utils.profile_utils import *
 from core.utils.speech_utils import *
+from core.utils.language_utils import *
 from core.utils.utils import *
 from core.learning_mode import *
 from core.conversation_mode import *
+from core.modules.DifficultyEstimationEngine import DifficultyEstimationEngine
 import shutil
+
 
 app = FastAPI()
 
@@ -253,34 +256,20 @@ async def websocket_endpoint_conversation(websocket: WebSocket):
     global session_data, user_interests, user_info
     await websocket.accept()
 
-    mode = "formal"
+    # get session info
     track_usage = False
-    level = get_desc(session_data["current_level"])
-    language = session_data["language"]
-    target_level = session_data["current_level"]
-    backup_lanaguage = session_data["backup_language"]
-    levels_below = get_levels_below_inclusive(language, target_level)
-    levels_above = get_levels_above_exclusive(language, target_level)
-
-    grammar_dict_target = load_grammar_file_to_dict(language, levels_below)
-    grammar_points_target = get_grammar_keys(grammar_dict_target)
-
-    grammar_dict_above = load_grammar_file_to_dict(language, levels_above)
-    grammar_points_above = get_grammar_keys(grammar_dict_above)
-    gd_above = GrammarDetectorLevel(language, grammar_points_above)
-
-    tokenizer = SentenceTokenizer(language)
-
-    vocab_dict_target =  load_vocab_file_to_dict(language, levels_below)
-    vocab_points_target = get_vocab_keys_w_category(vocab_dict_target)
-    vocab_keys_target = get_vocab_keys(vocab_points_target)
-
-    vocab_dict_above =  load_vocab_file_to_dict(language, levels_above)
-    vocab_points_above = get_vocab_keys_w_category(vocab_dict_above)
-    vocab_keys_above = get_vocab_keys(vocab_points_above)
-    vd_above = VocabDetector(language, vocab_points_above, vocab_keys_above)
-
-    ss = SentenceSimplifier(language, backup_lanaguage, grammar_points_target, grammar_points_above, vocab_keys_target, vocab_keys_above)
+    language = session_data["language"].lower()
+    target_level = session_data["current_level"].lower()
+    all_levels = get_all_levels_of_language(language)
+    backup_language = session_data["backup_language"].lower()
+    # load grammar and vocab db
+    grammar_dict = load_grammar_file_to_dict(language, all_levels)
+    vocab_dict = load_vocab_file_to_dict(language, all_levels)
+    if backup_language == "english":
+        grammar_dict = filter_katakana(grammar_dict)
+        vocab_dict = filter_katakana(vocab_dict)
+    grammar_dict = flatten_grammar_dict_for_tokenization(grammar_dict)
+    vocab_dict = flatten_vocab_dict_for_tokenization(vocab_dict)
 
     user_profile = session_data["profile"]
     name = session_data["firstname"]
@@ -288,12 +277,13 @@ async def websocket_endpoint_conversation(websocket: WebSocket):
     user_info = retrieve_user_info_from_profile(user_profile)
     past_topics = retrieve_past_topics_from_profile(user_profile)
     good_grammar = retrieve_recent_grammar_learnt(user_profile)
-    system_prompt = construct_sys_prompt_conversation(language, backup_lanaguage, name, level, user_interests, user_info, past_topics, good_grammar)
+    desired_tokens = get_desired_tokens_count(language, target_level)
+    system_prompt = construct_sys_prompt_conversation(language, backup_language, name, target_level, user_interests, user_info, past_topics, good_grammar, desired_tokens)
 
     my_key = os.getenv("OPENAI_API_KEY")
-    engine = OpenAIEngine(my_key, model="gpt-4")
+    engine = DifficultyEstimationEngine(language, target_level, vocab_dict, grammar_dict, my_key, model="gpt-4")
     session_data["engine"] = engine
-    tutor = ConversationKani(user_profile=user_profile, engine=engine, system_prompt=system_prompt, desired_response_tokens=15)
+    tutor = ConversationKani(user_profile=user_profile, engine=engine, system_prompt=system_prompt, desired_response_tokens=desired_tokens)
     session_data["tutor"] = tutor
     try:
         rounds = 0
@@ -304,7 +294,7 @@ async def websocket_endpoint_conversation(websocket: WebSocket):
         while True:
             if rounds % 16 == 0 and rounds != 0:
                 history_to_summarize = format_chat_history_for_summary(
-                    tutor.chat_history[:len(tutor.chat_history-4)])
+                    tutor.chat_history[:len(tutor.chat_history)-4])
                 chat_summary = summarize_rounds_history(history_to_summarize, language)
                 new_chat_history = [ChatMessage(role=ChatRole.ASSISTANT, content=chat_summary)] +\
                                     tutor.chat_history[len(tutor.chat_history-4):]
@@ -336,26 +326,7 @@ async def websocket_endpoint_conversation(websocket: WebSocket):
                     elif msg.name == "store_user_personal_info":
                         user_info.append(msg.content)
                     continue
-                print("orgininal text: ", msg.text)
-                tokens = tokenizer.tokenize_sentence(msg.text)
-                gp_above = await gd_above.detect_grammar(msg.text)
-                for gp in gp_above:
-                    if gp in grammar_points_target or gp not in gd_above.grammar_points:
-                        gp_above.remove(gp)
-                print("above grammar: ", gp_above)
-                vp_above = vd_above.detect_vocab(tokens)
-                for i, vp in enumerate(vp_above):
-                    if vp in all_user_input:
-                        vp_above.pop(i)
-                print("above vocab: ", vp_above)
-                if len(gp_above) != 0 or len(vp_above) != 0:
-                    print("Simplifying...")
-                    if mode == "formal":
-                        text = ss.swap_hard_expressions_formal(gp_above + vp_above, msg.text)
-                    else:
-                        text = ss.swap_hard_expressions_casual(gp_above + vp_above, msg.text)
-                else:
-                    text = msg.text
+                text = msg.text
                 tutor.chat_history[-1] = ChatMessage.assistant(text)
                 await websocket.send_text("Tutor:" + text)
                 audio_url = await generate_audio_response(text)

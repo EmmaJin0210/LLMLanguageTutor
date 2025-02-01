@@ -3,6 +3,8 @@ from typing import Annotated
 from core.utils.utils import *
 from core.utils.profile_utils import *
 
+# inherit from base engine
+# write a kani extension? or (import base kani engine) and create difficulty estimator class on engine
 
 class ConversationKani(Kani):
 

@@ -1,0 +1,641 @@
+{
+    "personal pronouns": {
+      "我": {
+        "meaning": "I, me",
+        "level": "hsk1"
+      },
+      "我们": {
+        "meaning": "we, us (pl.)",
+        "level": "hsk1"
+      },
+      "你": {
+        "meaning": "you",
+        "level": "hsk1"
+      },
+      "你们": {
+        "meaning": "you (pl.)",
+        "level": "hsk1"
+      },
+      "他": {
+        "meaning": "he, him",
+        "level": "hsk1"
+      },
+      "她": {
+        "meaning": "she, her",
+        "level": "hsk1"
+      },
+      "他们": {
+        "meaning": "they (male+female / male, pl.)",
+        "level": "hsk1"
+      },
+      "她们": {
+        "meaning": "they (females, pl.)",
+        "level": "hsk1"
+      }
+    },
+    "demonstrative pronouns": {
+      "这 (这儿)": {
+        "meaning": "here, this",
+        "level": "hsk1"
+      },
+      "那 (那儿)": {
+        "meaning": "there, that",
+        "level": "hsk1"
+      }
+    },
+    "interrogative pronouns": {
+      "哪（哪儿）": {
+        "meaning": "where",
+        "level": "hsk1"
+      },
+      "谁": {
+        "meaning": "who",
+        "level": "hsk1"
+      },
+      "什么": {
+        "meaning": "what, why",
+        "level": "hsk1"
+      },
+      "多少": {
+        "meaning": "how many, how much",
+        "level": "hsk1"
+      },
+      "几": {
+        "meaning": "a few, how many",
+        "level": "hsk1"
+      },
+      "怎么": {
+        "meaning": "how",
+        "level": "hsk1"
+      },
+      "怎么样": {
+        "meaning": "how about",
+        "level": "hsk1"
+      }
+    },
+    "numbers": {
+      "一": {
+        "meaning": "one",
+        "level": "hsk1"
+      },
+      "二": {
+        "meaning": "two",
+        "level": "hsk1"
+      },
+      "三": {
+        "meaning": "three",
+        "level": "hsk1"
+      },
+      "四": {
+        "meaning": "four",
+        "level": "hsk1"
+      },
+      "五": {
+        "meaning": "five",
+        "level": "hsk1"
+      },
+      "六": {
+        "meaning": "six",
+        "level": "hsk1"
+      },
+      "七": {
+        "meaning": "seven",
+        "level": "hsk1"
+      },
+      "八": {
+        "meaning": "eight",
+        "level": "hsk1"
+      },
+      "九": {
+        "meaning": "nine",
+        "level": "hsk1"
+      },
+      "十": {
+        "meaning": "ten",
+        "level": "hsk1"
+      },
+      "零": {
+        "meaning": "zero",
+        "level": "hsk1"
+      }
+    },
+    "quantifiers": {
+      "个": {
+        "meaning": "one, a, an",
+        "level": "hsk1"
+      },
+      "岁": {
+        "meaning": "year",
+        "level": "hsk1"
+      },
+      "本": {
+        "meaning": "volume",
+        "level": "hsk1"
+      },
+      "些": {
+        "meaning": "some",
+        "level": "hsk1"
+      },
+      "块": {
+        "meaning": "piece",
+        "level": "hsk1"
+      }
+    },
+    "adverbs": {
+      "不": {
+        "meaning": "no",
+        "level": "hsk1"
+      },
+      "没": {
+        "meaning": "no",
+        "level": "hsk1"
+      },
+      "很": {
+        "meaning": "quite, very",
+        "level": "hsk1"
+      },
+      "太": {
+        "meaning": "too",
+        "level": "hsk1"
+      },
+      "都": {
+        "meaning": "all",
+        "level": "hsk1"
+      }
+    },
+    "conjunctions": {
+      "和": {
+        "meaning": "and",
+        "level": "hsk1"
+      }
+    },
+    "prepositions": {
+      "在": {
+        "meaning": "in, at",
+        "level": "hsk1"
+      }
+    },
+    "auxiliaries": {
+      "的": {
+        "meaning": "",
+        "level": "hsk1"
+      },
+      "了": {
+        "meaning": "",
+        "level": "hsk1"
+      },
+      "吗": {
+        "meaning": "",
+        "level": "hsk1"
+      },
+      "呢": {
+        "meaning": "",
+        "level": "hsk1"
+      }
+    },
+    "interjections": {
+      "喂": {
+        "meaning": "hello",
+        "level": "hsk1"
+      }
+    },
+    "nouns": {
+      "家": {
+        "meaning": "home",
+        "level": "hsk1"
+      },
+      "学校": {
+        "meaning": "school",
+        "level": "hsk1"
+      },
+      "饭店": {
+        "meaning": "restaurant",
+        "level": "hsk1"
+      },
+      "商店": {
+        "meaning": "store",
+        "level": "hsk1"
+      },
+      "医院": {
+        "meaning": "hospital",
+        "level": "hsk1"
+      },
+      "火车站": {
+        "meaning": "train station",
+        "level": "hsk1"
+      },
+      "中国": {
+        "meaning": "China",
+        "level": "hsk1"
+      },
+      "北京": {
+        "meaning": "Beijing",
+        "level": "hsk1"
+      },
+      "上": {
+        "meaning": "up",
+        "level": "hsk1"
+      },
+      "下": {
+        "meaning": "down",
+        "level": "hsk1"
+      },
+      "前面": {
+        "meaning": "front",
+        "level": "hsk1"
+      },
+      "后面": {
+        "meaning": "behind",
+        "level": "hsk1"
+      },
+      "里": {
+        "meaning": "inside",
+        "level": "hsk1"
+      },
+      "今天": {
+        "meaning": "today",
+        "level": "hsk1"
+      },
+      "明天": {
+        "meaning": "tomorrow",
+        "level": "hsk1"
+      },
+      "昨天": {
+        "meaning": "yesterday",
+        "level": "hsk1"
+      },
+      "上午": {
+        "meaning": "morning",
+        "level": "hsk1"
+      },
+      "中午": {
+        "meaning": "noon",
+        "level": "hsk1"
+      },
+      "下午": {
+        "meaning": "afternoon",
+        "level": "hsk1"
+      },
+      "年": {
+        "meaning": "year",
+        "level": "hsk1"
+      },
+      "月": {
+        "meaning": "month",
+        "level": "hsk1"
+      },
+      "日": {
+        "meaning": "day",
+        "level": "hsk1"
+      },
+      "星期": {
+        "meaning": "week",
+        "level": "hsk1"
+      },
+      "点": {
+        "meaning": "dot, spot",
+        "level": "hsk1"
+      },
+      "分钟": {
+        "meaning": "minute",
+        "level": "hsk1"
+      },
+      "现在": {
+        "meaning": "now",
+        "level": "hsk1"
+      },
+      "时候": {
+        "meaning": "time",
+        "level": "hsk1"
+      },
+      "爸爸": {
+        "meaning": "father",
+        "level": "hsk1"
+      },
+      "妈妈": {
+        "meaning": "mother",
+        "level": "hsk1"
+      },
+      "儿子": {
+        "meaning": "son",
+        "level": "hsk1"
+      },
+      "女儿": {
+        "meaning": "daughter",
+        "level": "hsk1"
+      },
+      "老师": {
+        "meaning": "teacher",
+        "level": "hsk1"
+      },
+      "学生": {
+        "meaning": "student",
+        "level": "hsk1"
+      },
+      "同学": {
+        "meaning": "shoolmate",
+        "level": "hsk1"
+      },
+      "朋友": {
+        "meaning": "friend",
+        "level": "hsk1"
+      },
+      "医生": {
+        "meaning": "doctor",
+        "level": "hsk1"
+      },
+      "先生": {
+        "meaning": "sir",
+        "level": "hsk1"
+      },
+      "小姐": {
+        "meaning": "Miss",
+        "level": "hsk1"
+      },
+      "衣服": {
+        "meaning": "cloth",
+        "level": "hsk1"
+      },
+      "水": {
+        "meaning": "water",
+        "level": "hsk1"
+      },
+      "菜": {
+        "meaning": "vegetable",
+        "level": "hsk1"
+      },
+      "米饭": {
+        "meaning": "rice",
+        "level": "hsk1"
+      },
+      "水果": {
+        "meaning": "fruit",
+        "level": "hsk1"
+      },
+      "苹果": {
+        "meaning": "apple",
+        "level": "hsk1"
+      },
+      "茶": {
+        "meaning": "tea",
+        "level": "hsk1"
+      },
+      "杯子": {
+        "meaning": "cup",
+        "level": "hsk1"
+      },
+      "钱": {
+        "meaning": "money",
+        "level": "hsk1"
+      },
+      "飞机": {
+        "meaning": "airplane",
+        "level": "hsk1"
+      },
+      "出租车": {
+        "meaning": "taxi",
+        "level": "hsk1"
+      },
+      "电视": {
+        "meaning": "television",
+        "level": "hsk1"
+      },
+      "电脑": {
+        "meaning": "computer",
+        "level": "hsk1"
+      },
+      "电影": {
+        "meaning": "movie",
+        "level": "hsk1"
+      },
+      "天气": {
+        "meaning": "weather",
+        "level": "hsk1"
+      },
+      "猫": {
+        "meaning": "cat",
+        "level": "hsk1"
+      },
+      "狗": {
+        "meaning": "dog",
+        "level": "hsk1"
+      },
+      "东西": {
+        "meaning": "thing",
+        "level": "hsk1"
+      },
+      "人": {
+        "meaning": "person",
+        "level": "hsk1"
+      },
+      "名字": {
+        "meaning": "name",
+        "level": "hsk1"
+      },
+      "书": {
+        "meaning": "book",
+        "level": "hsk1"
+      },
+      "汉语": {
+        "meaning": "mandarin Chinese",
+        "level": "hsk1"
+      },
+      "字": {
+        "meaning": "character",
+        "level": "hsk1"
+      },
+      "桌子": {
+        "meaning": "desk",
+        "level": "hsk1"
+      },
+      "椅子": {
+        "meaning": "chair",
+        "level": "hsk1"
+      }
+    },
+    "verbs": {
+      "谢谢": {
+        "meaning": "thank",
+        "level": "hsk1"
+      },
+      "不客气": {
+        "meaning": "you are welcome",
+        "level": "hsk1"
+      },
+      "再见": {
+        "meaning": "good-bye",
+        "level": "hsk1"
+      },
+      "请": {
+        "meaning": "please",
+        "level": "hsk1"
+      },
+      "对不起": {
+        "meaning": "sorry",
+        "level": "hsk1"
+      },
+      "没关系": {
+        "meaning": "It doesn’t matter",
+        "level": "hsk1"
+      },
+      "是": {
+        "meaning": "be (am, is, are)",
+        "level": "hsk1"
+      },
+      "有": {
+        "meaning": "have",
+        "level": "hsk1"
+      },
+      "看": {
+        "meaning": "look",
+        "level": "hsk1"
+      },
+      "听": {
+        "meaning": "listen",
+        "level": "hsk1"
+      },
+      "说话": {
+        "meaning": "speak",
+        "level": "hsk1"
+      },
+      "读": {
+        "meaning": "read",
+        "level": "hsk1"
+      },
+      "写": {
+        "meaning": "write",
+        "level": "hsk1"
+      },
+      "看见": {
+        "meaning": "see",
+        "level": "hsk1"
+      },
+      "叫": {
+        "meaning": "call",
+        "level": "hsk1"
+      },
+      "来": {
+        "meaning": "come",
+        "level": "hsk1"
+      },
+      "回": {
+        "meaning": "return",
+        "level": "hsk1"
+      },
+      "去": {
+        "meaning": "go",
+        "level": "hsk1"
+      },
+      "吃": {
+        "meaning": "eat",
+        "level": "hsk1"
+      },
+      "喝": {
+        "meaning": "drink",
+        "level": "hsk1"
+      },
+      "睡觉": {
+        "meaning": "sleep",
+        "level": "hsk1"
+      },
+      "打电话": {
+        "meaning": "call up",
+        "level": "hsk1"
+      },
+      "做": {
+        "meaning": "do",
+        "level": "hsk1"
+      },
+      "买": {
+        "meaning": "buy",
+        "level": "hsk1"
+      },
+      "开": {
+        "meaning": "open",
+        "level": "hsk1"
+      },
+      "坐": {
+        "meaning": "sit",
+        "level": "hsk1"
+      },
+      "住": {
+        "meaning": "live",
+        "level": "hsk1"
+      },
+      "学习": {
+        "meaning": "study",
+        "level": "hsk1"
+      },
+      "工作": {
+        "meaning": "work",
+        "level": "hsk1"
+      },
+      "下雨": {
+        "meaning": "rain",
+        "level": "hsk1"
+      },
+      "爱": {
+        "meaning": "love",
+        "level": "hsk1"
+      },
+      "喜欢": {
+        "meaning": "love, like",
+        "level": "hsk1"
+      },
+      "想": {
+        "meaning": "want",
+        "level": "hsk1"
+      },
+      "认识": {
+        "meaning": "know",
+        "level": "hsk1"
+      },
+      "会": {
+        "meaning": "can",
+        "level": "hsk1"
+      },
+      "能": {
+        "meaning": "can, be able to",
+        "level": "hsk1"
+      }
+    },
+    "adjectives": {
+      "好": {
+        "meaning": "good",
+        "level": "hsk1"
+      },
+      "大": {
+        "meaning": "big",
+        "level": "hsk1"
+      },
+      "小": {
+        "meaning": "small",
+        "level": "hsk1"
+      },
+      "多": {
+        "meaning": "many, much",
+        "level": "hsk1"
+      },
+      "少": {
+        "meaning": "few, little",
+        "level": "hsk1"
+      },
+      "冷": {
+        "meaning": "cold",
+        "level": "hsk1"
+      },
+      "热": {
+        "meaning": "hot",
+        "level": "hsk1"
+      },
+      "高兴": {
+        "meaning": "happy",
+        "level": "hsk1"
+      },
+      "漂亮": {
+        "meaning": "beautiful",
+        "level": "hsk1"
+      }
+    }
+  }
+  

@@ -1,14 +1,5546 @@
 {
-    "nouns": {
+    "明け方": {
+        "meaning": "dawn"
     },
-    "verbs": {
+    "足跡": {
+        "meaning": "footprints"
     },
-    "adverbs": {
+    "売店": {
+        "meaning": "shop,stand"
     },
-    "adjectives": {
+    "長男": {
+        "meaning": "eldest son"
     },
-    "particles": {
+    "楕円": {
+        "meaning": "ellipse"
     },
-    "adjectivals": {
+    "大学院": {
+        "meaning": "graduate school"
+    },
+    "出入口": {
+        "meaning": "exit and entrance"
+    },
+    "宴会": {
+        "meaning": "party,banquet"
+    },
+    "円周": {
+        "meaning": "circumference"
+    },
+    "父母": {
+        "meaning": "father and mother,parents"
+    },
+    "学科": {
+        "meaning": "study subject,course of study"
+    },
+    "学会": {
+        "meaning": "scientific society,academic meeting"
+    },
+    "学力": {
+        "meaning": "scholarship,knowledge,literary ability"
+    },
+    "外科": {
+        "meaning": "surgical department"
+    },
+    "花火": {
+        "meaning": "fireworks"
+    },
+    "半径": {
+        "meaning": "radius"
+    },
+    "半島": {
+        "meaning": "peninsula"
+    },
+    "早口": {
+        "meaning": "fast-talking"
+    },
+    "寺院": {
+        "meaning": "temple"
+    },
+    "人文科学": {
+        "meaning": "social sciences,humanities"
+    },
+    "時速": {
+        "meaning": "speed (per hour)"
+    },
+    "過半数": {
+        "meaning": "majority"
+    },
+    "会館": {
+        "meaning": "meeting hall,assembly hall"
+    },
+    "加速度": {
+        "meaning": "acceleration"
+    },
+    "国王": {
+        "meaning": "king"
+    },
+    "国立": {
+        "meaning": "national"
+    },
+    "国籍": {
+        "meaning": "nationality"
+    },
+    "校舎": {
+        "meaning": "school building"
+    },
+    "校庭": {
+        "meaning": "campus"
+    },
+    "待合室": {
+        "meaning": "waiting room"
+    },
+    "窓口": {
+        "meaning": "ticket window"
+    },
+    "毎度": {
+        "meaning": "each time,common service-sector greeting"
+    },
+    "名刺": {
+        "meaning": "business card"
+    },
+    "店屋": {
+        "meaning": "store,shop"
+    },
+    "木材": {
+        "meaning": "lumber,timber,wood"
+    },
+    "内科": {
+        "meaning": "internist clinic,internal medicine"
+    },
+    "並木": {
+        "meaning": "roadside tree,row of trees"
+    },
+    "理科": {
+        "meaning": "science"
+    },
+    "刺身": {
+        "meaning": "sliced raw fish"
+    },
+    "青少年": {
+        "meaning": "youth,young person"
+    },
+    "赤道": {
+        "meaning": "equator"
+    },
+    "社会科学": {
+        "meaning": "social science"
+    },
+    "社説": {
+        "meaning": "editorial,leading article"
+    },
+    "新幹線": {
+        "meaning": "bullet train (very high speed),shinkansen"
+    },
+    "白髪": {
+        "meaning": "white or grey hair,trendy hair bleaching"
+    },
+    "自然科学": {
+        "meaning": "natural science"
+    },
+    "書店": {
+        "meaning": "bookshop"
+    },
+    "商社": {
+        "meaning": "trading company,firm"
+    },
+    "商店": {
+        "meaning": "shop,business firm"
+    },
+    "習字": {
+        "meaning": "penmanship"
+    },
+    "速力": {
+        "meaning": "speed"
+    },
+    "足袋": {
+        "meaning": "tabi,Japanese socks (with split toe)"
+    },
+    "東洋": {
+        "meaning": "Orient"
+    },
+    "売れ行き": {
+        "meaning": "sales; demand"
+    },
+    "売上": {
+        "meaning": "amount sold,proceeds"
+    },
+    "売り切れ": {
+        "meaning": "sold-out"
+    },
+    "洋品店": {
+        "meaning": "shop which handles Western-style apparel and accessories"
+    },
+    "材木": {
+        "meaning": "lumber,timber"
+    },
+    "売買": {
+        "meaning": "trade,buying and selling"
+    },
+    "募集": {
+        "meaning": "recruiting,taking applications"
+    },
+    "遠足": {
+        "meaning": "trip,hike,picnic"
+    },
+    "発売": {
+        "meaning": "sale"
+    },
+    "外れる": {
+        "meaning": "to be disconnected,to get out of place,to be off,to be out (e.g. of gear)"
+    },
+    "閉会": {
+        "meaning": "closure"
+    },
+    "昼寝": {
+        "meaning": "nap (at home),siesta"
+    },
+    "移転": {
+        "meaning": "moving,transfer,demise"
+    },
+    "自習": {
+        "meaning": "self-study"
+    },
+    "実習": {
+        "meaning": "practice,training"
+    },
+    "開会": {
+        "meaning": "opening of a meeting"
+    },
+    "回転": {
+        "meaning": "rotation,revolution,turning"
+    },
+    "加速": {
+        "meaning": "acceleration"
+    },
+    "見学": {
+        "meaning": "inspection,study by observation,field trip"
+    },
+    "転がる": {
+        "meaning": "to roll,to tumble"
+    },
+    "転がす": {
+        "meaning": "to roll"
+    },
+    "待ち合わせる": {
+        "meaning": "to rendezvous,to meet at a prearranged place and time"
+    },
+    "入社": {
+        "meaning": "entry to a company"
+    },
+    "押さえる": {
+        "meaning": "to pin down; to hold down; to press down"
+    },
+    "領収": {
+        "meaning": "receipt,voucher"
+    },
+    "刺さる": {
+        "meaning": "to stick,to be stuck"
+    },
+    "刺す": {
+        "meaning": "to pierce,to stab,to prick,to thrust"
+    },
+    "司会": {
+        "meaning": "chairmanship"
+    },
+    "集合": {
+        "meaning": "gathering,assembly,meeting,set (math)"
+    },
+    "集会": {
+        "meaning": "meeting,assembly"
+    },
+    "速達": {
+        "meaning": "express,special delivery"
+    },
+    "足る": {
+        "meaning": "to be sufficient,to be enough"
+    },
+    "特売": {
+        "meaning": "special sale"
+    },
+    "売り切れる": {
+        "meaning": "to be sold out"
+    },
+    "輸血": {
+        "meaning": "blood transfusion"
+    },
+    "輸送": {
+        "meaning": "transport,transportation"
+    },
+    "あるいは": {
+        "meaning": "or; either; maybe; perhaps; possibly"
+    },
+    "ばかりに": {
+        "meaning": "simply because; on account of (negative result)"
+    },
+    "どうやら": {
+        "meaning": "possibly; apparently; seems like; somehow; barely"
+    },
+    "どうせ": {
+        "meaning": "anyhow,in any case,at any rate"
+    },
+    "再び": {
+        "meaning": "again; once more"
+    },
+    "逆に": {
+        "meaning": "conversely; on the contrary"
+    },
+    "反面": {
+        "meaning": "while, although; on the other hand"
+    },
+    "果たして": {
+        "meaning": "as was expected; sure enough; really; actually"
+    },
+    "一応": {
+        "meaning": "once,tentatively,in outline,for the time being"
+    },
+    "以外": {
+        "meaning": "with the exception of; excepting"
+    },
+    "以上に": {
+        "meaning": "more than; not less than; beyond"
+    },
+    "いきなり": {
+        "meaning": "(uk) abruptly,suddenly,all of a sudden,without warning"
+    },
+    "一気に": {
+        "meaning": "in one go; without stopping; all at once; immediately; instantly; right away"
+    },
+    "一旦": {
+        "meaning": "once,for a moment,one morning,temporarily"
+    },
+    "まだしも": {
+        "meaning": "rather; better"
+    },
+    "全く.*ない": {
+        "meaning": "not at all"
+    },
+    "元々": {
+        "meaning": "originally,by nature,from the start"
+    },
+    "なお": {
+        "meaning": "still; yet; furthermore; in addition"
+    },
+    "恐らく": {
+        "meaning": "perhaps; likely; probably; I dare say"
+    },
+    "ろくに.*ない": {
+        "meaning": "not well; not enough; improperly; insufficiently; unsatisfactorily"
+    },
+    "再三": {
+        "meaning": "again and again,repeatedly"
+    },
+    "幸いなことに": {
+        "meaning": "fortunately; luckily; thankfully"
+    },
+    "早速": {
+        "meaning": "at once,immediately,without delay,promptly"
+    },
+    "せっかく": {
+        "meaning": "especially; (thank you for) troubling to, going to great pains for"
+    },
+    "せめて": {
+        "meaning": "offense,method of attack"
+    },
+    "次第に": {
+        "meaning": "gradually (progress into a state); in sequence; in order"
+    },
+    "その上": {
+        "meaning": "besides; in addition; furthermore"
+    },
+    "末に": {
+        "meaning": "finally; after; following; at the end/conclusion of"
+    },
+    "少しも.*ない": {
+        "meaning": "not one bit; not even a little"
+    },
+    "少なくとも": {
+        "meaning": "at least"
+    },
+    "直ちに": {
+        "meaning": "at once; immediately; directly; in person; automatically"
+    },
+    "と同時に": {
+        "meaning": "at the same time as; while; simultaneously"
+    },
+    "とっくに": {
+        "meaning": "long ago,already,a long time ago"
+    },
+    "はもとより": {
+        "meaning": "also; let alone; from the beginning"
+    },
+    "はともかく": {
+        "meaning": "anyhow; anyway; regardless; in any case; whether or not"
+    },
+    "わずかに": {
+        "meaning": "slightly; only; barely; narrowly"
+    },
+    "やがて": {
+        "meaning": "before long; soon; almost; eventually"
+    },
+    "よほど": {
+        "meaning": "very; greatly; much; to a large extent"
+    },
+    "よっぽど": {
+        "meaning": "very; greatly; much; to a large extent"
+    },
+    "要するに": {
+        "meaning": "in short; in a word; to sum up; to put it simply"
+    },
+    "青白い": {
+        "meaning": "pale,pallid"
+    },
+    "意地悪": {
+        "meaning": "malicious,ill-tempered,unkind"
+    },
+    "真っ青": {
+        "meaning": "deep blue,ghastly pale"
+    },
+    "真っ白": {
+        "meaning": "pure white"
+    },
+    "透明": {
+        "meaning": "transparency,cleanness"
+    },
+    "ばかり": {
+        "meaning": "about, approximately"
+    },
+    "ばかりか": {
+        "meaning": "not only... but also; as well as"
+    },
+    "どころか": {
+        "meaning": "far from; anything but; let alone; not to mention; much less"
+    },
+    "か.*ないかのうちに": {
+        "meaning": "just as; right after; as soon as"
+    },
+    "もの": {
+        "meaning": "because; indicates reason/excuse/dissatisfaction"
+    },
+    "もん": {
+        "meaning": "because; indicates reason/excuse/dissatisfaction"
+    },
+    "ものか": {
+        "meaning": "as if (something untrue were actually true); there's no way"
+    },
+    "もんか": {
+        "meaning": "as if (something untrue were actually true); there's no way"
+    },
+    "ものの": {
+        "meaning": "but; although; even though"
+    },
+    "にて": {
+        "meaning": "in, at, with, by (formal particle)"
+    },
+    "のみ": {
+        "meaning": "only; nothing but"
+    },
+    "ては": {
+        "meaning": "whenever; if; when; repetitive action"
+    },
+    "では": {
+        "meaning": "whenever; if; when; repetitive action"
+    },
+    "ては.*ては": {
+        "meaning": "repetitive situations/actions"
+    },
+    "とか": {
+        "meaning": "I heard that"
+    },
+    "とも": {
+        "meaning": "even if; no matter (who, what, when, where, why, how); though"
+    },
+    "つつ": {
+        "meaning": "while; even though; despite"
+    },
+    "やら.*やら": {
+        "meaning": "such things as A and B; A and B and so on"
+    },
+    "より": {
+        "meaning": "from (a time, place, or person)"
+    },
+    "Kanji": {
+        "meaning": "English"
+    },
+    "呼び掛ける": {
+        "meaning": "to call out to,to accost,to address (crowd),to appeal"
+    },
+    "定員": {
+        "meaning": "fixed number of regular personnel,capacity (of boat, etc.)"
+    },
+    "地盤": {
+        "meaning": "(the) ground"
+    },
+    "そのため": {
+        "meaning": "hence,for that reason"
+    },
+    "占う": {
+        "meaning": "to forecast,to predict"
+    },
+    "特殊": {
+        "meaning": "special,unique"
+    },
+    "仮名遣い": {
+        "meaning": "kana orthography,syllabary spelling"
+    },
+    "四季": {
+        "meaning": "four seasons"
+    },
+    "成立": {
+        "meaning": "coming into existence,arrangements,establishment,completion"
+    },
+    "おかげさまで": {
+        "meaning": "Thanks to god,thanks to you"
+    },
+    "固い": {
+        "meaning": "stubborn,firm (not viscous or easily moved)"
+    },
+    "生存": {
+        "meaning": "existence,being,survival"
+    },
+    "響き": {
+        "meaning": "echo,sound,reverberation,noise"
+    },
+    "活力": {
+        "meaning": "vitality,energy"
+    },
+    "出張": {
+        "meaning": "official tour,business trip"
+    },
+    "レベル": {
+        "meaning": "level"
+    },
+    "架空": {
+        "meaning": "aerial,overhead,fiction,fanciful"
+    },
+    "梯子": {
+        "meaning": "ladder,stairs"
+    },
+    "鉢": {
+        "meaning": "a bowl,a pot"
+    },
+    "美容": {
+        "meaning": "beauty of figure or form"
+    },
+    "整備": {
+        "meaning": "adjustment,completion,consolidation"
+    },
+    "払い込む": {
+        "meaning": "to deposit,to pay in"
+    },
+    "焚く": {
+        "meaning": "to burn,to kindle,to build a fire"
+    },
+    "課税": {
+        "meaning": "taxation"
+    },
+    "堅い": {
+        "meaning": "hard (esp. wood),steadfast,honorable,stuffy writing"
+    },
+    "ばからしい": {
+        "meaning": "absurd"
+    },
+    "蒸し暑い": {
+        "meaning": "humid,sultry"
+    },
+    "サンプル": {
+        "meaning": "sample"
+    },
+    "工員": {
+        "meaning": "factory worker"
+    },
+    "直径": {
+        "meaning": "diameter"
+    },
+    "煙い": {
+        "meaning": "smoky"
+    },
+    "紅葉": {
+        "meaning": "(1) (Japanese) maple"
+    },
+    "正門": {
+        "meaning": "main gate,main entrance"
+    },
+    "不通": {
+        "meaning": "suspension,interruption,stoppage,tie-up,cessation"
+    },
+    "花嫁": {
+        "meaning": "bride"
+    },
+    "詫びる": {
+        "meaning": "to apologize"
+    },
+    "やむをえない": {
+        "meaning": "cannot be helped,unavoidable"
+    },
+    "屋外": {
+        "meaning": "outdoors"
+    },
+    "万歳": {
+        "meaning": "hurrah, cheers"
+    },
+    "訳す": {
+        "meaning": "to translate"
+    },
+    "はきはき": {
+        "meaning": "lucidly"
+    },
+    "あてはまる": {
+        "meaning": "to be applicable,to come under (a category),to fulfill"
+    },
+    "鈴": {
+        "meaning": "bell"
+    },
+    "やっつける": {
+        "meaning": "to attack (an enemy),to beat,to do away with,to finish off"
+    },
+    "カセット": {
+        "meaning": "cassette (tape)"
+    },
+    "引き止める": {
+        "meaning": "to detain,to check,to restrain"
+    },
+    "略す": {
+        "meaning": "to abbreviate"
+    },
+    "効力": {
+        "meaning": "effect,efficacy,validity,potency"
+    },
+    "原産": {
+        "meaning": "place of origin,habitat"
+    },
+    "一段と": {
+        "meaning": "greater,more,further,still more"
+    },
+    "広さ": {
+        "meaning": "extent"
+    },
+    "夫妻": {
+        "meaning": "man and wife,married couple"
+    },
+    "演劇": {
+        "meaning": "play (theatrical)"
+    },
+    "あかんぼう": {
+        "meaning": "baby"
+    },
+    "暴れる": {
+        "meaning": "to act violently,to rage,to struggle,to be riotous"
+    },
+    "のこぎり": {
+        "meaning": "saw"
+    },
+    "緯度": {
+        "meaning": "latitude (nav.)"
+    },
+    "ほどく": {
+        "meaning": "to unfasten"
+    },
+    "見付かる": {
+        "meaning": "to be found,to be discovered"
+    },
+    "商業": {
+        "meaning": "commerce,trade,business"
+    },
+    "器具": {
+        "meaning": "utensil"
+    },
+    "フリー": {
+        "meaning": "free"
+    },
+    "釜": {
+        "meaning": "iron pot,kettle"
+    },
+    "酒場": {
+        "meaning": "bar,bar-room"
+    },
+    "スケジュール": {
+        "meaning": "schedule"
+    },
+    "祭る": {
+        "meaning": "to deify,to enshrine"
+    },
+    "かわいがる": {
+        "meaning": "to love,to be affectionate"
+    },
+    "同格": {
+        "meaning": "the same rank,equality,apposition"
+    },
+    "大通り": {
+        "meaning": "main street"
+    },
+    "法則": {
+        "meaning": "law,rule"
+    },
+    "実物": {
+        "meaning": "real thing,original"
+    },
+    "張り切る": {
+        "meaning": "to be in high spirits,to be full of vigor"
+    },
+    "点ける": {
+        "meaning": "to turn on,to switch on,to light up"
+    },
+    "長所": {
+        "meaning": "(1) strong point,merit,(2) advantage"
+    },
+    "揃う": {
+        "meaning": "to become complete,to be equal,to be all present,to gather"
+    },
+    "就任": {
+        "meaning": "inauguration,assumption of office"
+    },
+    "調味料": {
+        "meaning": "condiment,seasoning"
+    },
+    "煉瓦": {
+        "meaning": "brick"
+    },
+    "月給": {
+        "meaning": "monthly salary"
+    },
+    "打ち消す": {
+        "meaning": "to deny,to negate,to contradict"
+    },
+    "謙遜": {
+        "meaning": "humble,humility,modesty"
+    },
+    "吐き気": {
+        "meaning": "nausea,sickness in the stomach"
+    },
+    "点く": {
+        "meaning": "to catch fire,(electricity) comes on"
+    },
+    "憧れる": {
+        "meaning": "to long for,to yearn after,to admire"
+    },
+    "宛名": {
+        "meaning": "address,direction"
+    },
+    "驚かす": {
+        "meaning": "to surprise,to frighten,to create a stir"
+    },
+    "積む": {
+        "meaning": "to pile up,to stack"
+    },
+    "真似る": {
+        "meaning": "to mimic,to imitate"
+    },
+    "田植え": {
+        "meaning": "rice planting"
+    },
+    "調節": {
+        "meaning": "regulation,adjustment,control"
+    },
+    "延びる": {
+        "meaning": "to be prolonged"
+    },
+    "おやつ": {
+        "meaning": "(1) between meal snack,afternoon refreshment"
+    },
+    "勝負": {
+        "meaning": "victory or defeat,match,contest,game,bout"
+    },
+    "受話器": {
+        "meaning": "(telephone) receiver"
+    },
+    "手首": {
+        "meaning": "wrist"
+    },
+    "寝巻": {
+        "meaning": "sleep-wear,nightclothes,pyjamas,nightgown,nightdress"
+    },
+    "押える": {
+        "meaning": "to stop,to restrain,to seize,to repress,to suppress,to press down"
+    },
+    "芸能": {
+        "meaning": "public entertainment,accomplishments,attainments"
+    },
+    "掃く": {
+        "meaning": "to sweep,to brush,to gather up"
+    },
+    "鉄橋": {
+        "meaning": "railway bridge,iron bridge"
+    },
+    "電池": {
+        "meaning": "battery"
+    },
+    "取り消す": {
+        "meaning": "to cancel"
+    },
+    "姪": {
+        "meaning": "niece"
+    },
+    "ごちそうさま": {
+        "meaning": "feast"
+    },
+    "始めに": {
+        "meaning": "to begin with,first of all"
+    },
+    "持参": {
+        "meaning": "bringing,taking,carrying"
+    },
+    "列島": {
+        "meaning": "chain of islands"
+    },
+    "かゆい": {
+        "meaning": "itchy,itching"
+    },
+    "おだいじに": {
+        "meaning": "Take care of yourself"
+    },
+    "誓う": {
+        "meaning": "to swear,to vow,to take an oath,to pledge"
+    },
+    "中旬": {
+        "meaning": "second third of a month"
+    },
+    "賞金": {
+        "meaning": "prize,monetary award"
+    },
+    "回数券": {
+        "meaning": "book of tickets"
+    },
+    "直通": {
+        "meaning": "direct communication"
+    },
+    "金魚": {
+        "meaning": "goldfish"
+    },
+    "卸す": {
+        "meaning": "to sell wholesale,grated (vegetables)"
+    },
+    "性能": {
+        "meaning": "ability,efficiency"
+    },
+    "順々": {
+        "meaning": "in order,in turn"
+    },
+    "レンズ": {
+        "meaning": "lens"
+    },
+    "産地": {
+        "meaning": "producing area"
+    },
+    "酢": {
+        "meaning": "vinegar"
+    },
+    "水蒸気": {
+        "meaning": "water vapour,steam"
+    },
+    "稀": {
+        "meaning": "rare,seldom"
+    },
+    "すっきり": {
+        "meaning": "shapely,clear,neat"
+    },
+    "両側": {
+        "meaning": "both sides"
+    },
+    "ポスター": {
+        "meaning": "poster"
+    },
+    "便箋": {
+        "meaning": "writing paper,stationery"
+    },
+    "日陰": {
+        "meaning": "shadow"
+    },
+    "圧縮": {
+        "meaning": "compression,condensation,pressure"
+    },
+    "超える": {
+        "meaning": "to exceed,to cross over,to cross"
+    },
+    "体操": {
+        "meaning": "gymnastics,physical exercises,calisthenics"
+    },
+    "そのほか": {
+        "meaning": "otherwise"
+    },
+    "無数": {
+        "meaning": "countless number,infinite number"
+    },
+    "御免": {
+        "meaning": "your pardon,declining (something),dismissal,permission"
+    },
+    "跳ねる": {
+        "meaning": "to jump,to leap"
+    },
+    "突き当たる": {
+        "meaning": "to run into,to collide with"
+    },
+    "真空": {
+        "meaning": "vacuum,hollow,empty"
+    },
+    "出勤": {
+        "meaning": "going to work,at work"
+    },
+    "標識": {
+        "meaning": "sign,mark"
+    },
+    "手帳": {
+        "meaning": "notebook"
+    },
+    "対策": {
+        "meaning": "counter-plan,counter-measure"
+    },
+    "散らす": {
+        "meaning": "to scatter,to disperse,to distribute"
+    },
+    "だいいち": {
+        "meaning": "first,foremost,# 1"
+    },
+    "おまちどおさま": {
+        "meaning": "Sorry to have kept you waiting"
+    },
+    "園芸": {
+        "meaning": "horticulture,gardening"
+    },
+    "重量": {
+        "meaning": "(1) weight,(2) heavyweight boxer"
+    },
+    "案外": {
+        "meaning": "unexpectedly"
+    },
+    "代名詞": {
+        "meaning": "pronoun"
+    },
+    "公表": {
+        "meaning": "official announcement,proclamation"
+    },
+    "射す": {
+        "meaning": "to shine,to strike"
+    },
+    "稽古": {
+        "meaning": "practice,training,study"
+    },
+    "活躍": {
+        "meaning": "activity"
+    },
+    "崩す": {
+        "meaning": "to destroy,to pull down,to make change (money)"
+    },
+    "見慣れる": {
+        "meaning": "to become used to seeing,to be familiar with"
+    },
+    "広場": {
+        "meaning": "plaza"
+    },
+    "薬缶": {
+        "meaning": "kettle"
+    },
+    "学級": {
+        "meaning": "grade in school"
+    },
+    "下る": {
+        "meaning": "to get down,to descend"
+    },
+    "おしゃれ": {
+        "meaning": "smartly dressed,someone smartly dressed,fashion-conscious"
+    },
+    "内線": {
+        "meaning": "phone extension,indoor wiring,inner line"
+    },
+    "雑音": {
+        "meaning": "noise (jarring, grating)"
+    },
+    "下町": {
+        "meaning": "Shitamachi,lower parts of town"
+    },
+    "建つ": {
+        "meaning": "to erect,to be erected,to be built"
+    },
+    "定期券": {
+        "meaning": "commuter pass,season ticket"
+    },
+    "王女": {
+        "meaning": "princess"
+    },
+    "けれど": {
+        "meaning": "but,however"
+    },
+    "けれども": {
+        "meaning": "but,however"
+    },
+    "神様": {
+        "meaning": "god"
+    },
+    "要旨": {
+        "meaning": "gist,essentials,summary,fundamentals"
+    },
+    "きっかけ": {
+        "meaning": "chance,start,cue,excuse"
+    },
+    "車庫": {
+        "meaning": "garage,car shed"
+    },
+    "のろのろ": {
+        "meaning": "slowly,sluggishly"
+    },
+    "職人": {
+        "meaning": "worker,mechanic,artisan,craftsman"
+    },
+    "消毒": {
+        "meaning": "disinfection,sterilization"
+    },
+    "炊事": {
+        "meaning": "cooking,culinary arts"
+    },
+    "不運": {
+        "meaning": "unlucky,misfortune,bad luck,fate"
+    },
+    "寝台": {
+        "meaning": "bed,couch"
+    },
+    "汲む": {
+        "meaning": "(1) to draw (water),to dip,to scoop,to pump"
+    },
+    "カーブ": {
+        "meaning": "(1) curve,(2) curve ball (baseball)"
+    },
+    "物騒": {
+        "meaning": "dangerous,disturbed,insecure"
+    },
+    "日程": {
+        "meaning": "agenda"
+    },
+    "仲良し": {
+        "meaning": "intimate friend,bosom buddy,chum"
+    },
+    "区切る": {
+        "meaning": "to punctuate,to cut off,to mark off,to stop,to put an end to"
+    },
+    "測量": {
+        "meaning": "measurement,surveying"
+    },
+    "サークル": {
+        "meaning": "circle,sports club (i.e. at a company)"
+    },
+    "うんと": {
+        "meaning": "a great deal,very much"
+    },
+    "思い掛けない": {
+        "meaning": "unexpected,casual"
+    },
+    "公害": {
+        "meaning": "public nuisance,pollution"
+    },
+    "スクール": {
+        "meaning": "school"
+    },
+    "反省": {
+        "meaning": "reflection,reconsideration,introspection,meditation,contemplation"
+    },
+    "初級": {
+        "meaning": "elementary level"
+    },
+    "扇ぐ": {
+        "meaning": "to fan,to flap"
+    },
+    "具える": {
+        "meaning": "to be furnished with"
+    },
+    "膨大": {
+        "meaning": "huge,bulky,enormous,extensive,swelling,expansion"
+    },
+    "拭く": {
+        "meaning": "to wipe,to dry"
+    },
+    "じゃんけん": {
+        "meaning": "(n) rock-scissors-paper game"
+    },
+    "オルガン": {
+        "meaning": "organ"
+    },
+    "寿命": {
+        "meaning": "life span"
+    },
+    "瓦": {
+        "meaning": "roof tile"
+    },
+    "ブローチ": {
+        "meaning": "brooch"
+    },
+    "空想": {
+        "meaning": "daydream,fantasy,fancy,vision"
+    },
+    "照る": {
+        "meaning": "to shine"
+    },
+    "農村": {
+        "meaning": "agricultural community,farm village,rural"
+    },
+    "浮ぶ": {
+        "meaning": "to float,to rise to surface,to come to mind"
+    },
+    "寝間着": {
+        "meaning": "sleep-wear,nightclothes,pyjamas,nightgown,nightdress"
+    },
+    "丼": {
+        "meaning": "porcelain bowl,bowl of rice with food on top"
+    },
+    "南極": {
+        "meaning": "south pole,Antarctic"
+    },
+    "散らかる": {
+        "meaning": "to be in disorder,to lie scattered around"
+    },
+    "揚げる": {
+        "meaning": "to lift,to fry"
+    },
+    "中世": {
+        "meaning": "Middle Ages,mediaeval times"
+    },
+    "肘": {
+        "meaning": "elbow"
+    },
+    "統一": {
+        "meaning": "unity,consolidation,uniformity"
+    },
+    "随筆": {
+        "meaning": "essays,miscellaneous writings"
+    },
+    "ストップ": {
+        "meaning": "stop"
+    },
+    "ダイヤル": {
+        "meaning": "dial"
+    },
+    "座布団": {
+        "meaning": "cushion (Japanese)"
+    },
+    "北極": {
+        "meaning": "North Pole"
+    },
+    "実る": {
+        "meaning": "to bear fruit,to ripen"
+    },
+    "面積": {
+        "meaning": "area"
+    },
+    "破片": {
+        "meaning": "fragment,splinter,broken piece"
+    },
+    "まごまご": {
+        "meaning": "confused"
+    },
+    "税関": {
+        "meaning": "customs house"
+    },
+    "作る": {
+        "meaning": "to make,to create"
+    },
+    "造る": {
+        "meaning": "to make,to create"
+    },
+    "リポート": {
+        "meaning": "report,paper"
+    },
+    "杉": {
+        "meaning": "Japanese cedar"
+    },
+    "潰す": {
+        "meaning": "to smash,to waste"
+    },
+    "捕る": {
+        "meaning": "to take,to catch (fish),to capture"
+    },
+    "近々": {
+        "meaning": "nearness,before long"
+    },
+    "モダン": {
+        "meaning": "modern"
+    },
+    "ちぎる": {
+        "meaning": "to cut up fine,to pick (fruit)"
+    },
+    "客間": {
+        "meaning": "parlor,guest room"
+    },
+    "逆様": {
+        "meaning": "inversion,upside down"
+    },
+    "清掃": {
+        "meaning": "cleaning"
+    },
+    "実感": {
+        "meaning": "feelings (actual, true)"
+    },
+    "並行": {
+        "meaning": "(going) side by side,concurrent,abreast,at the same time"
+    },
+    "安易": {
+        "meaning": "easy-going"
+    },
+    "田ぼ": {
+        "meaning": "paddy field,farm"
+    },
+    "突く": {
+        "meaning": "(1) to thrust,to strike,(2) to poke"
+    },
+    "友好": {
+        "meaning": "friendship"
+    },
+    "活字": {
+        "meaning": "printing type"
+    },
+    "蛇口": {
+        "meaning": "faucet,tap"
+    },
+    "狙い": {
+        "meaning": "aim"
+    },
+    "コース": {
+        "meaning": "course"
+    },
+    "本来": {
+        "meaning": "essentially,naturally,by nature"
+    },
+    "未満": {
+        "meaning": "less than,insufficient"
+    },
+    "振舞う": {
+        "meaning": "to behave,to conduct oneself,to entertain (vt)"
+    },
+    "送り仮名": {
+        "meaning": "part of word written in kana"
+    },
+    "日帰り": {
+        "meaning": "day trip"
+    },
+    "わりあいに": {
+        "meaning": "comparatively"
+    },
+    "ぶつかる": {
+        "meaning": "to strike,to collide with"
+    },
+    "こんばんは": {
+        "meaning": "good evening"
+    },
+    "鉄砲": {
+        "meaning": "gun"
+    },
+    "敷く": {
+        "meaning": "to spread out,to lay out"
+    },
+    "賞品": {
+        "meaning": "prize,trophy"
+    },
+    "受取": {
+        "meaning": "receipt"
+    },
+    "うっかり": {
+        "meaning": "carelessly,thoughtlessly,inadvertently"
+    },
+    "洗剤": {
+        "meaning": "detergent,washing material"
+    },
+    "錆びる": {
+        "meaning": "to rust,to become rusty"
+    },
+    "鉱物": {
+        "meaning": "mineral"
+    },
+    "くれぐれも": {
+        "meaning": "repeatedly,sincerely,earnestly"
+    },
+    "船便": {
+        "meaning": "surface mail (ship)"
+    },
+    "真っ先": {
+        "meaning": "the head,the foremost,beginning"
+    },
+    "手洗い": {
+        "meaning": "restroom,lavatory,hand-washing"
+    },
+    "人差指": {
+        "meaning": "index finger"
+    },
+    "現に": {
+        "meaning": "actually,really"
+    },
+    "電球": {
+        "meaning": "light bulb"
+    },
+    "枕": {
+        "meaning": "pillow,bolster"
+    },
+    "ともかく": {
+        "meaning": "anyhow,anyway,somehow or other,generally speaking,in any case"
+    },
+    "貸家": {
+        "meaning": "house for rent"
+    },
+    "一休み": {
+        "meaning": "a rest"
+    },
+    "マラソン": {
+        "meaning": "marathon"
+    },
+    "正方形": {
+        "meaning": "square"
+    },
+    "捜す": {
+        "meaning": "to search,to seek,to look for"
+    },
+    "経度": {
+        "meaning": "longitude"
+    },
+    "専制": {
+        "meaning": "despotism,autocracy"
+    },
+    "しゃぶる": {
+        "meaning": "to suck,to chew"
+    },
+    "付近": {
+        "meaning": "neighbourhood,vicinity,environs"
+    },
+    "水滴": {
+        "meaning": "drop of water"
+    },
+    "挿す": {
+        "meaning": "to insert,to put in,to graft,to wear in belt"
+    },
+    "被せる": {
+        "meaning": "to cover (with something)"
+    },
+    "ローマじ": {
+        "meaning": "romanization,Roman letters"
+    },
+    "突っ込む": {
+        "meaning": "to plunge into,to go into deeply"
+    },
+    "引っ繰り返る": {
+        "meaning": "to be overturned,to be upset,to topple over,to be reversed"
+    },
+    "濁る": {
+        "meaning": "to become muddy,to get impure"
+    },
+    "改める": {
+        "meaning": "to change,to alter,to reform,to revise"
+    },
+    "承る": {
+        "meaning": "(hum) to hear,to be told,to know"
+    },
+    "隙間": {
+        "meaning": "crevice,crack,gap,opening"
+    },
+    "糊": {
+        "meaning": "paste,starch"
+    },
+    "石鹸": {
+        "meaning": "soap"
+    },
+    "全身": {
+        "meaning": "the whole body,full-length (portrait)"
+    },
+    "送料": {
+        "meaning": "postage,carriage"
+    },
+    "気を付ける": {
+        "meaning": "to be careful,to pay attention,to take care"
+    },
+    "予備": {
+        "meaning": "preparation,preliminaries,reserve,spare"
+    },
+    "侵入": {
+        "meaning": "penetration,invasion,raid,aggression,trespass"
+    },
+    "広める": {
+        "meaning": "to broaden,to propagate"
+    },
+    "西暦": {
+        "meaning": "Christian Era,anno domini (A.D.)"
+    },
+    "全集": {
+        "meaning": "complete works"
+    },
+    "為替": {
+        "meaning": "money order,exchange"
+    },
+    "堀": {
+        "meaning": "moat,canal"
+    },
+    "冷ます": {
+        "meaning": "to cool,to dampen,to let cool"
+    },
+    "攻める": {
+        "meaning": "to attack,to assault"
+    },
+    "著す": {
+        "meaning": "to write,to publish"
+    },
+    "四捨五入": {
+        "meaning": "rounding up (fractions)"
+    },
+    "競馬": {
+        "meaning": "horse racing"
+    },
+    "勇ましい": {
+        "meaning": "brave,valiant,gallant,courageous"
+    },
+    "平日": {
+        "meaning": "weekday,ordinary days"
+    },
+    "鑑賞": {
+        "meaning": "appreciation"
+    },
+    "氏名": {
+        "meaning": "full name,identity"
+    },
+    "分解": {
+        "meaning": "analysis,disassembly"
+    },
+    "回り道": {
+        "meaning": "detour"
+    },
+    "はめる": {
+        "meaning": "(col) to get in,to insert,to put on,to make love"
+    },
+    "的確": {
+        "meaning": "precise,accurate"
+    },
+    "冷める": {
+        "meaning": "to become cool,to wear off,to abate,to subside"
+    },
+    "流行る": {
+        "meaning": "to flourish,to thrive,to be popular,to come into fashion"
+    },
+    "停止": {
+        "meaning": "suspension,interruption,stoppage,ban"
+    },
+    "合理": {
+        "meaning": "rational"
+    },
+    "キャンパス": {
+        "meaning": "campus"
+    },
+    "テニスコート": {
+        "meaning": "tennis court"
+    },
+    "銘々": {
+        "meaning": "each,individual"
+    },
+    "乗車": {
+        "meaning": "taking a train,entraining"
+    },
+    "文体": {
+        "meaning": "literary style"
+    },
+    "郡": {
+        "meaning": "country,district"
+    },
+    "ランニング": {
+        "meaning": "(1) running,(2) tank top"
+    },
+    "刷る": {
+        "meaning": "to print"
+    },
+    "蹴る": {
+        "meaning": "to kick"
+    },
+    "塞ぐ": {
+        "meaning": "to stop up,to close up,to block (up)"
+    },
+    "草履": {
+        "meaning": "zoori (Japanese footwear),sandals"
+    },
+    "空中": {
+        "meaning": "sky,air"
+    },
+    "縞": {
+        "meaning": "stripe"
+    },
+    "大して": {
+        "meaning": "(not so) much,(not) very"
+    },
+    "月日": {
+        "meaning": "time,years,days"
+    },
+    "紙幣": {
+        "meaning": "paper money,notes,bills"
+    },
+    "尖る": {
+        "meaning": "to taper to a point,to become sharp,to be sour,to look displeased"
+    },
+    "スカーフ": {
+        "meaning": "scarf"
+    },
+    "銅": {
+        "meaning": "copper"
+    },
+    "おどかす": {
+        "meaning": "to threaten,to coerce"
+    },
+    "でたらめ": {
+        "meaning": "(1) irresponsible utterance,nonsense,nonsensical,(2) random"
+    },
+    "反映": {
+        "meaning": "reflection,influence"
+    },
+    "教養": {
+        "meaning": "culture,education,refinement,cultivation"
+    },
+    "増減": {
+        "meaning": "increase and decrease,fluctuation"
+    },
+    "養分": {
+        "meaning": "nourishment,nutrient"
+    },
+    "ためらう": {
+        "meaning": "to hesitate"
+    },
+    "名物": {
+        "meaning": "famous product,special product,speciality"
+    },
+    "歌謡": {
+        "meaning": "song,ballad"
+    },
+    "湿気": {
+        "meaning": "moisture,humidity,dampness"
+    },
+    "覗く": {
+        "meaning": "to peep in,to look in,to peek in,to stick out"
+    },
+    "血液": {
+        "meaning": "blood"
+    },
+    "幼児": {
+        "meaning": "infant,baby,child"
+    },
+    "問答": {
+        "meaning": "questions and answers,dialogue"
+    },
+    "箒": {
+        "meaning": "(n) broom"
+    },
+    "長女": {
+        "meaning": "eldest daughter"
+    },
+    "分る": {
+        "meaning": "to be understood"
+    },
+    "削る": {
+        "meaning": "to cut down little by little,to take a percentage"
+    },
+    "妥当": {
+        "meaning": "valid,proper,right,appropriate"
+    },
+    "巡る": {
+        "meaning": "to go around"
+    },
+    "目上": {
+        "meaning": "superior(s),senior"
+    },
+    "表紙": {
+        "meaning": "front cover,binding"
+    },
+    "本部": {
+        "meaning": "headquarters"
+    },
+    "瞳": {
+        "meaning": "pupil (of eye)"
+    },
+    "小遣い": {
+        "meaning": "personal expenses,pocket money,spending money,incidental expenses,allowance"
+    },
+    "ぴかぴか": {
+        "meaning": "glitter,sparkle"
+    },
+    "加熱": {
+        "meaning": "heating"
+    },
+    "文房具": {
+        "meaning": "stationery"
+    },
+    "もしかしたら": {
+        "meaning": "perhaps,maybe,by some chance"
+    },
+    "ゴム": {
+        "meaning": "gum,rubber,eraser"
+    },
+    "可決": {
+        "meaning": "approval,adoption (e.g. motion, bill),passage"
+    },
+    "生け花": {
+        "meaning": "(1) flower arrangement"
+    },
+    "荒い": {
+        "meaning": "rough,rude,wild"
+    },
+    "小便": {
+        "meaning": "(col) urine,piss"
+    },
+    "帰す": {
+        "meaning": "to send back"
+    },
+    "よこす": {
+        "meaning": "(1) to send,to forward,(2) to hand over (e.g. money)"
+    },
+    "酸性": {
+        "meaning": "acidity"
+    },
+    "オーケストラ": {
+        "meaning": "orchestra"
+    },
+    "垣根": {
+        "meaning": "hedge"
+    },
+    "南米": {
+        "meaning": "South America"
+    },
+    "御馳走": {
+        "meaning": "feast,treating (someone)"
+    },
+    "電柱": {
+        "meaning": "telephone pole,telegraph pole,lightpole"
+    },
+    "逆さ": {
+        "meaning": "reverse,inversion,upside down"
+    },
+    "ひとりでに": {
+        "meaning": "by itself,automatically,naturally"
+    },
+    "綱": {
+        "meaning": "rope"
+    },
+    "こらえる": {
+        "meaning": "to bear,to stand,to endure,to put up with"
+    },
+    "陽射": {
+        "meaning": "sunlight,rays of the sun"
+    },
+    "まぶた": {
+        "meaning": "eyelids"
+    },
+    "親類": {
+        "meaning": "relation,kin"
+    },
+    "勝敗": {
+        "meaning": "victory or defeat,issue (of battle)"
+    },
+    "伯父さん": {
+        "meaning": "middle-aged gentleman,uncle"
+    },
+    "髭": {
+        "meaning": "moustache,beard,whiskers"
+    },
+    "マスク": {
+        "meaning": "mask"
+    },
+    "腰掛ける": {
+        "meaning": "to sit (down)"
+    },
+    "纏める": {
+        "meaning": "to put in order,to collect,to bring to a conclusion"
+    },
+    "御中": {
+        "meaning": "and Company,Messrs."
+    },
+    "マンション": {
+        "meaning": "large apartment,apartment house"
+    },
+    "貸し出し": {
+        "meaning": "lending,loaning"
+    },
+    "おおざっぱ": {
+        "meaning": "rough (not precise),broad,sketchy"
+    },
+    "題名": {
+        "meaning": "title"
+    },
+    "雑巾": {
+        "meaning": "house-cloth,dust cloth"
+    },
+    "浴衣": {
+        "meaning": "bathrobe,informal summer kimono,yukata"
+    },
+    "ずらす": {
+        "meaning": "to put off,to delay"
+    },
+    "武士": {
+        "meaning": "warrior,samurai"
+    },
+    "ぶらさげる": {
+        "meaning": "to hang,to suspend,to dangle,to swing"
+    },
+    "寸法": {
+        "meaning": "measurement,size,dimension"
+    },
+    "床屋": {
+        "meaning": "barber"
+    },
+    "バランス": {
+        "meaning": "balance"
+    },
+    "必需品": {
+        "meaning": "necessities,necessary article,requisite,essential"
+    },
+    "書籍": {
+        "meaning": "book,publication"
+    },
+    "目印": {
+        "meaning": "mark,sign,landmark"
+    },
+    "中身": {
+        "meaning": "contents,interior,substance,filling,(sword) blade"
+    },
+    "朗らか": {
+        "meaning": "brightness,cheerfulness,melodious"
+    },
+    "灯台": {
+        "meaning": "lighthouse"
+    },
+    "比較的": {
+        "meaning": "comparatively,relatively"
+    },
+    "形式": {
+        "meaning": "form,formality,format,math expression"
+    },
+    "特長": {
+        "meaning": "forte,merit"
+    },
+    "複数": {
+        "meaning": "plural,multiple"
+    },
+    "全般": {
+        "meaning": "(the) whole,universal,wholly,general"
+    },
+    "造船": {
+        "meaning": "shipbuilding"
+    },
+    "看板": {
+        "meaning": "sign,signboard,doorplate,poster"
+    },
+    "歯車": {
+        "meaning": "gear,cog-wheel"
+    },
+    "断定": {
+        "meaning": "conclusion,decision"
+    },
+    "あきれる": {
+        "meaning": "to be amazed,to be shocked"
+    },
+    "人通り": {
+        "meaning": "pedestrian traffic"
+    },
+    "日の出": {
+        "meaning": "sunrise"
+    },
+    "大工": {
+        "meaning": "carpenter"
+    },
+    "悔やむ": {
+        "meaning": "to mourn"
+    },
+    "埋める": {
+        "meaning": "to bury,to fill up,to fill (a seat, a vacant position)"
+    },
+    "インキ": {
+        "meaning": "ink"
+    },
+    "剥す": {
+        "meaning": "(v5s) to tear off,to peel off,to rip off"
+    },
+    "ヘリコプター": {
+        "meaning": "helicopter"
+    },
+    "執筆": {
+        "meaning": "writing"
+    },
+    "英和": {
+        "meaning": "English-Japanese (e.g. dictionary)"
+    },
+    "文芸": {
+        "meaning": "literature,art and literature,belles-lettres"
+    },
+    "保健": {
+        "meaning": "health preservation,hygiene,sanitation"
+    },
+    "分かれる": {
+        "meaning": "to branch off,to diverge from,to fork,to split,to dispense,to scatter,to divide into"
+    },
+    "蛍光灯": {
+        "meaning": "fluorescent lamp,person who is slow to react"
+    },
+    "スピーカー": {
+        "meaning": "speaker"
+    },
+    "増やす": {
+        "meaning": "to increase,to add to,to augment"
+    },
+    "娯楽": {
+        "meaning": "pleasure,amusement"
+    },
+    "椀": {
+        "meaning": "Japanese soup bowl,wooden bowl"
+    },
+    "メーター": {
+        "meaning": "meter (clock)"
+    },
+    "領事": {
+        "meaning": "consul"
+    },
+    "毛糸": {
+        "meaning": "knitting wool"
+    },
+    "向う": {
+        "meaning": "(v5u) to face,to go towards"
+    },
+    "ベテラン": {
+        "meaning": "veteran"
+    },
+    "畳む": {
+        "meaning": "to fold (clothes)"
+    },
+    "分数": {
+        "meaning": "fraction (in math)"
+    },
+    "応用": {
+        "meaning": "application,put to practical use"
+    },
+    "只": {
+        "meaning": "free of charge,mere,sole,only,usual,common"
+    },
+    "運河": {
+        "meaning": "canal,waterway"
+    },
+    "郵送": {
+        "meaning": "mailing"
+    },
+    "将棋": {
+        "meaning": "Japanese chess"
+    },
+    "なんとも": {
+        "meaning": "nothing (with neg. verb),quite,not a bit"
+    },
+    "兼ねる": {
+        "meaning": "to hold (position),to serve,to be unable"
+    },
+    "余所": {
+        "meaning": "another place,somewhere else,strange parts"
+    },
+    "ばね": {
+        "meaning": "spring (e.g. coil, leaf)"
+    },
+    "対照": {
+        "meaning": "contrast,antithesis,comparison"
+    },
+    "作者": {
+        "meaning": "author,authoress"
+    },
+    "ロッカー": {
+        "meaning": "locker"
+    },
+    "やかましい": {
+        "meaning": "(1) noisy,(2) strict,fussy"
+    },
+    "炭鉱": {
+        "meaning": "coal mine,coal pit"
+    },
+    "役者": {
+        "meaning": "actor,actress"
+    },
+    "再来週": {
+        "meaning": "week after next"
+    },
+    "掘る": {
+        "meaning": "to dig,to excavate"
+    },
+    "方言": {
+        "meaning": "dialect"
+    },
+    "為す": {
+        "meaning": "to accomplish,to do"
+    },
+    "写る": {
+        "meaning": "to be photographed,to be projected"
+    },
+    "なんとなく": {
+        "meaning": "somehow or other,for some reason or another"
+    },
+    "打合せ": {
+        "meaning": "business meeting,previous arrangement,appointment"
+    },
+    "塞がる": {
+        "meaning": "to be plugged up,to be shut up"
+    },
+    "枚数": {
+        "meaning": "the number of flat things"
+    },
+    "縫う": {
+        "meaning": "to sew"
+    },
+    "顕微鏡": {
+        "meaning": "microscope"
+    },
+    "生える": {
+        "meaning": "(1) to grow,to spring up,(2) to cut (teeth)"
+    },
+    "固まる": {
+        "meaning": "to harden,to solidify,to become firm,to become certain"
+    },
+    "引っ繰り返す": {
+        "meaning": "to turn over,to overturn,to knock over,to upset,to turn inside out"
+    },
+    "あらすじ": {
+        "meaning": "outline,summary"
+    },
+    "通り掛かる": {
+        "meaning": "to happen to pass by"
+    },
+    "循環": {
+        "meaning": "circulation,rotation,cycle"
+    },
+    "教わる": {
+        "meaning": "to be taught"
+    },
+    "チップ": {
+        "meaning": "(1) gratuity,tip,(2) chip"
+    },
+    "鳴らす": {
+        "meaning": "to ring,to sound,to chime,to beat,to snort (nose)"
+    },
+    "英文": {
+        "meaning": "sentence in English"
+    },
+    "イコール": {
+        "meaning": "equal"
+    },
+    "碗": {
+        "meaning": "bowl"
+    },
+    "一昨年": {
+        "meaning": "year before last"
+    },
+    "公務": {
+        "meaning": "official business,public business"
+    },
+    "蒸気": {
+        "meaning": "steam,vapour"
+    },
+    "ペンチ": {
+        "meaning": "(abbr) pliers (lit: pinchers)"
+    },
+    "縛る": {
+        "meaning": "to tie,to bind"
+    },
+    "締切": {
+        "meaning": "closing,cut-off,end,deadline,Closed,No Entrance"
+    },
+    "撮影": {
+        "meaning": "photographing"
+    },
+    "絞る": {
+        "meaning": "to press,to wring,to squeeze"
+    },
+    "剃る": {
+        "meaning": "to shave"
+    },
+    "構造": {
+        "meaning": "structure,construction"
+    },
+    "偉い": {
+        "meaning": "great,celebrated,eminent,terrible,awful,famous,remarkable,excellent"
+    },
+    "酔っ払い": {
+        "meaning": "drunkard"
+    },
+    "煙突": {
+        "meaning": "chimney"
+    },
+    "缶詰": {
+        "meaning": "packing (in cans),canning,canned goods,tin can"
+    },
+    "公正": {
+        "meaning": "justice,fairness,impartiality"
+    },
+    "漁業": {
+        "meaning": "fishing (industry)"
+    },
+    "ずうずうしい": {
+        "meaning": "impudent,shameless"
+    },
+    "有無": {
+        "meaning": "yes or no,existence,flag indicator (comp),presence or absence marker"
+    },
+    "観測": {
+        "meaning": "observation"
+    },
+    "診る": {
+        "meaning": "to examine (medical)"
+    },
+    "写生": {
+        "meaning": "sketching,drawing from nature"
+    },
+    "叔母さん": {
+        "meaning": "(1) aunt,(2) middle-aged lady"
+    },
+    "心得る": {
+        "meaning": "to be informed,to have thorough knowledge"
+    },
+    "見下ろす": {
+        "meaning": "to overlook,to command a view of,to look down on something"
+    },
+    "果実": {
+        "meaning": "fruit,nut,berry."
+    },
+    "浮かべる": {
+        "meaning": "to float,to express,to look (sad, glad)"
+    },
+    "淡水": {
+        "meaning": "fresh water"
+    },
+    "特色": {
+        "meaning": "characteristic,feature"
+    },
+    "上る": {
+        "meaning": "to ascend,to go up,to climb"
+    },
+    "年度": {
+        "meaning": "year,fiscal year,school year,term"
+    },
+    "すくなくとも": {
+        "meaning": "at least"
+    },
+    "しあさって": {
+        "meaning": "two days after tomorrow"
+    },
+    "しゃっくり": {
+        "meaning": "hiccough,hiccup"
+    },
+    "話し掛ける": {
+        "meaning": "to accost a person,to talk (to someone)"
+    },
+    "伝わる": {
+        "meaning": "to be handed down,to be introduced,to be transmitted"
+    },
+    "乾燥": {
+        "meaning": "dry,arid,insipid,dehydrated"
+    },
+    "火傷": {
+        "meaning": "burn,scald"
+    },
+    "ダイヤモンド": {
+        "meaning": "diamond"
+    },
+    "御無沙汰": {
+        "meaning": "not writing or contacting for a while"
+    },
+    "夜行": {
+        "meaning": "walking around at night,night train,night travel"
+    },
+    "真っ暗": {
+        "meaning": "total darkness,shortsightedness,pitch dark"
+    },
+    "井戸": {
+        "meaning": "water well"
+    },
+    "じゅうたん": {
+        "meaning": "carpet"
+    },
+    "寒帯": {
+        "meaning": "frigid zone"
+    },
+    "個所": {
+        "meaning": "passage,place,point,part"
+    },
+    "境界": {
+        "meaning": "boundary"
+    },
+    "言付ける": {
+        "meaning": "to send word,to send a message"
+    },
+    "こぼれる": {
+        "meaning": "to overflow,to spill"
+    },
+    "反る": {
+        "meaning": "to warp,to be warped,to curve"
+    },
+    "雨戸": {
+        "meaning": "sliding storm door"
+    },
+    "ビニール": {
+        "meaning": "vinyl"
+    },
+    "解放": {
+        "meaning": "release,liberation,emancipation"
+    },
+    "幼稚": {
+        "meaning": "infancy,childish,infantile"
+    },
+    "湿度": {
+        "meaning": "level of humidity"
+    },
+    "無沙汰": {
+        "meaning": "neglecting to stay in contact"
+    },
+    "概論": {
+        "meaning": "intro,outline,general remarks"
+    },
+    "温泉": {
+        "meaning": "spa,hot spring,onsen"
+    },
+    "手続き": {
+        "meaning": "procedure,(legal) process,formalities"
+    },
+    "知合い": {
+        "meaning": "acquaintance"
+    },
+    "障子": {
+        "meaning": "paper sliding door"
+    },
+    "山林": {
+        "meaning": "mountain forest,mountains and forest"
+    },
+    "果して": {
+        "meaning": "as was expected,really"
+    },
+    "着せる": {
+        "meaning": "to put on clothes"
+    },
+    "身分": {
+        "meaning": "social position,social status"
+    },
+    "大小": {
+        "meaning": "size"
+    },
+    "休息": {
+        "meaning": "rest,relief,relaxation"
+    },
+    "捩る": {
+        "meaning": "to twist"
+    },
+    "定価": {
+        "meaning": "established price"
+    },
+    "坊さん": {
+        "meaning": "Buddhist priest,monk"
+    },
+    "停車": {
+        "meaning": "stopping (e.g. train)"
+    },
+    "機関車": {
+        "meaning": "locomotive,engine"
+    },
+    "回答": {
+        "meaning": "reply,answer"
+    },
+    "公衆": {
+        "meaning": "the public"
+    },
+    "祖先": {
+        "meaning": "ancestor"
+    },
+    "羨む": {
+        "meaning": "to envy"
+    },
+    "おねがいします": {
+        "meaning": "please"
+    },
+    "おやすみ": {
+        "meaning": "(1) holiday,absence,rest,(2) (exp) Good night"
+    },
+    "物置": {
+        "meaning": "storage room"
+    },
+    "休業": {
+        "meaning": "closed (e.g. store),business suspended,shutdown,holiday"
+    },
+    "コンセント": {
+        "meaning": "(1) consent,(2) concentric"
+    },
+    "短編": {
+        "meaning": "short (e.g. story, film)"
+    },
+    "碁": {
+        "meaning": "Go (board game of capturing territory)"
+    },
+    "戸棚": {
+        "meaning": "cupboard,locker,closet,wardrobe"
+    },
+    "人命": {
+        "meaning": "(human) life"
+    },
+    "おめでたい": {
+        "meaning": "happy event,matter for congratulation,auspicious event,pregnancy"
+    },
+    "立ち止まる": {
+        "meaning": "to stop,to halt,to stand still"
+    },
+    "苦心": {
+        "meaning": "pain,trouble"
+    },
+    "用語": {
+        "meaning": "term,terminology"
+    },
+    "終了": {
+        "meaning": "end,close,termination"
+    },
+    "挟む": {
+        "meaning": "to interpose,to hold between,to insert"
+    },
+    "物語る": {
+        "meaning": "to tell,to indicate"
+    },
+    "診断": {
+        "meaning": "diagnosis"
+    },
+    "分類": {
+        "meaning": "classification"
+    },
+    "あいまい": {
+        "meaning": "vague,ambiguous"
+    },
+    "宣伝": {
+        "meaning": "propaganda,publicity"
+    },
+    "こぼす": {
+        "meaning": "to spill"
+    },
+    "有難い": {
+        "meaning": "grateful,thankful,welcome,appreciated,evoking gratitude"
+    },
+    "頼もしい": {
+        "meaning": "reliable,trustworthy,hopeful,promising"
+    },
+    "出入り": {
+        "meaning": "in and out,coming and going,free association,income and expenditure,debits and credit"
+    },
+    "ウーマン": {
+        "meaning": "woman"
+    },
+    "プラットホーム": {
+        "meaning": "platform"
+    },
+    "仕上がる": {
+        "meaning": "to be finished"
+    },
+    "芯": {
+        "meaning": "core,heart,wick,marrow"
+    },
+    "だらしない": {
+        "meaning": "slovenly,loose,a slut"
+    },
+    "茂る": {
+        "meaning": "to grow thick,to luxuriate,to be luxurious"
+    },
+    "いつのまにか": {
+        "meaning": "before one knows,unnoticed,unawares"
+    },
+    "先程": {
+        "meaning": "some time ago"
+    },
+    "吹雪": {
+        "meaning": "snow storm"
+    },
+    "憎い": {
+        "meaning": "hateful,abominable,poor-looking,detestable"
+    },
+    "恩恵": {
+        "meaning": "grace,favor,blessing,benefit"
+    },
+    "統計": {
+        "meaning": "scattering,a scatter,dispersion"
+    },
+    "水筒": {
+        "meaning": "canteen,flask,water bottle"
+    },
+    "当日": {
+        "meaning": "appointed day,very day"
+    },
+    "うどん": {
+        "meaning": "noodles (Japanese)"
+    },
+    "原料": {
+        "meaning": "raw materials"
+    },
+    "耕す": {
+        "meaning": "to till,to plow,to cultivate"
+    },
+    "遭う": {
+        "meaning": "to meet,to encounter (undesirable nuance)"
+    },
+    "判子": {
+        "meaning": "seal (used for signature)"
+    },
+    "面接": {
+        "meaning": "interview"
+    },
+    "散る": {
+        "meaning": "to fall,to scatter (e.g. blossoms)"
+    },
+    "ステージ": {
+        "meaning": "(1) stage,(2) performance"
+    },
+    "見本": {
+        "meaning": "sample"
+    },
+    "道順": {
+        "meaning": "itinerary,route"
+    },
+    "満点": {
+        "meaning": "perfect score"
+    },
+    "公式": {
+        "meaning": "formula,formality,official"
+    },
+    "貝": {
+        "meaning": "shell,shellfish"
+    },
+    "ぎっしり": {
+        "meaning": "tightly,fully"
+    },
+    "寄せる": {
+        "meaning": "to collect,to gather,to add,to put aside"
+    },
+    "普及": {
+        "meaning": "diffusion,spread"
+    },
+    "乗換": {
+        "meaning": "(n) transfer (trains, buses, etc.)"
+    },
+    "崩れる": {
+        "meaning": "to collapse,to crumble"
+    },
+    "都心": {
+        "meaning": "heart (of city)"
+    },
+    "見付ける": {
+        "meaning": "to be familiar,to discover,to detect"
+    },
+    "ぶつける": {
+        "meaning": "to knock,to run into,to nail on,to strike hard,to hit and attack"
+    },
+    "再来年": {
+        "meaning": "year after next"
+    },
+    "やたらに": {
+        "meaning": "randomly,recklessly,blindly"
+    },
+    "中性": {
+        "meaning": "neuter gender,neutral (chem.),indifference,sterility"
+    },
+    "プログラム": {
+        "meaning": "program"
+    },
+    "シーツ": {
+        "meaning": "sheet"
+    },
+    "やっぱり": {
+        "meaning": "also,as I thought,still,in spite of,absolutely,of course"
+    },
+    "カロリー": {
+        "meaning": "calorie"
+    },
+    "出来上がる": {
+        "meaning": "(1) to be finished,to be ready,by definition,(2) to be very drunk"
+    },
+    "アイデア": {
+        "meaning": "idea"
+    },
+    "アイディア": {
+        "meaning": "idea"
+    },
+    "純粋": {
+        "meaning": "pure,true,genuine,unmixed"
+    },
+    "特定": {
+        "meaning": "specific,special,particular"
+    },
+    "たんす": {
+        "meaning": "chest of drawers"
+    },
+    "量る": {
+        "meaning": "to measure,to weigh,to survey"
+    },
+    "継続": {
+        "meaning": "continuation"
+    },
+    "軟らかい": {
+        "meaning": "soft,tender,limp"
+    },
+    "下旬": {
+        "meaning": "month (last third of)"
+    },
+    "代る": {
+        "meaning": "(v5r,vi) to take the place of,to relieve,to be substituted for"
+    },
+    "通勤": {
+        "meaning": "commuting to work"
+    },
+    "温室": {
+        "meaning": "greenhouse"
+    },
+    "汚す": {
+        "meaning": "(1) to disgrace,to dishonour,(2) to pollute,to contaminate,to soil,to make dirty,to stain"
+    },
+    "基地": {
+        "meaning": "base"
+    },
+    "正面": {
+        "meaning": "the front,honesty"
+    },
+    "引力": {
+        "meaning": "gravity"
+    },
+    "浸ける": {
+        "meaning": "to dip in,to soak"
+    },
+    "アクセント": {
+        "meaning": "accent"
+    },
+    "蝋燭": {
+        "meaning": "candle"
+    },
+    "高級": {
+        "meaning": "high class,high grade"
+    },
+    "チョーク": {
+        "meaning": "chock,chalk"
+    },
+    "皮肉": {
+        "meaning": "cynicism,sarcasm"
+    },
+    "ロビー": {
+        "meaning": "lobby"
+    },
+    "外部": {
+        "meaning": "the outside,external"
+    },
+    "超過": {
+        "meaning": "excess,being more than"
+    },
+    "接する": {
+        "meaning": "to come in contact with,to connect,to attend,to receive"
+    },
+    "送別": {
+        "meaning": "farewell,send-off"
+    },
+    "作成": {
+        "meaning": "frame,draw up,make,producing"
+    },
+    "望遠鏡": {
+        "meaning": "telescope"
+    },
+    "適確": {
+        "meaning": "precise,accurate"
+    },
+    "規律": {
+        "meaning": "order,rules,law"
+    },
+    "更ける": {
+        "meaning": "to get late,to advance,to wear on"
+    },
+    "在る": {
+        "meaning": "to live,to be"
+    },
+    "間も無く": {
+        "meaning": "soon,before long,in a short time"
+    },
+    "孝行": {
+        "meaning": "filial piety"
+    },
+    "振り仮名": {
+        "meaning": ",pronunciation key"
+    },
+    "お帰り": {
+        "meaning": "return,welcome"
+    },
+    "真っ黒": {
+        "meaning": "pitch black"
+    },
+    "蓋": {
+        "meaning": "cover,lid,cap"
+    },
+    "絵の具": {
+        "meaning": "colors,paints"
+    },
+    "ビルディング": {
+        "meaning": "building"
+    },
+    "女房": {
+        "meaning": "wife"
+    },
+    "算盤": {
+        "meaning": "abacus"
+    },
+    "日時": {
+        "meaning": "date and time"
+    },
+    "前後": {
+        "meaning": "around,throughout,front and back,before and behind,before and after"
+    },
+    "庖丁": {
+        "meaning": "kitchen knife,carving knife"
+    },
+    "補う": {
+        "meaning": "to compensate for"
+    },
+    "各自": {
+        "meaning": "individual,each"
+    },
+    "膨らむ": {
+        "meaning": "to expand,to swell (out),to get big,to become inflated"
+    },
+    "思い付く": {
+        "meaning": "to think of,to hit upon"
+    },
+    "広げる": {
+        "meaning": "to spread,to extend,to expand,to enlarge"
+    },
+    "話中": {
+        "meaning": "while talking,the line is busy"
+    },
+    "接近": {
+        "meaning": "getting closer,drawing nearer,approaching"
+    },
+    "縮小": {
+        "meaning": "reduction,curtailment"
+    },
+    "薬指": {
+        "meaning": "ring finger"
+    },
+    "治す": {
+        "meaning": "to cure,to heal,to fix,to correct,to repair"
+    },
+    "紙屑": {
+        "meaning": "wastepaper"
+    },
+    "スライド": {
+        "meaning": "slide"
+    },
+    "応ずる": {
+        "meaning": "to answer,to respond,to meet,to satisfy,to accept"
+    },
+    "ぜひとも": {
+        "meaning": "by all means (with sense of not taking no for an answer)"
+    },
+    "別々": {
+        "meaning": "separately,individually"
+    },
+    "群れ": {
+        "meaning": "group,crowd,flock,herd"
+    },
+    "冠": {
+        "meaning": "crown,diadem,first,best"
+    },
+    "追い掛ける": {
+        "meaning": "to chase or run after someone,to run down,to pursue"
+    },
+    "原始": {
+        "meaning": "origin,primeval"
+    },
+    "かるた": {
+        "meaning": "(n) playing cards (pt: carta)"
+    },
+    "手入れ": {
+        "meaning": "repairs,maintenance"
+    },
+    "過失": {
+        "meaning": "error,blunder,accident"
+    },
+    "空っぽ": {
+        "meaning": "empty,vacant,hollow"
+    },
+    "マフラー": {
+        "meaning": "muffler,scarf"
+    },
+    "住居": {
+        "meaning": "dwelling,house,residence,address"
+    },
+    "性質": {
+        "meaning": "nature,property,disposition"
+    },
+    "牧場": {
+        "meaning": "(1) farm (livestock),(2) pasture land,meadow,grazing land"
+    },
+    "巻く": {
+        "meaning": "to wind,to coil,to roll"
+    },
+    "潜る": {
+        "meaning": "(1) to drive,to pass through,(2) to evade,to hide,(3) to dive (into or under water),to go undergroun"
+    },
+    "番地": {
+        "meaning": "house number,address"
+    },
+    "包装": {
+        "meaning": "packing,wrapping"
+    },
+    "役所": {
+        "meaning": "government office,public office"
+    },
+    "間隔": {
+        "meaning": "space,interval,SPC"
+    },
+    "成分": {
+        "meaning": "ingredient,component,composition"
+    },
+    "へる": {
+        "meaning": "to decrease (in size or number),to diminish,to abate"
+    },
+    "倉庫": {
+        "meaning": "storehouse,warehouse,godown"
+    },
+    "縮める": {
+        "meaning": "to shorten,to reduce,to boil down,to shrink"
+    },
+    "注す": {
+        "meaning": "to pour (drink),to serve (drinks)"
+    },
+    "縮む": {
+        "meaning": "to shrink,to be contracted"
+    },
+    "味わう": {
+        "meaning": "to taste,to savor,to relish"
+    },
+    "砕く": {
+        "meaning": "to break,to smash"
+    },
+    "ハンドル": {
+        "meaning": "handle,steering wheel"
+    },
+    "殻": {
+        "meaning": "shell,husk,hull,chaff"
+    },
+    "削除": {
+        "meaning": "elimination,cancellation,deletion,erasure"
+    },
+    "講師": {
+        "meaning": "lecturer"
+    },
+    "努める": {
+        "meaning": "(1) to serve,to fill a post,to serve under,to work (for)"
+    },
+    "蒔く": {
+        "meaning": "to sow (seeds)"
+    },
+    "あいかわらず": {
+        "meaning": "as ever,as usual,the same"
+    },
+    "相撲": {
+        "meaning": "sumo wrestling"
+    },
+    "応接": {
+        "meaning": "reception"
+    },
+    "組合せ": {
+        "meaning": "combination"
+    },
+    "お参り": {
+        "meaning": "worship,shrine visit"
+    },
+    "広々": {
+        "meaning": "extensive,spacious"
+    },
+    "能率": {
+        "meaning": "efficiency"
+    },
+    "思い込む": {
+        "meaning": "to be under impression that,to be convinced that"
+    },
+    "オートメーション": {
+        "meaning": "automation"
+    },
+    "感激": {
+        "meaning": "deep emotion,impression,inspiration"
+    },
+    "矛盾": {
+        "meaning": "contradiction,inconsistency"
+    },
+    "編む": {
+        "meaning": "to knit"
+    },
+    "重体": {
+        "meaning": "seriously ill,serious condition,critical state"
+    },
+    "要領": {
+        "meaning": "point,gist,essentials,outline"
+    },
+    "強化": {
+        "meaning": "strengthen,intensify,reinforce,solidify"
+    },
+    "長引く": {
+        "meaning": "to be prolonged,to drag on"
+    },
+    "長方形": {
+        "meaning": "rectangle,oblong"
+    },
+    "パターン": {
+        "meaning": "pattern"
+    },
+    "曲線": {
+        "meaning": "curve"
+    },
+    "工芸": {
+        "meaning": "industrial arts"
+    },
+    "テーマ": {
+        "meaning": "(n) theme,project,topic (de: Thema)"
+    },
+    "破れる": {
+        "meaning": "to get torn,to wear out"
+    },
+    "落し物": {
+        "meaning": "lost property"
+    },
+    "実用": {
+        "meaning": "practical use,utility"
+    },
+    "死体": {
+        "meaning": "corpse"
+    },
+    "行事": {
+        "meaning": "event,function"
+    },
+    "俳句": {
+        "meaning": "haiku poetry"
+    },
+    "信ずる": {
+        "meaning": "to believe,to believe in,to place trust in"
+    },
+    "給与": {
+        "meaning": "allowance,grant,supply"
+    },
+    "みじめ": {
+        "meaning": "(arch) sad,pitiful,wretched"
+    },
+    "焦点": {
+        "meaning": "focus,point"
+    },
+    "水平線": {
+        "meaning": "horizon"
+    },
+    "ストッキング": {
+        "meaning": "stockings"
+    },
+    "終点": {
+        "meaning": "terminus,last stop (e.g train)"
+    },
+    "儲ける": {
+        "meaning": "to get,to earn,to gain,to have (bear, beget) a child"
+    },
+    "編物": {
+        "meaning": "knitting,web"
+    },
+    "釘": {
+        "meaning": "nail"
+    },
+    "役目": {
+        "meaning": "duty,business"
+    },
+    "整数": {
+        "meaning": "integer"
+    },
+    "こちらこそ": {
+        "meaning": "it is I who should say so"
+    },
+    "上下": {
+        "meaning": "high and low,up and down,unloading and loading,praising and blaming"
+    },
+    "重ねる": {
+        "meaning": "to pile up,to put something on another,to heap up,to add,to repeat"
+    },
+    "溜まる": {
+        "meaning": "to collect,to gather,to save"
+    },
+    "若々しい": {
+        "meaning": "youthful,young"
+    },
+    "消防署": {
+        "meaning": "fire station"
+    },
+    "もたれる": {
+        "meaning": "to lean against,to lean on,to recline on,to lie heavy (on the stomach)"
+    },
+    "交ざる": {
+        "meaning": "to be mixed,to be blended with,to associate with,to mingle with,to join"
+    },
+    "コンクール": {
+        "meaning": "contest (fr: concours)"
+    },
+    "掛け算": {
+        "meaning": "multiplication"
+    },
+    "秤": {
+        "meaning": "scales,weighing machine"
+    },
+    "錆": {
+        "meaning": "rust (colour)"
+    },
+    "開放": {
+        "meaning": "open,throw open,liberalization"
+    },
+    "体積": {
+        "meaning": "capacity,volume"
+    },
+    "工夫": {
+        "meaning": "labourer,worker"
+    },
+    "寮": {
+        "meaning": "hostel,dormitory"
+    },
+    "合同": {
+        "meaning": "combination,incorporation,union,amalgamation"
+    },
+    "言い付ける": {
+        "meaning": "to tell,to tell on (someone),to order"
+    },
+    "あくび": {
+        "meaning": "yawn"
+    },
+    "レジャー": {
+        "meaning": "leisure"
+    },
+    "おくさん": {
+        "meaning": "(hon) wife,your wife,madam"
+    },
+    "片仮名": {
+        "meaning": "katakana"
+    },
+    "卑怯": {
+        "meaning": "cowardice,meanness,unfairness"
+    },
+    "消極的": {
+        "meaning": "passive"
+    },
+    "カバー": {
+        "meaning": "cover (ex. book)"
+    },
+    "ひゃっかじてん": {
+        "meaning": "encyclopedia"
+    },
+    "塩辛い": {
+        "meaning": "salty (taste)"
+    },
+    "夕立": {
+        "meaning": "(sudden) evening shower (rain)"
+    },
+    "着ける": {
+        "meaning": "(1) to attach,to join,to add,to append"
+    },
+    "あたりまえ": {
+        "meaning": "usual,common,ordinary"
+    },
+    "洒落": {
+        "meaning": "joke,pun,witticism"
+    },
+    "割と": {
+        "meaning": "relatively, comparitively"
+    },
+    "匙": {
+        "meaning": "spoon"
+    },
+    "引分け": {
+        "meaning": "a draw (in competition),tie game"
+    },
+    "エプロン": {
+        "meaning": "apron"
+    },
+    "民謡": {
+        "meaning": "folk song,popular song"
+    },
+    "相互": {
+        "meaning": "mutual,reciprocal"
+    },
+    "ミシン": {
+        "meaning": "sewing machine"
+    },
+    "何分": {
+        "meaning": "what minute?,how many minutes?"
+    },
+    "あげる (=やる)": {
+        "meaning": "to do for"
+    },
+    "消耗": {
+        "meaning": "exhaustion,consumption"
+    },
+    "文献": {
+        "meaning": "literature,books (reference)"
+    },
+    "炊く": {
+        "meaning": "to boil,to cook"
+    },
+    "発想": {
+        "meaning": "expression (music),conceptualization"
+    },
+    "性別": {
+        "meaning": "distinction by sex,sex,gender"
+    },
+    "中年": {
+        "meaning": "middle-aged"
+    },
+    "歯磨き": {
+        "meaning": "dentifrice,toothpaste"
+    },
+    "浮く": {
+        "meaning": "to float,to become merry,to become loose"
+    },
+    "傾く": {
+        "meaning": "to incline toward,to slant,to lurch"
+    },
+    "へそ": {
+        "meaning": "navel,belly-button"
+    },
+    "投書": {
+        "meaning": "letter to the editor,letter from a reader,contribution"
+    },
+    "農薬": {
+        "meaning": "agricultural chemicals"
+    },
+    "超す": {
+        "meaning": "to cross,to pass,to tide over"
+    },
+    "溜息": {
+        "meaning": "a sigh"
+    },
+    "床の間": {
+        "meaning": "alcove"
+    },
+    "直前": {
+        "meaning": "just before"
+    },
+    "低下": {
+        "meaning": "fall,decline,lowering,deterioration"
+    },
+    "再来月": {
+        "meaning": "month after next"
+    },
+    "合流": {
+        "meaning": "confluence,union,linking up,merge"
+    },
+    "粗い": {
+        "meaning": "coarse,rough"
+    },
+    "インタビュー": {
+        "meaning": "interview"
+    },
+    "頂点": {
+        "meaning": "top,summit"
+    },
+    "地帯": {
+        "meaning": "area,zone"
+    },
+    "御手洗": {
+        "meaning": "font of purifying water placed at entrance of shrine"
+    },
+    "交流": {
+        "meaning": "alternating current,intercourse,(cultural) exchange,intermingling"
+    },
+    "研修": {
+        "meaning": "training"
+    },
+    "引っ込む": {
+        "meaning": "to draw back,to sink,to cave in"
+    },
+    "燃やす": {
+        "meaning": "to burn"
+    },
+    "あちらこちら": {
+        "meaning": "here and there"
+    },
+    "茶碗": {
+        "meaning": "rice bowl,tea cup,teacup"
+    },
+    "原稿": {
+        "meaning": "manuscript,copy"
+    },
+    "評論": {
+        "meaning": "criticism,critique"
+    },
+    "間接": {
+        "meaning": "indirection,indirectness"
+    },
+    "区分": {
+        "meaning": "division,section,classification"
+    },
+    "裏返す": {
+        "meaning": "to turn inside out,to turn (something) over"
+    },
+    "おかず": {
+        "meaning": "side dish,accompaniment for rice dishes"
+    },
+    "名作": {
+        "meaning": "masterpiece"
+    },
+    "作製": {
+        "meaning": "manufacture"
+    },
+    "催し": {
+        "meaning": "event,festivities,function"
+    },
+    "三角": {
+        "meaning": "triangle,triangular"
+    },
+    "流域": {
+        "meaning": "(river) basin"
+    },
+    "流石": {
+        "meaning": "clever,adept,good,expectations,as one would expect"
+    },
+    "家主": {
+        "meaning": "landlord"
+    },
+    "退ける": {
+        "meaning": "to remove,to take away,to dislodge,to put something out of the way"
+    },
+    "坊や": {
+        "meaning": "boy"
+    },
+    "着替え": {
+        "meaning": "changing clothes,change of clothes"
+    },
+    "退く": {
+        "meaning": "(1) to retreat,to recede,to withdraw"
+    },
+    "上り": {
+        "meaning": "up-train (going to Tokyo),ascent"
+    },
+    "漸く": {
+        "meaning": "gradually,finally,hardly"
+    },
+    "這う": {
+        "meaning": "to creep,to crawl"
+    },
+    "討つ": {
+        "meaning": "to attack,to avenge"
+    },
+    "始終": {
+        "meaning": "continuously,from beginning to end"
+    },
+    "平野": {
+        "meaning": "plain,open field"
+    },
+    "灯油": {
+        "meaning": "lamp oil,kerosene"
+    },
+    "言葉遣い": {
+        "meaning": "speech,expression,wording"
+    },
+    "しいんと": {
+        "meaning": "silent (as the grave),(deathly) quiet"
+    },
+    "副詞": {
+        "meaning": "adverb"
+    },
+    "記号": {
+        "meaning": "symbol,code"
+    },
+    "納める": {
+        "meaning": "to obtain,to reap,to pay,to supply,to accept"
+    },
+    "からかう": {
+        "meaning": "to ridicule,to tease,to banter with,to make fun of"
+    },
+    "胡椒": {
+        "meaning": "pepper"
+    },
+    "弱点": {
+        "meaning": "weak point,weakness"
+    },
+    "詰まる": {
+        "meaning": "to be blocked,to be packed"
+    },
+    "通貨": {
+        "meaning": "currency"
+    },
+    "敬語": {
+        "meaning": "honorific,term of respect"
+    },
+    "災難": {
+        "meaning": "calamity,misfortune"
+    },
+    "あふれる": {
+        "meaning": "to flood,to overflow,to brim over"
+    },
+    "恨む": {
+        "meaning": "to curse,to feel bitter"
+    },
+    "仮定": {
+        "meaning": "assumption,supposition,hypothesis"
+    },
+    "トレーニング": {
+        "meaning": "training"
+    },
+    "タイア": {
+        "meaning": "tire,tyre"
+    },
+    "恋しい": {
+        "meaning": "(1) dear,beloved,darling,(2) yearned for"
+    },
+    "往復": {
+        "meaning": "(col) round trip,coming and going,return ticket"
+    },
+    "油断": {
+        "meaning": "negligence,unpreparedness"
+    },
+    "はじめまして": {
+        "meaning": "How do you do?,I am glad to meet you"
+    },
+    "意義": {
+        "meaning": "meaning,significance"
+    },
+    "垂直": {
+        "meaning": "vertical,perpendicular"
+    },
+    "くしゃみ": {
+        "meaning": "sneeze"
+    },
+    "悔しい": {
+        "meaning": "regrettable,mortifying,vexing"
+    },
+    "姓": {
+        "meaning": "surname,family name"
+    },
+    "伝記": {
+        "meaning": "biography,life story"
+    },
+    "子孫": {
+        "meaning": "descendants,posterity,offspring"
+    },
+    "プリント": {
+        "meaning": "print,handout"
+    },
+    "神話": {
+        "meaning": "myth,legend"
+    },
+    "直後": {
+        "meaning": "immediately following"
+    },
+    "住まい": {
+        "meaning": "dwelling,house,residence,address"
+    },
+    "海水浴": {
+        "meaning": "sea bathing,seawater bath"
+    },
+    "ついで": {
+        "meaning": "opportunity,occasion"
+    },
+    "高度": {
+        "meaning": "altitude,height,advanced"
+    },
+    "挙げる": {
+        "meaning": "to raise,to fly"
+    },
+    "醤油": {
+        "meaning": "soy sauce"
+    },
+    "慰める": {
+        "meaning": "to comfort,to console"
+    },
+    "取り出す": {
+        "meaning": "to take out,to produce,to pick out"
+    },
+    "退院": {
+        "meaning": "leaving hospital"
+    },
+    "直線": {
+        "meaning": "straight line"
+    },
+    "怪しい": {
+        "meaning": "suspicious,dubious,doubtful"
+    },
+    "目覚し": {
+        "meaning": "(abbr) alarm-clock"
+    },
+    "下線": {
+        "meaning": "underline,underscore"
+    },
+    "見掛け": {
+        "meaning": "outward appearance"
+    },
+    "枯れる": {
+        "meaning": "to wither,to die (plant),to be blasted (plant)"
+    },
+    "快晴": {
+        "meaning": "good weather"
+    },
+    "箸": {
+        "meaning": "chopsticks"
+    },
+    "感想": {
+        "meaning": "impressions,thoughts"
+    },
+    "月末": {
+        "meaning": "end of the month"
+    },
+    "差し引き": {
+        "meaning": "deduction,subtraction,balance,ebb and flow,rise and fall"
+    },
+    "濡らす": {
+        "meaning": "to wet,to soak,to dip"
+    },
+    "代える": {
+        "meaning": "to exchange,to interchange,to substitute,to replace"
+    },
+    "もしかすると": {
+        "meaning": "perhaps,maybe,by some chance"
+    },
+    "車輪": {
+        "meaning": "(car) wheel"
+    },
+    "鐘": {
+        "meaning": "bell,chime"
+    },
+    "展開": {
+        "meaning": "develop,expansion (opposite of compression)"
+    },
+    "断水": {
+        "meaning": "water outage"
+    },
+    "散らかす": {
+        "meaning": "to scatter around,to leave untidy"
+    },
+    "飢える": {
+        "meaning": "to starve"
+    },
+    "塊": {
+        "meaning": "lump,mass,clod,cluster"
+    },
+    "車掌": {
+        "meaning": "(train) conductor"
+    },
+    "解答": {
+        "meaning": "answer,solution"
+    },
+    "迷信": {
+        "meaning": "superstition"
+    },
+    "落第": {
+        "meaning": "failure,dropping out of a class"
+    },
+    "幾分": {
+        "meaning": "somewhat"
+    },
+    "判事": {
+        "meaning": "judge,judiciary"
+    },
+    "嗅ぐ": {
+        "meaning": "to sniff,to smell"
+    },
+    "高層": {
+        "meaning": "upper"
+    },
+    "レクリェーション": {
+        "meaning": "recreation"
+    },
+    "マイナス": {
+        "meaning": "minus"
+    },
+    "干す": {
+        "meaning": "to air,to dry,to desiccate,to drain (off),to drink up"
+    },
+    "接続": {
+        "meaning": "(1) connection,union,join,link,(2) changing trains"
+    },
+    "電力": {
+        "meaning": "electric power"
+    },
+    "中味": {
+        "meaning": "contents,interior,substance,filling,(sword) blade"
+    },
+    "妨げる": {
+        "meaning": "to disturb,to prevent"
+    },
+    "下水": {
+        "meaning": "drainage,sewage,ditch,gutter,sewerage"
+    },
+    "次ぐ": {
+        "meaning": "to rank next to,to come after"
+    },
+    "停電": {
+        "meaning": "failure of electricity"
+    },
+    "四つ角": {
+        "meaning": "four corners,crossroads"
+    },
+    "危うい": {
+        "meaning": "dangerous,critical,grave"
+    },
+    "清書": {
+        "meaning": "clean copy"
+    },
+    "おととし": {
+        "meaning": "year before last"
+    },
+    "開通": {
+        "meaning": "opening,open"
+    },
+    "すれちがう": {
+        "meaning": "to pass by one another,to disagree"
+    },
+    "カラー": {
+        "meaning": "collar,color,colour"
+    },
+    "解散": {
+        "meaning": "breakup,dissolution"
+    },
+    "日の入り": {
+        "meaning": "sunset"
+    },
+    "話合い": {
+        "meaning": "discussion,conference"
+    },
+    "言い出す": {
+        "meaning": "to start talking,to speak,to tell,to propose,to suggest,to break the ice"
+    },
+    "方程式": {
+        "meaning": "equation"
+    },
+    "撒く": {
+        "meaning": "to scatter,to sprinkle,to sow"
+    },
+    "免税": {
+        "meaning": "tax exemption,duty exemption"
+    },
+    "確率": {
+        "meaning": "probability"
+    },
+    "手拭い": {
+        "meaning": "(hand) towel"
+    },
+    "下降": {
+        "meaning": "downward,descent,fall,drop,subsidence"
+    },
+    "改造": {
+        "meaning": "(1) remodeling,(2) modding (comp)"
+    },
+    "電流": {
+        "meaning": "electric current"
+    },
+    "原理": {
+        "meaning": "principle,theory,fundamental truth"
+    },
+    "しっぽ": {
+        "meaning": "tail (animal)"
+    },
+    "裂く": {
+        "meaning": "to tear,to split"
+    },
+    "こしらえる": {
+        "meaning": "to make,to manufacture"
+    },
+    "深まる": {
+        "meaning": "to deepen,to heighten,to intensify"
+    },
+    "仲直り": {
+        "meaning": "reconciliation,make peace with"
+    },
+    "あわただしい": {
+        "meaning": "busy,hurried,confused,flurried"
+    },
+    "失恋": {
+        "meaning": "disappointed love,broken heart,unrequited love,be lovelorn"
+    },
+    "農産物": {
+        "meaning": "agricultural produce"
+    },
+    "濃度": {
+        "meaning": "concentration,brightness"
+    },
+    "脂": {
+        "meaning": "fat,tallow,lard"
+    },
+    "剃刀": {
+        "meaning": "razor"
+    },
+    "溶く": {
+        "meaning": "to dissolve (paint)"
+    },
+    "ごくろうさま": {
+        "meaning": "Thank you very much for your...."
+    },
+    "無限": {
+        "meaning": "infinite"
+    },
+    "囁く": {
+        "meaning": "to whisper,to murmur"
+    },
+    "受験": {
+        "meaning": "taking an examination"
+    },
+    "応援": {
+        "meaning": "aid,assistance,help,reinforcement"
+    },
+    "観念": {
+        "meaning": "(1) idea,notion,conception,(2) sense (e.g. of duty)"
+    },
+    "湿る": {
+        "meaning": "to be wet,to become wet,to be damp"
+    },
+    "虹": {
+        "meaning": "rainbow"
+    },
+    "光線": {
+        "meaning": "beam,light ray"
+    },
+    "損得": {
+        "meaning": "loss and gain,advantage and disadvantage"
+    },
+    "口実": {
+        "meaning": "excuse"
+    },
+    "引算": {
+        "meaning": "subtraction"
+    },
+    "ダブル": {
+        "meaning": "double"
+    },
+    "伝染": {
+        "meaning": "contagion"
+    },
+    "湯気": {
+        "meaning": "steam,vapour"
+    },
+    "恵まれる": {
+        "meaning": "to be blessed with,to be rich in"
+    },
+    "拝見": {
+        "meaning": "(hum) (pol) seeing,look at"
+    },
+    "儀式": {
+        "meaning": "ceremony,rite,ritual,service"
+    },
+    "論ずる": {
+        "meaning": "to argue,to discuss,to debate"
+    },
+    "和服": {
+        "meaning": "Japanese clothes"
+    },
+    "定規": {
+        "meaning": "(measuring) ruler"
+    },
+    "鈍い": {
+        "meaning": "dull (e.g. a knife),thickheaded,slow (opposite of fast),stupid"
+    },
+    "五十音": {
+        "meaning": "the Japanese syllabary"
+    },
+    "ジャーナリスト": {
+        "meaning": "journalist"
+    },
+    "筆者": {
+        "meaning": "writer,author"
+    },
+    "相違": {
+        "meaning": "difference,discrepancy,variation"
+    },
+    "サラリーマン": {
+        "meaning": "salary man,company employee"
+    },
+    "役人": {
+        "meaning": "government official"
+    },
+    "噴火": {
+        "meaning": "eruption"
+    },
+    "ボーナス": {
+        "meaning": "bonus"
+    },
+    "くるむ": {
+        "meaning": "to be engulfed in,to be enveloped by,to wrap up"
+    },
+    "襖": {
+        "meaning": "sliding screen"
+    },
+    "盛る": {
+        "meaning": "(1) to serve (food, etc.),(2) to fill up,(3) to prescribe"
+    },
+    "重なる": {
+        "meaning": "to be piled up,lie on top of one another,overlap each other"
+    },
+    "そのうえ": {
+        "meaning": "in addition,furthermore"
+    },
+    "大木": {
+        "meaning": "large tree"
+    },
+    "名字": {
+        "meaning": "surname,family name"
+    },
+    "防止": {
+        "meaning": "prevention,check"
+    },
+    "つまずく": {
+        "meaning": "to stumble,to trip"
+    },
+    "脱線": {
+        "meaning": "derailment,digression"
+    },
+    "葬式": {
+        "meaning": "funeral"
+    },
+    "しみじみ": {
+        "meaning": "keenly,deeply,heartily"
+    },
+    "大層": {
+        "meaning": "very much,exaggerated,very fine"
+    },
+    "生年月日": {
+        "meaning": "birth date"
+    },
+    "組み立てる": {
+        "meaning": "to assemble,to set up,to construct"
+    },
+    "先祖": {
+        "meaning": "ancestor"
+    },
+    "ラッシュアワー": {
+        "meaning": "rush hour"
+    },
+    "担ぐ": {
+        "meaning": "to shoulder,to carry on shoulder"
+    },
+    "図鑑": {
+        "meaning": "picture book"
+    },
+    "曲げる": {
+        "meaning": "to bend,to crook,to lean"
+    },
+    "助教授": {
+        "meaning": "assistant professor"
+    },
+    "拝む": {
+        "meaning": "to worship,to beg,to make a supplication"
+    },
+    "凹む": {
+        "meaning": "to be dented,to be indented,to yield to,to give,to sink,to collapse,to cave in,to be snubbed"
+    },
+    "放れる": {
+        "meaning": "to leave,to get free,to cut oneself off"
+    },
+    "粒": {
+        "meaning": "grain"
+    },
+    "磁石": {
+        "meaning": "magnet"
+    },
+    "憎らしい": {
+        "meaning": "odious,hateful"
+    },
+    "強引": {
+        "meaning": "overbearing,coercive,pushy,forcible,high-handed"
+    },
+    "口紅": {
+        "meaning": "lipstick"
+    },
+    "櫛": {
+        "meaning": "comb"
+    },
+    "不規則": {
+        "meaning": "irregularity,unsteadiness,disorderly"
+    },
+    "灰色": {
+        "meaning": "grey,gray,ashen"
+    },
+    "方面": {
+        "meaning": "direction,district,field (e.g., of study)"
+    },
+    "図表": {
+        "meaning": "chart,diagram,graph"
+    },
+    "跳ぶ": {
+        "meaning": "to jump,to fly,to leap"
+    },
+    "引っ掛かる": {
+        "meaning": "to be caught in,to be stuck in,to be cheated"
+    },
+    "関東": {
+        "meaning": "eastern half of Japan, including Tokyo"
+    },
+    "物差し": {
+        "meaning": "ruler,measure"
+    },
+    "命ずる": {
+        "meaning": "to command,to appoint"
+    },
+    "格別": {
+        "meaning": "exceptional"
+    },
+    "混ざる": {
+        "meaning": "to be mixed,to be blended with,to associate with,to mingle with,to join"
+    },
+    "留まる": {
+        "meaning": "(1) to be fixed,(2) to abide,to stay (in the one place)"
+    },
+    "自衛": {
+        "meaning": "self-defense"
+    },
+    "テンポ": {
+        "meaning": "tempo"
+    },
+    "過程": {
+        "meaning": "process"
+    },
+    "測る": {
+        "meaning": "to measure,to weigh,to survey"
+    },
+    "慶び": {
+        "meaning": "(n) (a) joy,(a) delight,rapture,pleasure,gratification,rejoicing,congratulations,felicitations"
+    },
+    "欄": {
+        "meaning": "column of text (e.g. as in a newspaper)"
+    },
+    "肯定": {
+        "meaning": "positive,affirmation"
+    },
+    "入れ物": {
+        "meaning": "container,case,receptacle"
+    },
+    "薄暗い": {
+        "meaning": "dim,gloomy"
+    },
+    "下書き": {
+        "meaning": "rough copy,draft"
+    },
+    "ごめんください": {
+        "meaning": "May I come in?"
+    },
+    "すまない": {
+        "meaning": "sorry (phrase)"
+    },
+    "例外": {
+        "meaning": "exception"
+    },
+    "背負う": {
+        "meaning": "to be burdened with,to carry on back or shoulder"
+    },
+    "見出し": {
+        "meaning": "heading,caption,subtitle,index"
+    },
+    "蘇る": {
+        "meaning": "to be resurrected,to be revived,to be resuscitated,to be rehabilitated"
+    },
+    "どなる": {
+        "meaning": "to shout,to yell"
+    },
+    "付合う": {
+        "meaning": "to associate with,to keep company with,to get on with"
+    },
+    "回数": {
+        "meaning": "number of times,frequency"
+    },
+    "繋がる": {
+        "meaning": "to be tied together,to be connected to,to be related to"
+    },
+    "ふざける": {
+        "meaning": "to romp,to gambol,to frolic,to joke"
+    },
+    "しびれる": {
+        "meaning": "to become numb,to go to sleep (i.e., a limb)"
+    },
+    "生意気": {
+        "meaning": "impertinent,saucy,cheeky,conceit,audacious,brazen"
+    },
+    "例える": {
+        "meaning": "to compare,to liken,to speak figuratively,to illustrate,to use a simile"
+    },
+    "感ずる": {
+        "meaning": "to feel,to sense"
+    },
+    "シーズン": {
+        "meaning": "season (sporting)"
+    },
+    "気体": {
+        "meaning": "vapour,gas"
+    },
+    "噴水": {
+        "meaning": "water fountain"
+    },
+    "通路": {
+        "meaning": "passage,pathway"
+    },
+    "凍える": {
+        "meaning": "to freeze,to be chilled,to be frozen"
+    },
+    "通知": {
+        "meaning": "notice,notification"
+    },
+    "追加": {
+        "meaning": "addition,supplement,appendix"
+    },
+    "図形": {
+        "meaning": "figure"
+    },
+    "そういえば": {
+        "meaning": "which reminds me .."
+    },
+    "通用": {
+        "meaning": "popular use,circulation"
+    },
+    "純情": {
+        "meaning": "pure heart,naivete,self-sacrificing devotion"
+    },
+    "末っ子": {
+        "meaning": "youngest child"
+    },
+    "政党": {
+        "meaning": "(member of) political party"
+    },
+    "照らす": {
+        "meaning": "to shine on,to illuminate"
+    },
+    "踏切": {
+        "meaning": "railway crossing,level crossing,starting line,scratch,crossover"
+    },
+    "採点": {
+        "meaning": "marking,grading,looking over"
+    },
+    "単数": {
+        "meaning": "singular (number)"
+    },
+    "海洋": {
+        "meaning": "ocean"
+    },
+    "受け持つ": {
+        "meaning": "to take (be in) charge of"
+    },
+    "申請": {
+        "meaning": "application,request,petition"
+    },
+    "附属": {
+        "meaning": "attached,belonging,affiliated"
+    },
+    "独り言": {
+        "meaning": "a soliloquy,a monologue,speaking to oneself"
+    },
+    "点々": {
+        "meaning": "here and there,little by little"
+    },
+    "さわやか": {
+        "meaning": "fresh,refreshing,invigorating"
+    },
+    "たちまち": {
+        "meaning": "at once,in a moment,suddenly,all at once"
+    },
+    "中指": {
+        "meaning": "middle finger"
+    },
+    "リズム": {
+        "meaning": "rhythm"
+    },
+    "制作": {
+        "meaning": "work (film, book)"
+    },
+    "しつこい": {
+        "meaning": "insistent,obstinate"
+    },
+    "請う": {
+        "meaning": "to ask,to request"
+    },
+    "Ͼ立": {
+        "meaning": "confrontation,opposition,antagonism"
+    },
+    "貸間": {
+        "meaning": "room to let"
+    },
+    "こっそり": {
+        "meaning": "stealthily,secretly"
+    },
+    "姿勢": {
+        "meaning": "attitude,posture"
+    },
+    "あてはめる": {
+        "meaning": "to apply,to adapt"
+    },
+    "係わる": {
+        "meaning": "to concern oneself in,to have to do with,to affect,to influence,to stick to (opinions)"
+    },
+    "形容動詞": {
+        "meaning": "adjectival noun,quasi-adjective"
+    },
+    "学部": {
+        "meaning": "department of a university,undergraduate"
+    },
+    "主役": {
+        "meaning": "leading part,leading actor (actress)"
+    },
+    "載る": {
+        "meaning": "to appear (in print),to be recorded"
+    },
+    "標本": {
+        "meaning": "example,specimen"
+    },
+    "続々": {
+        "meaning": "successively,one after another"
+    },
+    "夕刊": {
+        "meaning": "evening paper"
+    },
+    "頭脳": {
+        "meaning": "head,brains,intellect"
+    },
+    "調整": {
+        "meaning": "regulation,adjustment,tuning"
+    },
+    "在学": {
+        "meaning": "(enrolled) in school"
+    },
+    "見送る": {
+        "meaning": "(1) to see off,to farewell,(2) to escort,(3) to let pass"
+    },
+    "混ぜる": {
+        "meaning": "to mix,to stir"
+    },
+    "工事": {
+        "meaning": "construction work"
+    },
+    "過剰": {
+        "meaning": "excess,over-"
+    },
+    "改めて": {
+        "meaning": "another time,again,over again,anew,formally"
+    },
+    "紺": {
+        "meaning": "navy blue,deep blue"
+    },
+    "肌着": {
+        "meaning": "underwear"
+    },
+    "騒々しい": {
+        "meaning": "noisy,boisterous"
+    },
+    "重役": {
+        "meaning": "director,high executive"
+    },
+    "ピストル": {
+        "meaning": "pistol"
+    },
+    "指定": {
+        "meaning": "designation,specification,assignment,pointing at"
+    },
+    "羨ましい": {
+        "meaning": "envious,enviable"
+    },
+    "体系": {
+        "meaning": "system,organization"
+    },
+    "甚だしい": {
+        "meaning": "extreme,excessive,terrible"
+    },
+    "個体": {
+        "meaning": "an individual"
+    },
+    "人造": {
+        "meaning": "man-made,synthetic,artificial"
+    },
+    "塵紙": {
+        "meaning": "tissue paper,toilet paper"
+    },
+    "水平": {
+        "meaning": "water level,horizon"
+    },
+    "以後": {
+        "meaning": "after this,from now on,hereafter,thereafter"
+    },
+    "不潔": {
+        "meaning": "unclean,dirty,filthy,impure"
+    },
+    "ブラウス": {
+        "meaning": "blouse"
+    },
+    "揉む": {
+        "meaning": "to rub,to crumple (up),to wrinkle"
+    },
+    "薬局": {
+        "meaning": "pharmacy,drugstore"
+    },
+    "書留": {
+        "meaning": "writing down,putting on record,recording,making a note of,registration (of mail)"
+    },
+    "溶岩": {
+        "meaning": "lava"
+    },
+    "爪": {
+        "meaning": "fingernail or toenail,claw,talon,hoof"
+    },
+    "コック": {
+        "meaning": "(1) cook (nl:),(2) tap,spigot,faucet,cock"
+    },
+    "目次": {
+        "meaning": "table of contents"
+    },
+    "欲張り": {
+        "meaning": "avarice,covetousness,greed"
+    },
+    "シリーズ": {
+        "meaning": "series"
+    },
+    "各々": {
+        "meaning": "each,every,either,respectively,severally"
+    },
+    "屑": {
+        "meaning": "waste,scrap"
+    },
+    "敬う": {
+        "meaning": "to show respect,to honour"
+    },
+    "発揮": {
+        "meaning": "exhibition,demonstration,utilization,display"
+    },
+    "重点": {
+        "meaning": "important point,lay stress on,colon,emphasis"
+    },
+    "名詞": {
+        "meaning": "noun"
+    },
+    "項目": {
+        "meaning": "item"
+    },
+    "あわてる": {
+        "meaning": "to become confused"
+    },
+    "混じる": {
+        "meaning": "to be mixed,to be blended with,to associate with"
+    },
+    "皮膚": {
+        "meaning": "skin"
+    },
+    "強気": {
+        "meaning": "firm,strong"
+    },
+    "遡る": {
+        "meaning": "to go back,to go upstream,to make retroactive"
+    },
+    "体制": {
+        "meaning": "order,system,structure,set-up,organization"
+    },
+    "出迎える": {
+        "meaning": "to meet,to greet"
+    },
+    "すっぱい": {
+        "meaning": "sour,acid"
+    },
+    "めでたい": {
+        "meaning": "happy,simple soul,propitious,joyous"
+    },
+    "時間割": {
+        "meaning": "timetable,schedule"
+    },
+    "線路": {
+        "meaning": "line,track,roadbed"
+    },
+    "逸れる": {
+        "meaning": "to stray (turn) from subject,to get lost,to go astray"
+    },
+    "貯蔵": {
+        "meaning": "storage,preservation"
+    },
+    "みっともない": {
+        "meaning": "shameful,indecent"
+    },
+    "小学生": {
+        "meaning": "grade school student"
+    },
+    "レインコート": {
+        "meaning": "raincoat"
+    },
+    "竹": {
+        "meaning": "bamboo,middle (of a three-tier ranking system)"
+    },
+    "包帯": {
+        "meaning": "bandage,dressing"
+    },
+    "短期": {
+        "meaning": "short term"
+    },
+    "栓": {
+        "meaning": "stopper,cork,stopcock"
+    },
+    "艶": {
+        "meaning": "gloss,glaze"
+    },
+    "しぼむ": {
+        "meaning": "to wither,to fade (away),to shrivel,to wilt"
+    },
+    "飾り": {
+        "meaning": "decoration"
+    },
+    "平気": {
+        "meaning": "coolness,calmness,composure,unconcern"
+    },
+    "透き通る": {
+        "meaning": "to be(come) transparent"
+    },
+    "探る": {
+        "meaning": "to search,to look for,to sound out"
+    },
+    "さきおととい": {
+        "meaning": "two days before yesterday"
+    },
+    "謙虚": {
+        "meaning": "modesty,humility"
+    },
+    "苦情": {
+        "meaning": "complaint,troubles,objection"
+    },
+    "締め切る": {
+        "meaning": "to shut up"
+    },
+    "俄": {
+        "meaning": "sudden,abrupt,unexpected,improvised,offhand"
+    },
+    "しゃがむ": {
+        "meaning": "to squat"
+    },
+    "彫刻": {
+        "meaning": "carving,engraving,sculpture"
+    },
+    "製作": {
+        "meaning": "manufacture,production"
+    },
+    "太鼓": {
+        "meaning": "drum,tambourine"
+    },
+    "蚊": {
+        "meaning": "mosquito"
+    },
+    "麓": {
+        "meaning": "the foot,the bottom,the base (of a mountain)"
+    },
+    "測定": {
+        "meaning": "measurement"
+    },
+    "行列": {
+        "meaning": "(1) line,procession,(2) matrix (math)"
+    },
+    "祝日": {
+        "meaning": "national holiday"
+    },
+    "オイル": {
+        "meaning": "oil,engine oil,kerosene"
+    },
+    "裏口": {
+        "meaning": "backdoor,rear entrance"
+    },
+    "迫る": {
+        "meaning": "to draw near,to press"
+    },
+    "薄める": {
+        "meaning": "to dilute,to water down"
+    },
+    "厚かましい": {
+        "meaning": "impudent,shameless,brazen"
+    },
+    "欧米": {
+        "meaning": "Europe and America,the West"
+    },
+    "先々月": {
+        "meaning": "month before last"
+    },
+    "先頭": {
+        "meaning": "head,lead,vanguard,first"
+    },
+    "助かる": {
+        "meaning": "to be saved,to be rescued,to survive,to be helpful"
+    },
+    "ミリ": {
+        "meaning": "milli-,10^-3"
+    },
+    "亡くす": {
+        "meaning": "to lose someone, wife, child, etc"
+    },
+    "地下水": {
+        "meaning": "underground water"
+    },
+    "涼む": {
+        "meaning": "to cool oneself,to cool off,to enjoy evening cool"
+    },
+    "別荘": {
+        "meaning": "holiday house,villa"
+    },
+    "素質": {
+        "meaning": "character,qualities,genius"
+    },
+    "割算": {
+        "meaning": "division (math)"
+    },
+    "気圧": {
+        "meaning": "atmospheric pressure"
+    },
+    "ギャング": {
+        "meaning": "gang"
+    },
+    "溜める": {
+        "meaning": "to amass,to accumulate"
+    },
+    "清い": {
+        "meaning": "clear,pure,noble"
+    },
+    "プラスチック": {
+        "meaning": "plastic"
+    },
+    "食器": {
+        "meaning": "tableware"
+    },
+    "差し支え": {
+        "meaning": "hindrance,impediment"
+    },
+    "毛皮": {
+        "meaning": "fur,skin,pelt"
+    },
+    "さっさと": {
+        "meaning": "quickly"
+    },
+    "児童": {
+        "meaning": "children,juvenile"
+    },
+    "漁師": {
+        "meaning": "fisherman"
+    },
+    "幼稚園": {
+        "meaning": "kindergarten"
+    },
+    "片付く": {
+        "meaning": "to put in order,to dispose of,to solve"
+    },
+    "拡張": {
+        "meaning": "expansion,extension,enlargement,escape (ESC)"
+    },
+    "針金": {
+        "meaning": "wire"
+    },
+    "風船": {
+        "meaning": "balloon"
+    },
+    "発つ": {
+        "meaning": "to depart (on a plane, train, etc.)"
+    },
+    "どうぞよろしく": {
+        "meaning": "pleased to meet you"
+    },
+    "容積": {
+        "meaning": "capacity,volume"
+    },
+    "好き嫌い": {
+        "meaning": "likes and dislikes,taste"
+    },
+    "腰掛け": {
+        "meaning": "seat,bench"
+    },
+    "そうして": {
+        "meaning": "and,like that"
+    },
+    "生き生き": {
+        "meaning": "vividly,lively"
+    },
+    "目安": {
+        "meaning": "criterion,aim"
+    },
+    "佚": {
+        "meaning": "be lost,peace,hide,mistake,beautiful,in turn"
+    },
+    "符号": {
+        "meaning": "sign,mark,symbol"
+    },
+    "瀬戸物": {
+        "meaning": "earthenware,crockery,china"
+    },
+    "水素": {
+        "meaning": "hydrogen"
+    },
+    "書取": {
+        "meaning": "dictation"
+    },
+    "盆地": {
+        "meaning": "basin (e.g. between mountains)"
+    },
+    "上級": {
+        "meaning": "advanced level,high grade,senior"
+    },
+    "修繕": {
+        "meaning": "repair,mending"
+    },
+    "琴": {
+        "meaning": "Koto (Japanese harp)"
+    },
+    "大凡": {
+        "meaning": "about,roughly,as a rule,approximately"
+    },
+    "応対": {
+        "meaning": "receiving,dealing with"
+    },
+    "偶数": {
+        "meaning": "even number"
+    },
+    "交差": {
+        "meaning": "cross"
+    },
+    "威張る": {
+        "meaning": "to be proud,to swagger"
+    },
+    "ぺん": {
+        "meaning": "pen"
+    },
+    "三日月": {
+        "meaning": "new moon,crescent moon"
+    },
+    "滝": {
+        "meaning": "waterfall"
+    },
+    "憎む": {
+        "meaning": "to hate,to detest"
+    },
+    "ウエートレス": {
+        "meaning": "waitress"
+    },
+    "通訳": {
+        "meaning": "interpretation"
+    },
+    "筆記": {
+        "meaning": "(taking) notes,copying"
+    },
+    "登場": {
+        "meaning": "entry (on stage)"
+    },
+    "衣食住": {
+        "meaning": "necessities of life (food, clothing, etc.)"
+    },
+    "薬品": {
+        "meaning": "medicine(s),chemical(s)"
+    },
+    "厳重": {
+        "meaning": "strict,rigour,severe,firm"
+    },
+    "県庁": {
+        "meaning": "prefectural office"
+    },
+    "重たい": {
+        "meaning": "heavy,massive,serious"
+    },
+    "交ぜる": {
+        "meaning": "to be mixed,to be blended with"
+    },
+    "いよいよ": {
+        "meaning": "more and more,all the more,increasingly,at last,beyond doubt"
+    },
+    "いちいち": {
+        "meaning": "one by one,separately"
+    },
+    "力強い": {
+        "meaning": "reassuring,emboldened"
+    },
+    "刻む": {
+        "meaning": "to mince,to carve,to engrave"
+    },
+    "余る": {
+        "meaning": "to remain,to be left over,to be in excess,to be too many"
+    },
+    "等分": {
+        "meaning": "division into equal parts"
+    },
+    "基礎": {
+        "meaning": "foundation,basis"
+    },
+    "そそっかしい": {
+        "meaning": "careless,thoughtless"
+    },
+    "モーター": {
+        "meaning": "motor"
+    },
+    "近付ける": {
+        "meaning": "to bring near,to put close,to let come near,to associate with"
+    },
+    "兵隊": {
+        "meaning": "soldier,sailor"
+    },
+    "存じる": {
+        "meaning": "(hum) to know"
+    },
+    "基準": {
+        "meaning": "standard,basis,criteria,norm"
+    },
+    "植木": {
+        "meaning": "garden shrubs,trees,potted plant"
+    },
+    "狡い": {
+        "meaning": "sly,cunning"
+    },
+    "算数": {
+        "meaning": "arithmetic"
+    },
+    "日課": {
+        "meaning": "daily lesson,daily work,daily routine"
+    },
+    "まぶしい": {
+        "meaning": "dazzling,radiant"
+    },
+    "明き": {
+        "meaning": "room,time to spare,emptiness"
+    },
+    "深夜": {
+        "meaning": "late at night"
+    },
+    "羽根": {
+        "meaning": "shuttlecock"
+    },
+    "手前": {
+        "meaning": "before,this side,we,you"
+    },
+    "地質": {
+        "meaning": "geological features"
+    },
+    "渇く": {
+        "meaning": "to be thirsty"
+    },
+    "載せる": {
+        "meaning": "to place on (something),to take on board,to give a ride"
+    },
+    "夕日": {
+        "meaning": "(in) the evening sun,setting sun"
+    },
+    "後輩": {
+        "meaning": "junior (at work or school)"
+    },
+    "坊っちゃん": {
+        "meaning": "son (of others)"
+    },
+    "払い戻す": {
+        "meaning": "to repay,to pay back"
+    },
+    "仮名": {
+        "meaning": "(n) alias,pseudonym,pen name"
+    },
+    "却って": {
+        "meaning": "on the contrary,rather,all the more,instead"
+    },
+    "一斉": {
+        "meaning": "simultaneous,all at once"
+    },
+    "便所": {
+        "meaning": "toilet,lavatory,rest room,latrine,comfort station"
+    },
+    "日日": {
+        "meaning": "every day,daily,day after day"
+    },
+    "献立": {
+        "meaning": "menu,program,schedule"
+    },
+    "バック": {
+        "meaning": "back"
+    },
+    "膨らます": {
+        "meaning": "to swell,to expand,to inflate,to bulge"
+    },
+    "うろうろ": {
+        "meaning": "loiteringly,aimless wandering"
+    },
+    "なにしろ": {
+        "meaning": "at any rate,anyhow,anyway,in any case"
+    },
+    "巡査": {
+        "meaning": "police,policeman"
+    },
+    "出来上がり": {
+        "meaning": "be finished,ready,made for,cut out"
+    },
+    "何々": {
+        "meaning": "such and such,What?"
+    },
+    "ピンク": {
+        "meaning": "pink"
+    },
+    "連合": {
+        "meaning": "union,alliance"
+    },
+    "私立": {
+        "meaning": "private (establishment)"
+    },
+    "バンド": {
+        "meaning": "band"
+    },
+    "録音": {
+        "meaning": "(audio) recording"
+    },
+    "休講": {
+        "meaning": "lecture cancelled"
+    },
+    "リボン": {
+        "meaning": "ribbon"
+    },
+    "羊毛": {
+        "meaning": "wool"
+    },
+    "ショップ": {
+        "meaning": "a shop"
+    },
+    "スチュワーデス": {
+        "meaning": "stewardess"
+    },
+    "摩擦": {
+        "meaning": "friction,rubbing,rubdown,chafe"
+    },
+    "天皇": {
+        "meaning": "Emperor of Japan"
+    },
+    "増大": {
+        "meaning": "enlargement"
+    },
+    "実力": {
+        "meaning": "merit,efficiency,arms,force"
+    },
+    "サイレン": {
+        "meaning": "siren"
+    },
+    "絶えず": {
+        "meaning": "constantly"
+    },
+    "ランチ": {
+        "meaning": "launch,lunch"
+    },
+    "好き好き": {
+        "meaning": "matter of taste"
+    },
+    "大分": {
+        "meaning": "considerably,greatly,a lot"
+    },
+    "見舞う": {
+        "meaning": "to ask after (health),to visit"
+    },
+    "捻る": {
+        "meaning": "to turn (a switch) on or off,to twist,to puzzle over"
+    },
+    "書道": {
+        "meaning": "calligraphy"
+    },
+    "素人": {
+        "meaning": "amateur,novice"
+    },
+    "看病": {
+        "meaning": "nursing (a patient)"
+    },
+    "あれこれ": {
+        "meaning": "one thing or another,this and that,this or that"
+    },
+    "形容詞": {
+        "meaning": "true adjective"
+    },
+    "分布": {
+        "meaning": "distribution"
+    },
+    "課程": {
+        "meaning": "course,curriculum"
+    },
+    "乾杯": {
+        "meaning": "toast (drink)"
+    },
+    "パンツ": {
+        "meaning": "underpants"
+    },
+    "砕ける": {
+        "meaning": "to break,to be broken"
+    },
+    "古典": {
+        "meaning": "old book,classics,classic"
+    },
+    "部首": {
+        "meaning": "radical (of a kanji character)"
+    },
+    "飢饉": {
+        "meaning": "famine"
+    },
+    "創作": {
+        "meaning": "production,literary creation,work"
+    },
+    "重力": {
+        "meaning": "gravity"
+    },
+    "ナンバー": {
+        "meaning": "number"
+    },
+    "心当たり": {
+        "meaning": "having some knowledge of,happening to know"
+    },
+    "部品": {
+        "meaning": "parts,accessories"
+    },
+    "煎る": {
+        "meaning": "to parch,to fry"
+    },
+    "謎謎": {
+        "meaning": "riddle,puzzle,enigma"
+    },
+    "セメント": {
+        "meaning": "cement"
+    },
+    "売行き": {
+        "meaning": "sales"
+    },
+    "当番": {
+        "meaning": "being on duty"
+    },
+    "風呂敷": {
+        "meaning": "wrapping cloth,cloth wrapper"
+    },
+    "さようなら": {
+        "meaning": "good-bye"
+    },
+    "催促": {
+        "meaning": "request,demand,claim,urge (action),press for"
+    },
+    "悠々": {
+        "meaning": "quiet,calm,leisurely"
+    },
+    "映す": {
+        "meaning": "to project,to reflect,to cast (shadow)"
+    },
+    "どっと": {
+        "meaning": "suddenly"
+    },
+    "温帯": {
+        "meaning": "temperate zone"
+    },
+    "引受る": {
+        "meaning": "to undertake,to take up,to take over"
+    },
+    "電波": {
+        "meaning": "electro-magnetic wave"
+    },
+    "初旬": {
+        "meaning": "first 10 days of the month"
+    },
+    "険しい": {
+        "meaning": "inaccessible place,sharp eyes"
+    },
+    "着々": {
+        "meaning": "steadily"
+    },
+    "リットル": {
+        "meaning": "litre"
+    },
+    "一昨日": {
+        "meaning": "day before yesterday"
+    },
+    "派手": {
+        "meaning": "showy,loud,gay,flashy,gaudy"
+    },
+    "お手伝いさん": {
+        "meaning": "maid"
+    },
+    "懐かしい": {
+        "meaning": "dear,desired,missed"
+    },
+    "中途": {
+        "meaning": "in the middle,half-way"
+    },
+    "主語": {
+        "meaning": "(gram) subject"
+    },
+    "円い": {
+        "meaning": "round,circular,spherical"
+    },
+    "縮れる": {
+        "meaning": "to be wavy,to be curled"
+    },
+    "折角": {
+        "meaning": "with trouble,at great pains,long-awaited"
+    },
+    "出迎え": {
+        "meaning": "meeting,reception"
+    },
+    "おさきに": {
+        "meaning": "before,ahead,previously"
+    },
+    "平凡": {
+        "meaning": "common,commonplace,ordinary,mediocre"
+    },
+    "挟まる": {
+        "meaning": "to get between,to be caught in"
+    },
+    "馴れる": {
+        "meaning": "to become domesticated,to become tame"
+    },
+    "シャッター": {
+        "meaning": "shutter"
+    },
+    "点数": {
+        "meaning": "marks,points,score,runs"
+    },
+    "街角": {
+        "meaning": "street corner"
+    },
+    "但し": {
+        "meaning": "but,however,provided that"
+    },
+    "おじゃまします": {
+        "meaning": "Excuse me for disturbing you"
+    },
+    "揃える": {
+        "meaning": "to put things in order,to arrange,to make uniform,to get something ready"
+    },
+    "述語": {
+        "meaning": "predicate"
+    },
+    "扇風機": {
+        "meaning": "electric fan"
+    },
+    "墨": {
+        "meaning": "ink"
+    },
+    "至急": {
+        "meaning": "urgent,pressing"
+    },
+    "ぶつぶつ": {
+        "meaning": "grumbling,complaining in a small voice"
+    },
+    "中間": {
+        "meaning": "middle,midway,interim"
+    },
+    "正味": {
+        "meaning": "net (weight)"
+    },
+    "東西": {
+        "meaning": "East and West,whole country"
+    },
+    "日当たり": {
+        "meaning": "exposure to the sun,sunny place"
+    },
+    "冷やす": {
+        "meaning": "to cool,to refrigerate"
+    },
+    "おまたせしました": {
+        "meaning": "Sorry to have kept you waiting"
+    },
+    "実例": {
+        "meaning": "example,illustration"
+    },
+    "角度": {
+        "meaning": "angle"
+    },
+    "自治": {
+        "meaning": "self-government,autonomy"
+    },
+    "総理大臣": {
+        "meaning": "Prime Minister"
+    },
+    "なぐる": {
+        "meaning": "to strike,to hit"
+    },
+    "団地": {
+        "meaning": "multi-unit apartments"
+    },
+    "盗難": {
+        "meaning": "theft,robbery"
+    },
+    "引越し": {
+        "meaning": "moving (dwelling etc.),changing residence"
+    },
+    "問い合わせ": {
+        "meaning": "enquiry,ENQ"
+    },
+    "因る": {
+        "meaning": "to come from"
+    },
+    "争う": {
+        "meaning": "to dispute,to argue,to be at variance,to compete"
+    },
+    "湧く": {
+        "meaning": "to boil,to grow hot,to get excited,to gush forth"
+    },
+    "物凄い": {
+        "meaning": "earth-shattering,staggering,to a very great extent"
+    },
+    "預かる": {
+        "meaning": "to keep in custody,to receive on deposit,to take charge of"
+    },
+    "冷凍": {
+        "meaning": "freezing,cold storage,refrigeration"
+    },
+    "ウール": {
+        "meaning": "wool"
+    },
+    "叔父さん": {
+        "meaning": "middle-aged gentleman,uncle"
+    },
+    "醜い": {
+        "meaning": "ugly"
+    },
+    "飛び込む": {
+        "meaning": "to jump in,to leap in,to plunge into,to dive"
+    },
+    "アンテナ": {
+        "meaning": "antenna"
+    },
+    "ねじ": {
+        "meaning": "(a) screw"
+    },
+    "酌む": {
+        "meaning": "to serve sake"
+    },
+    "センチ": {
+        "meaning": "centimeter,centi-,10^-2"
+    },
+    "順序": {
+        "meaning": "order,sequence,procedure"
+    },
+    "休養": {
+        "meaning": "rest,break,recreation"
+    },
+    "日用品": {
+        "meaning": "daily necessities"
+    },
+    "功績": {
+        "meaning": "achievements,merit,meritorious service,meritorious deed"
+    },
+    "フライパン": {
+        "meaning": "fry pan,frying pan"
+    },
+    "引返す": {
+        "meaning": "to repeat,to send back,to bring back"
+    },
+    "隔てる": {
+        "meaning": "to be shut out"
+    },
+    "水産": {
+        "meaning": "marine products,fisheries"
+    },
+    "斬る": {
+        "meaning": "(v5r) to behead,to murder"
+    },
+    "汁": {
+        "meaning": "juice,sap,soup,broth"
+    },
+    "御覧": {
+        "meaning": "(hon) look,inspection,try"
+    },
+    "吊す": {
+        "meaning": "to hang"
+    },
+    "ガム": {
+        "meaning": "chewing gum"
+    },
+    "起床": {
+        "meaning": "rising,getting out of bed"
+    },
+    "直角": {
+        "meaning": "right angle"
+    },
+    "省略": {
+        "meaning": "omission,abbreviation,abridgment"
+    },
+    "生長": {
+        "meaning": "growth,increment"
+    },
+    "森林": {
+        "meaning": "forest,woods"
+    },
+    "零点": {
+        "meaning": "zero,no marks"
+    },
+    "集金": {
+        "meaning": "money collection"
+    },
+    "峠": {
+        "meaning": "ridge,(mountain) pass,difficult part"
+    },
+    "出合い": {
+        "meaning": "an encounter"
+    },
+    "一通り": {
+        "meaning": "ordinary,usual,in general,briefly"
+    },
+    "先端": {
+        "meaning": "pointed end,tip,fine point"
+    },
+    "響く": {
+        "meaning": "to resound"
+    },
+    "殖える": {
+        "meaning": "to increase,to multiply"
+    },
+    "又は": {
+        "meaning": "or,otherwise"
+    },
+    "交じる": {
+        "meaning": "to be mixed,to be blended with,to associate with"
+    },
+    "属する": {
+        "meaning": "to belong to,to come under,to be affiliated with,to be subject to"
+    },
+    "めちゃくちゃ": {
+        "meaning": "absurd,unreasonable,excessive,messed up,spoiled,wreaked"
+    },
+    "直流": {
+        "meaning": "direct current"
+    },
+    "規準": {
+        "meaning": "standard,basis,criteria,norm"
+    },
+    "標準": {
+        "meaning": "standard,level"
+    },
+    "ゆでる": {
+        "meaning": "to boil"
+    },
+    "繋がり": {
+        "meaning": "connection,link,relationship"
+    },
+    "定休日": {
+        "meaning": "regular holiday"
+    },
+    "目指す": {
+        "meaning": "to aim at,to have an eye on"
+    },
+    "ビタミン": {
+        "meaning": "vitamin"
+    },
+    "水曜": {
+        "meaning": "Wednesday"
+    },
+    "敷地": {
+        "meaning": "site"
+    },
+    "永い": {
+        "meaning": "long,lengthy"
+    },
+    "あぶる": {
+        "meaning": "to scorch"
+    },
+    "惜しい": {
+        "meaning": "regrettable,disappointing,precious"
+    },
+    "下品": {
+        "meaning": "vulgarity,meanness,indecency,coarseness"
+    },
+    "甘やかす": {
+        "meaning": "to pamper,to spoil"
+    },
+    "警備": {
+        "meaning": "defense,guard,policing,security"
+    },
+    "片寄る": {
+        "meaning": "to be one-sided,to incline,to be partial"
+    },
+    "片道": {
+        "meaning": "one-way (trip)"
+    },
+    "エチケット": {
+        "meaning": "etiquette"
+    },
+    "防犯": {
+        "meaning": "prevention of crime"
+    },
+    "盆": {
+        "meaning": "Lantern Festival,Festival of the Dead,tray"
+    },
+    "素直": {
+        "meaning": "obedient,meek,docile,unaffected"
+    },
+    "蒸す": {
+        "meaning": "to steam,to poultice,to be sultry"
+    },
+    "方角": {
+        "meaning": "direction,way,compass point"
+    },
+    "溶け込む": {
+        "meaning": "to melt into"
+    },
+    "利害": {
+        "meaning": "advantages and disadvantages,interest"
+    },
+    "従姉妹": {
+        "meaning": "cousin (female)"
+    },
+    "裁縫": {
+        "meaning": "sewing"
+    },
+    "凸凹": {
+        "meaning": "unevenness,roughness,ruggedness"
+    },
+    "桁": {
+        "meaning": "column,beam,digit"
+    },
+    "撫でる": {
+        "meaning": "to brush gently,to stroke"
+    },
+    "基盤": {
+        "meaning": "foundation,basis"
+    },
+    "用途": {
+        "meaning": "use,usefulness"
+    },
+    "抽象": {
+        "meaning": "abstract"
+    },
+    "おとなしい": {
+        "meaning": "obedient,docile,quiet"
+    },
+    "面倒臭い": {
+        "meaning": "bother to do,tiresome"
+    },
+    "かじる": {
+        "meaning": "to chew,to bite (at),to gnaw,to nibble"
+    },
+    "こないだ": {
+        "meaning": "the other day,lately,recently"
+    },
+    "溶ける": {
+        "meaning": "to melt,to thaw,to fuse,to dissolve"
+    },
+    "拡充": {
+        "meaning": "expansion"
+    },
+    "下駄": {
+        "meaning": "geta (Japanese footwear),wooden clogs"
+    },
+    "換気": {
+        "meaning": "ventilation"
+    },
+    "くたびれる": {
+        "meaning": "to get tired,to wear out"
+    },
+    "長短": {
+        "meaning": "length,long and short,+-"
+    },
+    "暖まる": {
+        "meaning": "to warm up,to get warm"
+    },
+    "睨む": {
+        "meaning": "to glare at,to scowl at,to keep an eye on"
+    },
+    "容器": {
+        "meaning": "container,vessel"
+    },
+    "気配": {
+        "meaning": "indication,market trend,worry"
+    },
+    "学術": {
+        "meaning": "science,learning,scholarship"
+    },
+    "ダム": {
+        "meaning": "dumb"
+    },
+    "傑作": {
+        "meaning": "masterpiece,best work,boner,blunder"
+    },
+    "期限": {
+        "meaning": "term,period"
+    },
+    "火山": {
+        "meaning": "volcano"
+    },
+    "整う": {
+        "meaning": "to be prepared,to be in order,to be put in order,to be arranged"
+    },
+    "配る": {
+        "meaning": "to distribute,to deliver"
+    },
+    "吊る": {
+        "meaning": "to hang"
+    },
+    "交通機関": {
+        "meaning": "transportation facilities"
+    },
+    "乱暴": {
+        "meaning": "rude,violent,rough,lawless,unreasonable,reckless"
+    },
+    "お代わり": {
+        "meaning": "second helping,another cup"
+    },
+    "澄む": {
+        "meaning": "to clear (e.g. weather),to become transparent"
+    },
+    "親指": {
+        "meaning": "thumb"
+    },
+    "勘違い": {
+        "meaning": "misunderstanding,wrong guess"
+    },
+    "小数": {
+        "meaning": "fraction (part of),decimal"
+    },
+    "かしこまりました": {
+        "meaning": "certainly!"
+    },
+    "倣う": {
+        "meaning": "to imitate,to follow,to emulate"
+    },
+    "学年": {
+        "meaning": "year in school,grade in school"
+    },
+    "出掛ける": {
+        "meaning": "to depart,to set out,to start,to be going out"
+    },
+    "ゼミ": {
+        "meaning": "(n) seminar"
+    },
+    "御辞儀": {
+        "meaning": "bow"
+    },
+    "くっつける": {
+        "meaning": "to attach"
+    },
+    "食塩": {
+        "meaning": "table salt"
+    },
+    "解説": {
+        "meaning": "explanation,commentary"
+    },
+    "南北": {
+        "meaning": "south and north"
+    },
+    "激増": {
+        "meaning": "sudden increase"
+    },
+    "一定": {
+        "meaning": "fixed,settled,definite"
+    },
+    "針路": {
+        "meaning": "course,direction,compass bearing"
+    },
+    "一流": {
+        "meaning": "first class,top grade,foremost,top-notch"
+    },
+    "区域": {
+        "meaning": "limits,boundary,domain,zone,sphere,territory"
+    },
+    "飽くまで": {
+        "meaning": "to the end,to the last,stubbornly"
+    },
+    "動作": {
+        "meaning": "action,movements,motions,bearing,behaviour,manners"
+    },
+    "潰れる": {
+        "meaning": "to be smashed,to go bankrupt"
+    },
+    "四角い": {
+        "meaning": "square"
+    },
+    "映る": {
+        "meaning": "to be reflected,to harmonize with,to come out (photo)"
+    },
+    "来日": {
+        "meaning": "arrival in Japan,coming to Japan,visit to Japan"
+    },
+    "知人": {
+        "meaning": "friend,acquaintance"
+    },
+    "餅": {
+        "meaning": "sticky rice cake"
+    },
+    "目立つ": {
+        "meaning": "to be conspicuous,to stand out"
+    },
+    "またぐ": {
+        "meaning": "to straddle"
+    },
+    "恨み": {
+        "meaning": "resentment"
+    },
+    "彫る": {
+        "meaning": "to carve,to engrave,to sculpture,to chisel"
+    },
+    "クーラー": {
+        "meaning": "cooler,air conditioner"
+    },
+    "官庁": {
+        "meaning": "government office,authorities"
+    },
+    "掻く": {
+        "meaning": "to scratch,to perspire"
+    },
+    "モデル": {
+        "meaning": "model"
+    },
+    "塵芥": {
+        "meaning": "trash,rubbish"
+    },
+    "民間": {
+        "meaning": "private,civilian,civil,popular,folk,unofficial"
+    },
+    "延長": {
+        "meaning": "extension,elongation,prolongation,lengthening"
+    },
+    "祭日": {
+        "meaning": "national holiday,festival day"
+    },
+    "延ばす": {
+        "meaning": "to lengthen,to stretch,to reach out,to grow (beard)"
+    },
+    "殖やす": {
+        "meaning": "to increase,to add to,to augment"
+    },
+    "卒直": {
+        "meaning": "frankness,candour,openheartedness"
+    },
+    "掏摸": {
+        "meaning": "pickpocket"
+    },
+    "採る": {
+        "meaning": "(1) to adopt (measure, proposal),(2) to pick (fruit)"
+    },
+    "含める": {
+        "meaning": "to include,to instruct,to make one understand"
+    },
+    "括弧": {
+        "meaning": "parenthesis,brackets"
+    },
+    "耕地": {
+        "meaning": "arable land"
+    },
+    "追い越す": {
+        "meaning": "to pass (e.g. car),to outdistance,to outstrip"
+    },
+    "発射": {
+        "meaning": "firing,shooting,discharge,catapult"
+    },
+    "焦がす": {
+        "meaning": "to burn,to scorch,to singe,to char"
+    },
+    "心身": {
+        "meaning": "mind and body"
+    },
+    "クリーニング": {
+        "meaning": "cleaning,dry cleaning,laundry service"
+    },
+    "放る": {
+        "meaning": "to let go"
+    },
+    "務める": {
+        "meaning": "(1) to serve,to fill a post,to serve under,to work (for)"
+    },
+    "ブラシ": {
+        "meaning": "brushy,brush"
+    },
+    "推定": {
+        "meaning": "presumption,assumption,estimation"
+    },
+    "狙う": {
+        "meaning": "to aim at"
+    },
+    "育児": {
+        "meaning": "childcare,nursing,upbringing"
+    },
+    "索引": {
+        "meaning": "index,indices"
+    },
+    "溶かす": {
+        "meaning": "to melt,to dissolve"
+    },
+    "コレクション": {
+        "meaning": "(1) collection,(2) correction"
+    },
+    "編集": {
+        "meaning": "editing,compilation,editorial (e.g. committee)"
+    },
+    "コンクリート": {
+        "meaning": "concrete"
+    },
+    "岬": {
+        "meaning": "cape (on coast)"
+    },
+    "呼び出す": {
+        "meaning": "to summon,to call (e.g. phone)"
+    },
+    "モノレール": {
+        "meaning": "monorail"
+    },
+    "ひとまず": {
+        "meaning": "for the present,once,in outline"
+    },
+    "まあまあ": {
+        "meaning": "so-so"
+    },
+    "バケツ": {
+        "meaning": "bucket,pail"
+    },
+    "液体": {
+        "meaning": "liquid,fluid"
+    },
+    "資料": {
+        "meaning": "materials,data"
+    },
+    "煮る": {
+        "meaning": "to boil,to cook"
+    },
+    "メニュー": {
+        "meaning": "menu"
+    },
+    "複写": {
+        "meaning": "copy,duplicate"
+    },
+    "儲かる": {
+        "meaning": "to be profitable,to yield a profit"
+    },
+    "座敷": {
+        "meaning": "tatami room"
+    },
+    "騒がしい": {
+        "meaning": "noisy"
+    },
+    "煮える": {
+        "meaning": "to boil,to cook,to be cooked"
+    },
+    "矢印": {
+        "meaning": "directing arrow"
+    },
+    "句読点": {
+        "meaning": "punctuation marks"
+    },
+    "火口": {
+        "meaning": "a burner,origin of a fire"
+    },
+    "ファスナー": {
+        "meaning": "fastener,zipper"
+    },
+    "擦る": {
+        "meaning": "to rub,to chafe,to file,to frost (glass),to strike (match)"
+    },
+    "どきどき": {
+        "meaning": "throb,beat (fast)"
+    },
+    "香水": {
+        "meaning": "perfume"
+    },
+    "くっつく": {
+        "meaning": "to adhere to,to keep close to"
+    },
+    "地名": {
+        "meaning": "place name"
+    },
+    "纏まる": {
+        "meaning": "to be collected,to be settled,to be in order"
+    },
+    "匂う": {
+        "meaning": "to be fragrant,to smell,to stink"
+    },
+    "取り入れる": {
+        "meaning": "to harvest,to take in,to adopt"
+    },
+    "ネックレス": {
+        "meaning": "necklace"
+    },
+    "嫌がる": {
+        "meaning": "to hate,to dislike"
+    },
+    "段階": {
+        "meaning": "gradation,grade,stage"
+    },
+    "紫": {
+        "meaning": "purple colour,violet"
+    },
+    "地点": {
+        "meaning": "site,point on a map"
+    },
+    "水分": {
+        "meaning": "moisture"
+    },
+    "以降": {
+        "meaning": "on and after,hereafter,thereafter"
+    },
+    "短所": {
+        "meaning": "(1) defect,demerit,weak point,(2) disadvantage"
+    },
+    "牧畜": {
+        "meaning": "stock-farming"
+    },
+    "もったいない": {
+        "meaning": "too good,more than one deserves,wasteful,sacrilegious,unworthy of"
+    },
+    "漢和": {
+        "meaning": "Chinese Character-Japanese (e.g. dictionary)"
+    },
+    "家屋": {
+        "meaning": "house,building"
+    },
+    "平仮名": {
+        "meaning": "hiragana,47 syllables,the cursive syllabary"
+    },
+    "治める": {
+        "meaning": "(1) to govern,to manage,(2) to subdue"
+    },
+    "和英": {
+        "meaning": "Japanese-English"
+    },
+    "怠る": {
+        "meaning": "to neglect,to be off guard,to be feeling better"
+    },
+    "唇": {
+        "meaning": "lips"
+    },
+    "緩い": {
+        "meaning": "loose,lenient,slow"
+    },
+    "文脈": {
+        "meaning": "context"
+    },
+    "繋げる": {
+        "meaning": "to connect"
+    },
+    "だます": {
+        "meaning": "to trick,to cheat,to deceive"
+    },
+    "めまい": {
+        "meaning": "dizziness,giddiness"
+    },
+    "交替": {
+        "meaning": "alternation,change,relief,relay,shift"
+    },
+    "スタート": {
+        "meaning": "start"
+    },
+    "めっきり": {
+        "meaning": "remarkably"
+    },
+    "血圧": {
+        "meaning": "blood pressure"
+    },
+    "手頃": {
+        "meaning": "moderate,handy"
+    },
+    "満員": {
+        "meaning": "full house,no vacancy,sold out"
+    },
+    "余計": {
+        "meaning": "too much,unnecessary,abundance,surplus,excess,superfluity"
+    },
+    "熱する": {
+        "meaning": "to heat"
+    },
+    "乾かす": {
+        "meaning": "to dry (clothes, etc.),to desiccate"
+    },
+    "私鉄": {
+        "meaning": "private railway"
+    },
+    "客席": {
+        "meaning": "guest seating"
+    },
+    "下車": {
+        "meaning": "alighting,getting off"
+    },
+    "残らず": {
+        "meaning": "all,entirely,completely,without exception"
+    },
+    "捕える": {
+        "meaning": "to seize,to grasp,to capture,to arrest"
+    },
+    "目下": {
+        "meaning": "at present,now"
+    },
+    "発電": {
+        "meaning": "generation (e.g. power)"
+    },
+    "系統": {
+        "meaning": "system,family line,geological formation"
+    },
+    "名所": {
+        "meaning": "famous place"
+    },
+    "蒸発": {
+        "meaning": "evaporation,unexplained disappearance"
+    },
+    "恐縮": {
+        "meaning": "shame,very kind of you,sorry to trouble"
+    },
+    "申し訳ない": {
+        "meaning": "inexcusable"
+    },
+    "くどい": {
+        "meaning": "verbose,importunate,heavy (taste)"
+    },
+    "遊園地": {
+        "meaning": "amusement park"
+    },
+    "逃がす": {
+        "meaning": "to let loose,to set free,to let escape"
+    },
+    "上旬": {
+        "meaning": "first 10 days of month"
+    },
+    "ナイロン": {
+        "meaning": "nylon"
+    },
+    "改札": {
+        "meaning": "examination of tickets"
+    },
+    "周辺": {
+        "meaning": "circumference,outskirts,environs,(computer) peripheral"
+    },
+    "こうして": {
+        "meaning": "thus"
+    },
+    "突き当たり": {
+        "meaning": "end (e.g. of street)"
+    },
+    "蓄える": {
+        "meaning": "to store,to lay in stock"
+    },
+    "小父さん": {
+        "meaning": "middle-aged gentleman,uncle"
+    },
+    "ふわふわ": {
+        "meaning": "light,soft"
+    },
+    "スマート": {
+        "meaning": "smart,stylish,slim"
+    },
+    "湯飲み": {
+        "meaning": "teacup"
+    },
+    "近寄る": {
+        "meaning": "to approach,to draw near"
+    },
+    "四角": {
+        "meaning": "square"
+    },
+    "熟語": {
+        "meaning": "idiom,idiomatic phrase,kanji compound"
+    },
+    "ワンピース": {
+        "meaning": "one-piece dress"
+    },
+    "無地": {
+        "meaning": "plain,unfigured"
+    },
+    "焦げる": {
+        "meaning": "to burn,to be burned"
+    },
+    "落着く": {
+        "meaning": "to calm down,to settle down"
+    },
+    "地味": {
+        "meaning": "plain,simple"
+    },
+    "蕎麦": {
+        "meaning": "soba (buckwheat noodles)"
+    },
+    "改正": {
+        "meaning": "revision,amendment,alteration"
+    },
+    "器械": {
+        "meaning": "instrument"
+    },
+    "分量": {
+        "meaning": "amount,quantity"
+    },
+    "女の人": {
+        "meaning": "woman"
+    },
+    "生ずる": {
+        "meaning": "to cause,to arise,to be generated"
+    },
+    "釣り合う": {
+        "meaning": "to balance,to be in harmony,to suit"
+    },
+    "各地": {
+        "meaning": "every place,various places"
+    },
+    "ぼろ": {
+        "meaning": "rag,scrap,tattered clothes,fault (esp. in a pretense)"
+    },
+    "静まる": {
+        "meaning": "to quieten down,to calm down,to subside"
+    },
+    "限度": {
+        "meaning": "limit,bounds"
+    },
+    "楽器": {
+        "meaning": "musical instrument"
+    },
+    "引出す": {
+        "meaning": "to pull out,to take out,to draw out,to withdraw"
+    },
+    "暖める": {
+        "meaning": "to warm,to heat"
+    },
+    "コーラス": {
+        "meaning": "chorus"
+    },
+    "高める": {
+        "meaning": "to raise,to lift,to boost"
+    },
+    "見直す": {
+        "meaning": "to look again,to get a better opinion of"
+    },
+    "ダイヤグラム": {
+        "meaning": "diagram"
+    },
+    "混合": {
+        "meaning": "mixing,mixture"
+    },
+    "夜間": {
+        "meaning": "at night,nighttime"
+    },
+    "ええと": {
+        "meaning": "let me see,well,er...."
+    },
+    "貨物": {
+        "meaning": "cargo,freight"
+    },
+    "実績": {
+        "meaning": "achievements,actual results"
+    },
+    "伯母さん": {
+        "meaning": "(hon) aunt"
+    },
+    "通帳": {
+        "meaning": "passbook"
+    },
+    "泊める": {
+        "meaning": "to give shelter to,to lodge"
+    },
+    "有料": {
+        "meaning": "admission-paid,toll"
+    },
+    "公共": {
+        "meaning": "public,community,public service,society,communal"
+    },
+    "生る": {
+        "meaning": "to bear fruit"
+    },
+    "高等": {
+        "meaning": "high class,high grade"
+    },
+    "くだらない": {
+        "meaning": "good-for-nothing,stupid,trivial,worthless"
+    },
+    "おととい": {
+        "meaning": "day before yesterday"
+    },
+    "剥く": {
+        "meaning": "to peel,to skin,to pare,to hull"
+    },
+    "おまちください": {
+        "meaning": "Please wait a moment"
+    },
+    "乾電池": {
+        "meaning": "dry cell,battery"
+    },
+    "臨時": {
+        "meaning": "temporary,special,extraordinary"
+    },
+    "割引": {
+        "meaning": "discount,reduction,rebate"
+    },
+    "呑気": {
+        "meaning": "carefree,optimistic,careless,reckless,heedless"
+    },
+    "所々": {
+        "meaning": "here and there,some parts (of something)"
+    },
+    "留守番": {
+        "meaning": "care-taking,caretaker,house-watching"
+    },
+    "扇子": {
+        "meaning": "folding fan"
+    },
+    "方針": {
+        "meaning": "objective,plan,policy"
+    },
+    "斜め": {
+        "meaning": "obliqueness"
+    },
+    "小指": {
+        "meaning": "little finger"
+    },
+    "童話": {
+        "meaning": "fairy tale"
+    },
+    "消化": {
+        "meaning": "digestion"
+    },
+    "瓶詰": {
+        "meaning": "bottling,bottled"
     }
 }

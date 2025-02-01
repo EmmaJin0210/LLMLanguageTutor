@@ -1,0 +1,82 @@
+{
+    "particles": {
+        "も": {
+            "n5": "too; also; as well",
+            "n4": "as many as; as much as; up to; nearly"
+        },
+        "が": {
+            "n5": "subject marker; however; but ~"
+        },
+        "か": {
+            "n5": "question particle"
+        },
+        "ね": {
+            "n5": "isn't it? right? eh?"
+        },
+        "に": {
+            "n5": "destination particle; in; at; on; to",
+            "n1": "and; in addition to; the combination of ~"
+        },
+        "へ": {
+            "n5": "to (indicates direction / destination)"
+        },
+        "の": {
+            "n5": "possessive particle"
+        },
+        "お": {
+            "n5": "polite marker; honorific prefix particle"
+        },
+        "ご": {
+            "n5": "polite marker; honorific prefix particle"
+        },
+        "を": {
+            "n5": "object marker particle"
+        },
+        "と": {
+            "n5": "and; with; as; connecting particle",
+            "n4": "whenever [A] happens, [B] also happens",
+            "n1": "1. if (conjunction), 2. promoted pawn (shogi) (abbr)"
+        },
+        "は": {
+            "n5": "topic marker"
+        },
+        "や": {
+            "n5": "and; or; connecting particle"
+        },
+        "よ": {
+            "n5": "you know; emphasis (ending particle)"
+        },
+        "な": {
+            "n4": "don’t (order somebody to not do something)"
+        },
+        "し": {
+            "n4": "and; and what’s more (emphasis)"
+        },
+        "て": {
+            "n4": "conjunctive particle; so; because of [A], [B]"
+        },
+        "で": {
+            "n4": "conjunctive particle; so; because of [A], [B]",
+            "n3": "outflow,coming (going) out,graduate (of)"
+        },
+        "ば": {
+            "n4": "conditional form; If [A] then [B]"
+        },
+        "さ": {
+            "n4": "-ness​ ; nominalizer for adjective",
+            "n1": "ending particle; indicates assertion"
+        },
+        "げ": {
+            "n2": "looks like; seems like; appears to ~"
+        },
+        "わ": {
+            "n1": "feminine sentence ending particle"
+        },
+        "ぞ": {
+            "n1": "ending particle; adds force or indicates command"
+        },
+        "ぜ": {
+            "n1": "ending particle; adds force or indicates command"
+        }
+    }
+}
