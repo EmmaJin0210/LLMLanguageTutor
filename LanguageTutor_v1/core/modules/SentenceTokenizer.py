@@ -14,7 +14,4 @@ class SentenceTokenizer():
     def tokenize_sentence(self, sentence):
         if self.language == "japanese":
             tokens = self.tokenizer.tokenize(sentence, return_list=True)
-            # tokenized_sentence = mecab_wrapper.tokenize(text)
-            # for i, obj in enumerate(tokenized_sentence.tokenized_objects):
-            #     print(tokens[i], obj.tuple_pos)
             return tokens

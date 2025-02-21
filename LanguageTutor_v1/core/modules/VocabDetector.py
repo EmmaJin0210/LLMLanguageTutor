@@ -1,6 +1,5 @@
 from openai import OpenAI
 import Levenshtein as lev
-from core.utils.utils import *
 
 # TODO: pass in JSON instead; or just the index? (other)
 

@@ -1,0 +1,5 @@
+archive/
+LanguageTutor_v1/core/models/
+**/__pycache__/
+.DS_Store
+venv/

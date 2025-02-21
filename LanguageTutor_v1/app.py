@@ -1,376 +1,273 @@
-from fastapi import FastAPI, Form, File, Request, status, WebSocket, WebSocketDisconnect, UploadFile, HTTPException
+from fastapi import FastAPI, Form, File, Request, Response, status, UploadFile, \
+    WebSocket, WebSocketDisconnect, \
+    HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from core.utils.profile_utils import *
-from core.utils.speech_utils import *
-from core.utils.language_utils import *
-from core.utils.utils import *
-from core.learning_mode import *
-from core.conversation_mode import *
-from core.modules.DifficultyEstimationEngine import DifficultyEstimationEngine
 import shutil
+
+from core.kanis.ConversationKani import ConversationKani
+from core.kanis.LearningKani import LearningKani
+from core.core_utils.language_utils import get_all_levels
+from core.core_utils.chat_utils import summarize_chat_history
+from core.core_utils.engine_utils import clean_up
+
+from appstuff.data_classes import GlobalSessionData
+from appstuff.app_utils.app_utils import *
+
+from core.core_constants import CHAT_ENGINE, CHAT_MODEL, LEARNING_ENGINE, LEARNING_MODEL
+from appstuff.app_constants import FILENAME_USERS_DB, \
+    ROOT_TEMP_DATA, ROOT_STATIC, ROOT_TEMPLATES, \
+    MOUNT_TEMP_DATA, MOUNT_STATIC, \
+    APP_IP, APP_PORT
 
 
 app = FastAPI()
 
-app.mount("/core/temp-data", StaticFiles(directory="core/temp-data"), name="temp-data")
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount(MOUNT_TEMP_DATA, StaticFiles(directory = ROOT_TEMP_DATA), name = "temp-data")
+app.mount(MOUNT_STATIC, StaticFiles(directory = ROOT_STATIC), name = "static")
+templates = Jinja2Templates(directory = ROOT_TEMPLATES)
 
-all_users_db_path = "user_profiles/all_users.json"
-all_users = read_json_to_dict(all_users_db_path)
-levels = []
-
-session_data = {}
+g_session_data = GlobalSessionData()
+g_session_data.users = read_json_to_dict(f"{ROOT_USER_PROFILES}{FILENAME_USERS_DB}")
 
 @app.get("/")
-def get_root(request: Request):
-    if "username" in session_data:
-        return RedirectResponse(url="/home", status_code=status.HTTP_303_SEE_OTHER)
+def get_root(request: Request) -> RedirectResponse:
+    if g_session_data.username:
+        return RedirectResponse(url = "/home", status_code = status.HTTP_303_SEE_OTHER)
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/home", response_class=HTMLResponse)
-async def get_home(request: Request):
-    if "username" in session_data:
-        language = session_data["language"] if "language" in session_data else None
+async def get_home(request: Request) -> Response:
+    if g_session_data.username:
+        language = g_session_data.language
         return templates.TemplateResponse("home.html", {"request": request, "selected": language})
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/signup")
-async def get_signup(request: Request):
+async def get_signup(request: Request) -> Response:
     return templates.TemplateResponse("signup.html", {"request": request})
 
 
 @app.post("/signup")
-def sign_up(request: Request, username: str = Form(...), first_name: str = Form(...)):
-    username = username.lower()
-    all_users[username] = {"username": username, "firstname": first_name}
-    write_dict_to_json(all_users, "user_profiles/all_users.json")
-    user_template = read_json_to_dict("user_profiles/<username>.json")
-    user_template["name"] = first_name
-    write_dict_to_json(user_template, f"user_profiles/{username}.json")
-    return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+def sign_up(request: Request, username: str = Form(...), first_name: str = Form(...)) \
+    -> RedirectResponse:
+    global g_session_data
+    g_session_data = handle_user_signup(session_data = g_session_data,
+                                        username = username,
+                                        firstname = first_name)
+    return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/login")
-async def get_login(request: Request):
-    if "username" in session_data:
+async def get_login(request: Request) -> Response:
+    if g_session_data.username:
         return RedirectResponse(url="/home", status_code=status.HTTP_303_SEE_OTHER)
     else:
         return templates.TemplateResponse("login.html", {"request": request})
 
 
 @app.post("/login")
-def login(request: Request, username: str = Form(...)):
-    global session_data
-    if username in all_users:
-        print("storing session stuff")
-        session_data['username'] = username
-        session_data['profile_path'] = retrieve_profile_path_from_username(username)
-        profile = read_json_to_dict(f"user_profiles/{username}.json")
-        session_data['profile'] = profile
-        session_data["firstname"] = profile["name"]
-        return RedirectResponse(url="/home", status_code=status.HTTP_303_SEE_OTHER)
+def login(request: Request, username: str = Form(...)) -> Response:
+    global g_session_data
+    if username in g_session_data.users:
+        g_session_data = handle_user_login(session_data = g_session_data, username = username)
+        return RedirectResponse(url = "/home", status_code = status.HTTP_303_SEE_OTHER)
     else:
-        return HTMLResponse(content="<p>Invalid username. Try again or <a href='/signup'>sign up</a>.</p>", status_code=400)
+        content = "<p>Invalid username. Try again or <a href='/signup'>sign up</a>.</p>"
+        return HTMLResponse(content = content, status_code = 400)
     
 
 @app.get("/logout")
-def logout(request: Request):
-    global session_data
-    session_data = {}
-    return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+def logout(request: Request) -> RedirectResponse:
+    global g_session_data
+    g_session_data.reset()
+    return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/set-language")
-def set_language(request: Request, language: str = Form(...)):
-    global levels, session_data
-    if "username" in session_data:
-        print("language: ", language)
-        session_data['language'] = language
-        levels = get_levels(language)
-        return RedirectResponse(url="/home", status_code=status.HTTP_303_SEE_OTHER)
+def set_language(request: Request, language: str = Form(...)) -> RedirectResponse:
+    global g_session_data
+    if g_session_data.username:
+        print(f"/set-language: setting language to {language}")
+        g_session_data.language = language.lower()
+        g_session_data.all_levels = get_all_levels(language)
+        return RedirectResponse(url = "/home", status_code = status.HTTP_303_SEE_OTHER)
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/choose-instruction-lang")
-async def get_instruction_lang(request: Request):
-    if "username" in session_data:
-        return templates.TemplateResponse("instruction-lang.html", {"request": request, "levels": levels})
+async def get_instruction_lang(request: Request) -> Response:
+    if g_session_data.username:
+        return templates.TemplateResponse("instruction-lang.html", 
+                                          {"request": request, "levels": g_session_data.all_levels})
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/set-instruction-lang")
-def set_instruction_lang(request: Request, instructionlang: str = Form(...), targetlevel: str = Form(...)):
-    global session_data
-    session_data['instruction_language'] = instructionlang
-    session_data['target_level'] = targetlevel
-    return RedirectResponse(url="/learning", status_code=status.HTTP_303_SEE_OTHER)
+def set_instruction_lang(request: Request, instructionlang: str = Form(...), 
+                         targetlevel: str = Form(...)) -> RedirectResponse:
+    global g_session_data
+    g_session_data.instruction_language = instructionlang.lower()
+    g_session_data.target_level = targetlevel.lower()
+    return RedirectResponse(url = "/learning", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/choose-backup-lang")
-async def get_backup_lang(request: Request):
-    if "username" in session_data:
-        return templates.TemplateResponse("backup-lang.html", {"request": request, "levels": levels})
+async def get_backup_lang(request: Request) -> Response:
+    if g_session_data.username:
+        return templates.TemplateResponse("backup-lang.html", 
+                                          {"request": request, "levels": g_session_data.all_levels})
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/set-backup-lang")
-def set_backup_lang(request: Request, backuplang: str = Form(...), currentlevel: str = Form(...)):
-    global session_data
-    session_data['backup_language'] = backuplang
-    session_data['current_level'] = currentlevel
-    return RedirectResponse(url="/conversation", status_code=status.HTTP_303_SEE_OTHER)
+def set_backup_lang(request: Request, backuplang: str = Form(...), currentlevel: str = Form(...)) \
+    -> RedirectResponse:
+    global g_session_data
+    g_session_data.backup_language = backuplang.lower()
+    g_session_data.current_level = currentlevel.lower()
+    return RedirectResponse(url = "/conversation", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.get("/learning")
-async def get_learning_mode(request: Request):
-    if "username" in session_data:
-        return templates.TemplateResponse("learning.html", {"request": request, "language": session_data["language"]})
+async def get_learning_mode(request: Request) -> Response:
+    if g_session_data.username:
+        return templates.TemplateResponse("learning.html", 
+                                          {"request": request, "language": g_session_data.language})
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/save-learning")
-def save_learning_mode(request: Request):
-    global session_data
-    try:
-        grammar_to_teach = session_data["grammar_to_teach"]
-        user_profile = session_data["profile"]
-        user_profile = update_learning_log_in_profile(grammar_to_teach, user_profile)
-        profile_path = session_data["profile_path"]
-        write_updated_profile_to_file(user_profile, profile_path)
-        return JSONResponse(status_code=200, content={"message": "Progress saved! Your learning and conversation sessions hereon will take into account what you learned today.\n\nRedirecting to homepage..."})
-    except Exception as e:
-        print(e)
-        return JSONResponse(status_code=500, content={"message": "Failed to save progress"})
+def save_learning_mode(request: Request) -> JSONResponse:
+    res = save_learning_info_to_profile(g_session_data)
+    if res["success"]:
+        return JSONResponse(status_code=200, content={"message": res["message"]})
+    else:
+        return JSONResponse(status_code=500, content={"message": res["message"]})
 
 
 @app.websocket("/ws-learning")
-async def websocket_endpoint_learning(websocket: WebSocket):
-    global session_data
-    await websocket.accept()
+async def websocket_endpoint_learning(websocket: WebSocket) -> None:
+    global g_session_data
 
-    learning_schema = "random-sample"
-    name = session_data["firstname"]
-    if session_data["profile"]["comprehension-level"]:
-        level = session_data["profile"]["comprehension-level"]
-    else:
-        level = get_desc(session_data["target_level"])
-    target_language = session_data["language"]
-    instruction_language = session_data["instruction_language"]
-    grammar_dict_target = load_grammar_file_to_dict(target_language, [session_data["target_level"]])
-    user_profile = session_data["profile"]
-    grammar_to_teach = pick_grammars_to_teach(learning_schema, grammar_dict_target, user_profile)
-    session_data["grammar_to_teach"] = grammar_to_teach
-    sys_prompt = construct_learning_sys_prompt(name, level, target_language, instruction_language, grammar_to_teach)
-    my_key = os.getenv("OPENAI_API_KEY")
-    engine = OpenAIEngine(my_key, model="gpt-4")
-    session_data["engine"] = engine
-    tutor = LearningKani(user_profile=user_profile, engine=engine, system_prompt=sys_prompt)
+    await websocket.accept()
+    g_session_data.learning_schema = "random-sample"### dummy
+
+    info = get_learning_endpoint_info(g_session_data)
+
+    engine = get_engine(info = info, engine_id = LEARNING_ENGINE, model_id = LEARNING_MODEL)
+    tutor = LearningKani(user_profile = g_session_data.profile, 
+                         engine = engine,
+                         system_prompt = info.system_prompt)
+
+    g_session_data.grammar_to_teach = info.grammar_to_teach
+    g_session_data.engine = engine
+    g_session_data.tutor = tutor
+
     try:
         while True:
             try:
-                data = await websocket.receive()
+                await websocket.receive()
             except WebSocketDisconnect:
-                print("WebSocket disconnected")
-                break  # Exit the loop if the client disconnects
-            if "text" in data:
-                try:
-                    data = json.loads(data["text"])
-                    datatype = data["type"]
-                    datadata = data["data"]
-                except:
-                    datatype = "text"
-                    datadata = data["text"]
+                print("/ws-learning: webSocket disconnected")
+                break
+            user_input = handle_websocket_input(websocket)
+            handle_learning_round(websocket = websocket, 
+                                  tutor = tutor,
+                                  user_input = user_input)
 
-                if datatype == "text":
-                    user_input = datadata
-                elif datatype == "audio":
-                    file_location = "core/temp-data/input.wav"
-                    transcription = await transcribe_audio(file_location)
-                    print("transcription ", transcription)
-                    user_input = transcription["transcription"]
-                    await websocket.send_text(f"You:{user_input}")
-                
-                async for msg in tutor.full_round(user_input):
-                    if msg.content is None and msg.role == ChatRole.ASSISTANT:
-                        continue
-                    if msg.role == ChatRole.FUNCTION:
-                        continue
-                    print(msg.text)
-                    await websocket.send_text("Tutor:" + msg.text)
-                    audio_url = await generate_audio_response(msg.text)
-                    await websocket.send_text(audio_url)
     except WebSocketDisconnect:
-        print("Client disconnected")
+        print("/ws-learning: client disconnected")
     finally:
         await clean_up(engine)
 
 
 @app.get("/conversation")
-async def get_conversation_mode(request: Request):
-    if "username" in session_data:
+async def get_conversation_mode(request: Request) -> Response:
+    if g_session_data.username:
         return templates.TemplateResponse("conversation.html", {"request": request})
     else:
-        return RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
+        return RedirectResponse(url = "/login", status_code = status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/save-conversation")
-async def save_conversation_mode(request: Request):
-    global session_data
+async def save_conversation_mode(request: Request) -> JSONResponse:
+    global g_session_data
     try:
-        language = session_data["language"]
-        user_profile = session_data["profile"]
-        profile_path = session_data["profile_path"]
-        tutor = session_data["tutor"]
-        engine = session_data["engine"]
-        if user_interests:
-            user_profile["interests"] = summarize_user_interests(user_interests, language)
-        if user_info:
-            user_profile["personal-info"] = summarize_user_personal_info(user_info, language)
-        # summarize topics talked about
-        history_to_summarize = format_chat_history_for_summary(tutor.chat_history)
-        topics_talked_about = summarize_rounds_history(history_to_summarize, language)
-        user_profile["past-topics"].append(topics_talked_about)
-        write_updated_profile_to_file(user_profile, profile_path)
-        return JSONResponse(status_code=200, content={"message": "Progress saved! Your learning and conversation sessions hereon will take into account what you learned today.\n\nRedirecting to homepage..."})
-    except Exception as e:
-        print(e)
-        return JSONResponse(status_code=500, content={"message": "Failed to save progress"})
+        res = save_chat_info_to_profile(g_session_data)
+        if res["success"]:
+            return JSONResponse(status_code=200, content={"message": res["message"]})
+        else:
+            return JSONResponse(status_code=500, content={"message": res["message"]})
+    
     finally:
+        engine = g_session_data.engine
         await clean_up(engine)
     
 
 
 @app.websocket("/ws-conversation")
-async def websocket_endpoint_conversation(websocket: WebSocket):
-    global session_data, user_interests, user_info
+async def websocket_endpoint_conversation(websocket: WebSocket) -> None:
+    global g_session_data
     await websocket.accept()
 
-    # get session info
-    track_usage = False
-    language = session_data["language"].lower()
-    target_level = session_data["current_level"].lower()
-    all_levels = get_all_levels_of_language(language)
-    backup_language = session_data["backup_language"].lower()
-    # load grammar and vocab db
-    grammar_dict = load_grammar_file_to_dict(language, all_levels)
-    vocab_dict = load_vocab_file_to_dict(language, all_levels)
-    if backup_language == "english":
-        grammar_dict = filter_katakana(grammar_dict)
-        vocab_dict = filter_katakana(vocab_dict)
-    grammar_dict = flatten_grammar_dict_for_tokenization(grammar_dict)
-    vocab_dict = flatten_vocab_dict_for_tokenization(vocab_dict)
+    info = get_conversation_endpoint_info(g_session_data)
+    engine = get_engine(info = info, engine_id = CHAT_ENGINE, model_id = CHAT_MODEL)
+    tutor = ConversationKani(user_profile = g_session_data.profile,
+                             engine = engine,
+                             system_prompt = info.system_prompt,
+                             desired_response_tokens = info.desired_response_tokens)
 
-    user_profile = session_data["profile"]
-    name = session_data["firstname"]
-    user_interests = retrieve_user_interests_from_profile(user_profile)
-    user_info = retrieve_user_info_from_profile(user_profile)
-    past_topics = retrieve_past_topics_from_profile(user_profile)
-    good_grammar = retrieve_recent_grammar_learnt(user_profile)
-    desired_tokens = get_desired_tokens_count(language, target_level)
-    system_prompt = construct_sys_prompt_conversation(language, backup_language, name, target_level, user_interests, user_info, past_topics, good_grammar, desired_tokens)
+    g_session_data.engine = engine
+    g_session_data.tutor = tutor
 
-    my_key = os.getenv("OPENAI_API_KEY")
-    engine = DifficultyEstimationEngine(language, target_level, vocab_dict, grammar_dict, my_key, model="gpt-4")
-    session_data["engine"] = engine
-    tutor = ConversationKani(user_profile=user_profile, engine=engine, system_prompt=system_prompt, desired_response_tokens=desired_tokens)
-    session_data["tutor"] = tutor
+    rounds = 0
+    g_session_data.user_interests = [g_session_data.profile["interests"]]
+    g_session_data.user_info = [g_session_data.profile["personal-info"]]
     try:
-        rounds = 0
-        all_user_input = ""
-        all_bot_output = ""
-        user_interests = [user_profile["interests"]]
-        user_info = [user_profile["personal-info"]]
         while True:
             if rounds % 16 == 0 and rounds != 0:
-                history_to_summarize = format_chat_history_for_summary(
-                    tutor.chat_history[:len(tutor.chat_history)-4])
-                chat_summary = summarize_rounds_history(history_to_summarize, language)
-                new_chat_history = [ChatMessage(role=ChatRole.ASSISTANT, content=chat_summary)] +\
-                                    tutor.chat_history[len(tutor.chat_history-4):]
-                tutor.chat_history = new_chat_history
-            data = await websocket.receive()
-            try:
-                data = json.loads(data["text"])
-                datatype = data["type"]
-                datadata = data["data"]
-            except:
-                datatype = "text"
-                datadata = data["text"]
-
-            if datatype == "text":
-                user_input = datadata
-            elif datatype == "audio":
-                file_location = "core/temp-data/input.wav"
-                transcription = await transcribe_audio(file_location)
-                print("transcription ", transcription)
-                user_input = transcription["transcription"]
-                await websocket.send_text(f"You:{user_input}")
+                tutor = summarize_chat_history(tutor = tutor, language = info.language)
             
-            async for msg in tutor.full_round(user_input):
-                if msg.content is None and msg.role == ChatRole.ASSISTANT:
-                    continue
-                if msg.role == ChatRole.FUNCTION:
-                    if msg.name == "store_user_interest":
-                        user_interests.append(msg.content)
-                    elif msg.name == "store_user_personal_info":
-                        user_info.append(msg.content)
-                    continue
-                text = msg.text
-                tutor.chat_history[-1] = ChatMessage.assistant(text)
-                await websocket.send_text("Tutor:" + text)
-                audio_url = await generate_audio_response(text)
-                await websocket.send_text(audio_url)
+            res = await handle_websocket_input(websocket)
+            if not res["success"]:
+                return JSONResponse(status_code = 500, 
+                                    content = {"error": res["error"]})
+            user_input = res["user_input"]
+            
+            g_session_data = await handle_chat_round(websocket = websocket, 
+                                                     session_data = g_session_data,
+                                                     tutor = tutor,
+                                                     user_input = user_input)
             rounds += 1
+
     except WebSocketDisconnect:
-        print("Client disconnected")
+        print("/ws-conversation: Client disconnected")
     finally:
         await clean_up(engine)
-
-
-async def generate_audio_response(text):
-    audio_filename = text_to_speech_web(text)
-    server_address = os.getenv("SERVER_ADDRESS", "127.0.0.1:8000")
-    return f"http://{server_address}/core/temp-data/{audio_filename}"
-
-
-async def transcribe_audio(file_path: str):
-    try:
-        client = OpenAI()
-        with open(file_path, "rb") as audiofile:
-            transcription = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audiofile
-            )
-            print("Transcription: ", transcription.text)
-            return {"transcription": transcription.text}
-    except Exception as e:
-        print(f"Error in transcription: {e}")
-        return JSONResponse(status_code=500, content={"error": "Failed to transcribe audio."})
-
+        
 
 @app.post("/upload-audio")
-async def upload_audio(file: UploadFile = File(...)):
-    file_location = f"core/temp-data/{file.filename}"
-    print("file loc: ", file_location)
+async def upload_audio(file: UploadFile = File(...)) -> JSONResponse:
+    file_location = f"{ROOT_TEMP_DATA}{file.filename}"
+    print(f"Uploaded audio file to {file_location}")
     try:
         with open(file_location, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
-        return JSONResponse(content={"status": "success"})
+        return JSONResponse(content = {"status": "success"})
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code = 500, detail = str(e))
     
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host = APP_IP, port = APP_PORT)

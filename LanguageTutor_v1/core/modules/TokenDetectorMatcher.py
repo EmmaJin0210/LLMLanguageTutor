@@ -3,8 +3,6 @@ import konoha
 import subprocess
 import regex as re
 
-from core.utils.utils import *
-
 def is_punctuation(token):
     return re.match(r'^\p{P}+$', token)
 

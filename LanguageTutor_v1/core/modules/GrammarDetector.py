@@ -3,7 +3,7 @@ import os
 import asyncio
 from kani import Kani, ChatMessage
 from kani.engines.openai import OpenAIEngine
-from core.utils.utils import *
+from core.core_utils.misc_utils import *
 
 # TODO: pass in JSON instead; or just the index? (other)
 # TODO: maybe integrate the two API calls into one? Chain-of_thoughts prompting?
