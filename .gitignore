@@ -3,8 +3,3 @@ LanguageTutor_v1/core/models/
 **/__pycache__/
 .DS_Store
 venv/
-LanguageTutor_v1/db/static_database/japanese/sentences/n1.txt
-LanguageTutor_v1/db/static_database/japanese/sentences/n2.txt
-LanguageTutor_v1/db/static_database/japanese/sentences/n3.txt
-LanguageTutor_v1/db/static_database/japanese/sentences/n4.txt
-LanguageTutor_v1/db/static_database/japanese/sentences/n5.txt
