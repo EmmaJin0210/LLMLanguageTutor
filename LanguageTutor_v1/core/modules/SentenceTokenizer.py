@@ -1,5 +1,4 @@
-import JapaneseTokenizer
-
+import sudachipy
 
 class SentenceTokenizer():
     def __init__(self, language):
@@ -8,10 +7,9 @@ class SentenceTokenizer():
             self.tokenizer = self.init_japanese_tokenizer()
 
     def init_japanese_tokenizer(self):
-        dict_type = "ipadic"
-        return JapaneseTokenizer.MecabWrapper(dictType=dict_type)
+        return sudachipy.Dictionary().create()
 
     def tokenize_sentence(self, sentence):
         if self.language == "japanese":
-            tokens = self.tokenizer.tokenize(sentence, return_list=True)
+            tokens = [m.surface() for m in self.tokenizer.tokenize(sentence)]
             return tokens
