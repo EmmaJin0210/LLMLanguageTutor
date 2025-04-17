@@ -8,8 +8,8 @@ import soundfile as sf
 import pyaudio
 import wave
 ###############################
-from core.core_constants import TRANSCRIPTION_MODEL, TTS_MODEL
-from appstuff.app_constants import ROOT_TEMP_DATA, \
+from LanguageTutor_v1.core.core_constants import TRANSCRIPTION_MODEL, TTS_MODEL
+from LanguageTutor_v1.appstuff.app_constants import ROOT_TEMP_DATA, \
 FILENAME_AUDIO_INPUT, FILENAME_AUDIO_OUTPUT
 
 

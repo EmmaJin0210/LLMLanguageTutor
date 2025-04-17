@@ -2,24 +2,24 @@ import os
 from openai import AsyncOpenAI as OpenAIClient
 from kani.engines.openai import OpenAIEngine
 
-from core.engines.DifficultyEstimationEngine import DifficultyEstimationEngine
-from core.engines.DeepSeekEngine import get_deepseek_engine
-from core.core_constants import ENGINE_ID_OPENAI_DC, ENGINE_ID_DEEPSEEK, ENGINE_ID_OPENAI
+from LanguageTutor_v1.core.engines.OvergenerationEngine import OvergenerationEngine
+from LanguageTutor_v1.core.engines.DeepSeekEngine import get_deepseek_engine
+from LanguageTutor_v1.core.core_constants import ENGINE_ID_OPENAI_OG, ENGINE_ID_DEEPSEEK, ENGINE_ID_OPENAI
 
 ###### imports for typing purposes ######
 from kani.engines.base import BaseEngine
 #########################################
 
 def create_engine(engine_id: str, model_id: str, **kwargs) -> BaseEngine:
-    if engine_id == ENGINE_ID_OPENAI_DC:
+    if engine_id == ENGINE_ID_OPENAI_OG:
         my_key = os.getenv("OPENAI_API_KEY")
         client = OpenAIClient(api_key = my_key)
-        engine = DifficultyEstimationEngine(language = kwargs.get("language"), 
-                                            target_level = kwargs.get("target_level"), 
-                                            vocab_dict = kwargs.get("vocab_dict"),
-                                            grammar_dict = kwargs.get("grammar_dict"),
-                                            client = client,
-                                            model = model_id)
+        engine = OvergenerationEngine(language = kwargs.get("language"), 
+                                        target_level = kwargs.get("target_level"), 
+                                        vocab_dict = kwargs.get("vocab_dict"),
+                                        grammar_dict = kwargs.get("grammar_dict"),
+                                        client = client,
+                                        model = model_id)
     elif engine_id == ENGINE_ID_DEEPSEEK:
         engine = get_deepseek_engine(model = model_id)
     elif engine_id == ENGINE_ID_OPENAI:

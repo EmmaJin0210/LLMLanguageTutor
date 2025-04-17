@@ -1,6 +1,6 @@
 from kani import ChatMessage, ChatRole
 from openai import OpenAI
-from core.core_utils.language_utils import retrieve_shots
+from LanguageTutor_v1.core.core_utils.language_utils import retrieve_shots
 
 ###### imports for typing purposes ######
 from kani import Kani

@@ -12,9 +12,9 @@ LIST_ALL_LEVELS = {
 
 MAP_LEVEL_TO_DESC_WORD = {
     "japanese": {
-        "n5" : "beginner",
+        "n5" : "absolute beginner",
         "n4" : "beginner",
-        "n3" : "intermediate",
+        "n3" : "early intermediate",
         "n2" : "intermediate",
         "n1" : "advanced"
     }

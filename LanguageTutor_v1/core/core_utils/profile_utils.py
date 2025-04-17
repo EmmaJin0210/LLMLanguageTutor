@@ -1,5 +1,5 @@
-from core.core_utils.misc_utils import write_dict_to_json
-from appstuff.app_constants import ROOT_USER_PROFILES
+from LanguageTutor_v1.core.core_utils.misc_utils import write_dict_to_json
+from LanguageTutor_v1.appstuff.app_constants import ROOT_USER_PROFILES
 
 ###### imports for typing purposes ######
 from typing import Dict, List, Any
