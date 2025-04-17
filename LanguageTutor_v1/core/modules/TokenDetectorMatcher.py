@@ -12,7 +12,7 @@ class TokenDetectorMatcher:
         self.level_to_words = word_dict
         self.level_to_grammars = grammar_dict
 
-    def tokenize(self, sentence, tokenizer = 'Sudachi', sudachi_mode = 'A'):
+    def tokenize(self, sentence, tokenizer = 'Sudachi', sudachi_mode = 'C', strip = False):
         konoha_tokenizers = {
             'MeCab': {},
             'Janome': {},
@@ -21,6 +21,9 @@ class TokenDetectorMatcher:
         if tokenizer in konoha_tokenizers:
             self.tokenizer = konoha.WordTokenizer(tokenizer, **konoha_tokenizers[tokenizer])
             tokens = [token.base_form for token in self.tokenizer.tokenize(sentence)]
+            if strip:
+                tokens = [tok.strip() for tok in tokens if tok.strip()]
+                
         elif tokenizer == 'juman':
             self.tokenizer = JapaneseTokenizer.JumanppWrapper()
             tokens = self.tokenizer.tokenize(sentence).convert_list_object()
@@ -31,7 +34,7 @@ class TokenDetectorMatcher:
         tokens = [token for token in tokens if token and not is_punctuation(token)]
         return tokens
 
-    def detect_tokens_at_level(self, tokens, level, scope=['v', 'g']):
+    def detect_tokens_at_level(self, tokens, level, scope=['v']):
         to_return = set()
         for token in tokens:
             if 'v' in scope and token in self.level_to_words[level]:
@@ -41,7 +44,7 @@ class TokenDetectorMatcher:
         return to_return
 
 
-    def detect_tokens_at_levels(self, tokens, levels, scope=['v', 'g']):  # return a level : [tokens] map
+    def detect_tokens_at_levels(self, tokens, levels, scope=['v']):  # return a level : [tokens] map
         level_to_detected = {}
         tokens = set(tokens)
         # print(levels)
