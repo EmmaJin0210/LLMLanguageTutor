@@ -1,7 +1,7 @@
 from kani import Kani, AIParam, ai_function
 from typing import Annotated
-from core.utils.utils import *
-from core.utils.profile_utils import *
+from LanguageTutor_v1.core.core_utils.misc_utils import *
+from LanguageTutor_v1.core.core_utils.profile_utils import *
 
 # inherit from base engine
 # write a kani extension? or (import base kani engine) and create difficulty estimator class on engine
