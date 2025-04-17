@@ -3,14 +3,12 @@ from huggingface_hub import upload_folder
 from dotenv import load_dotenv
 from LanguageTutor_v1.core.models.model_constants import ROOT_MODELS
 
-# Define your local model directory and the repo ID on Hugging Face
 model_output_dir = f"{ROOT_MODELS}modernbert_output_endtok_readable/checkpoint-280710"
 repo_id = "emmajin0210/modernbert_output_endtok_readable"
 
 load_dotenv()
 hf_token = os.getenv("HF_TOKEN")
 
-# Upload the folder
 upload_folder(
     folder_path = model_output_dir,
     repo_id=repo_id,
