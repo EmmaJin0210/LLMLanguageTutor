@@ -5,4 +5,4 @@ LanguageTutor_v1/core/models/models/
 venv/
 LanguageTutor_v1/db/static_database/japanese/sentences/n1.txt
 .env
-.sh
+**.sh

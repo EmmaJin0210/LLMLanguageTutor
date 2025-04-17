@@ -3,20 +3,20 @@ import threading
 from kani.engines.base import BaseEngine, Completion
 from kani.models import ChatMessage, ChatRole
 from kani.ai_function import AIFunction
-import core.modules.function_calling as function_calling
-from core.engines.engine_constants import OPENAI_MODELS_CONTEXT_SIZES
-from core.modules.TokenDetectorMatcher import TokenDetectorMatcher
-from core.modules.DifficultyCalculator import DifficultyCalculator
-from core.core_utils.language_utils import get_levels_below_inclusive, get_levels_above_exclusive
+import LanguageTutor_v1.core.modules.function_calling as function_calling
+from LanguageTutor_v1.core.engines.engine_constants import OPENAI_MODELS_CONTEXT_SIZES
+from LanguageTutor_v1.core.modules.TokenDetectorMatcher import TokenDetectorMatcher
+from LanguageTutor_v1.core.modules.DifficultyCalculator import DifficultyCalculator
+from LanguageTutor_v1.core.core_utils.language_utils import get_levels_below_inclusive, get_levels_above_exclusive
 
 try:
     import tiktoken
 except ImportError as e:
-    raise ImportError('The DifficultyEstimationEngine requires OpenAI dependencies. Install with "pip install openai".') from None
+    raise ImportError('The OvergenerationEngine requires OpenAI dependencies. Install with "pip install openai".') from None
 
 
 
-class DifficultyEstimationEngine(BaseEngine):
+class OvergenerationEngine(BaseEngine):
     def __init__(self, language, target_level, vocab_dict, grammar_dict, client=None, model="gpt-4", tokenizer=None, **hyperparams):
         self.language = language
         self.target_level = target_level
@@ -34,9 +34,6 @@ class DifficultyEstimationEngine(BaseEngine):
         self.levels_above = get_levels_above_exclusive(self.language, self.target_level)
 
     def _load_tokenizer(self):
-        """
-        Initialize the tokenizer for the model.
-        """
         try:
             return tiktoken.encoding_for_model(self.model)
         except ImportError:
@@ -46,15 +43,9 @@ class DifficultyEstimationEngine(BaseEngine):
 
     @property
     def token_reserve(self):
-        """
-        Returns the number of tokens reserved by the engine.
-        """
         return self.function_token_reserve([])
 
     def message_len(self, message: ChatMessage) -> int:
-        """
-        Calculate the length of a message in tokens.
-        """
         return len(message.content.split())
 
     def function_token_reserve(self, functions: list[AIFunction]) -> int:
@@ -64,17 +55,11 @@ class DifficultyEstimationEngine(BaseEngine):
 
     @functools.lru_cache(maxsize=256)
     def _function_token_reserve_impl(self, functions):
-        # openai doesn't tell us exactly how their function prompt works, so
-        # we rely on community reverse-engineering to build the right prompt
-        # hopefully OpenAI releases a utility to calculate this in the future, this seems kind of fragile
         prompt = function_calling.prompt(functions)
-        return len(self.tokenizer.encode(prompt)) + 16  # internal MD headers, namespace {} delimiters
+        return len(self.tokenizer.encode(prompt)) + 16
 
 
     async def predict(self, messages, functions=None, **kwargs):
-        """
-        Generate a single response.
-        """
         responses = []
         while not responses:
             responses = await self.generate_responses(messages, functions=functions, **kwargs)
@@ -86,11 +71,10 @@ class DifficultyEstimationEngine(BaseEngine):
         ]
 
         if functions:
-            # Validate and translate functions
             translated_functions = []
             for func in functions:
                 if not hasattr(func, "parameters") or func.parameters is None:
-                    func.parameters = {}  # Default to empty JSON Schema
+                    func.parameters = {}
                 translated_functions.append({
                     "name": func.name,
                     "description": func.desc,
@@ -112,29 +96,22 @@ class DifficultyEstimationEngine(BaseEngine):
         return [choice.message.content for choice in response.choices if choice.message.content]
 
     def pick_response(self, responses):
-        """
-        Select a response based on difficulty estimation using threading.
-        Responses are scored based on difficulty and sorted (higher score first, fewer tokens as a tiebreaker).
-        """
         token_matcher = TokenDetectorMatcher(self.vocab_dict, self.grammar_dict, language=self.language)
         difficulty_calculator = DifficultyCalculator()
         scored_responses = []
         threads = []
 
         def evaluate_response(response):
-            """
-            Evaluate a single response and append its score and token count to scored_responses.
-            """
             tokens = token_matcher.tokenize(response)
             levels_below_to_matched, undetected = token_matcher.detect_tokens_at_levels(tokens, self.levels_below)
             levels_above_to_matched, _ = token_matcher.detect_tokens_at_levels(undetected, self.levels_above)
             difficulty_score = difficulty_calculator.calc_difficulty_score(
-                self.language, levels_above_to_matched, levels_below_to_matched
+                levels_above_to_matched, levels_below_to_matched
             )
-
+            score = difficulty_score if difficulty_score else float('inf')
             scored_responses.append({
                 "response": response,
-                "score": difficulty_score,
+                "score": score,
                 "token_count": len(tokens)
             })
 
@@ -151,16 +128,15 @@ class DifficultyEstimationEngine(BaseEngine):
         if not scored_responses:
             raise ValueError("No valid responses were scored.")
 
-        # Sort responses: higher score first, then fewer tokens
+        # Sort responses: lower score first, then fewer tokens
         scored_responses.sort(key=lambda x: (x["score"], x["token_count"]))
-        print(scored_responses)
+        print("SCORED OVERGEN RESPONSES: ", scored_responses)
         # Pick the top response
         best_response = scored_responses[0]["response"]
 
         # Wrap the selected response in a Completion object
         message = ChatMessage(role=ChatRole.ASSISTANT, content=best_response)
         return Completion(message=message, prompt_tokens=None, completion_tokens=None)
-
 
 
     async def close(self):
