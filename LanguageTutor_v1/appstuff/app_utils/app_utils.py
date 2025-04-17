@@ -19,7 +19,7 @@ from kani import ChatMessage, ChatRole
 import json
 
 from core.core_constants import KANI_F_STORE_INTEREST, KANI_F_STORE_PERSONAL_INFO, \
-    ENGINE_ID_OPENAI_DC, \
+    ENGINE_ID_OPENAI_OG, \
     TRANSCRIPTION_MODEL
 from appstuff.app_constants import MOUNT_TEMP_DATA, SERVER_ADDR, \
     ROOT_USER_PROFILES, ROOT_TEMP_DATA, \
@@ -100,7 +100,7 @@ def get_engine(info: Union[LearningEndpointInfo, ConversationEndpointInfo],
                model_id: str) \
     -> BaseEngine:
     extra_kwargs = {}
-    if engine_id == ENGINE_ID_OPENAI_DC:
+    if engine_id == ENGINE_ID_OPENAI_OG:
         extra_kwargs = {
             "language": getattr(info, "language", None),
             "target_level": getattr(info, "target_level", None),
