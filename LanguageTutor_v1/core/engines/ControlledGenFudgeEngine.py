@@ -31,7 +31,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
         self.lamda = lamda
 
     async def predict(self, messages: list, functions: list[AIFunction] = None,
-                      top_k: int = 50, max_new_tokens: int = 8196, **kwargs) -> Completion:
+                      top_k: int = 50, max_new_tokens: int = 256, **kwargs) -> Completion:
         
         prompt = self.build_prompt(messages, functions)
         # Encode prompt as input IDs.
