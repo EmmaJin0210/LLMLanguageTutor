@@ -16,7 +16,6 @@ class FudgeLogitsProcessor(LogitsProcessor):
         self.top_k = top_k
         self._pre_top_p = TopPLogitsWarper(top_p = top_p, min_tokens_to_keep = 1)
         self._pre_top_k = TopKLogitsWarper(top_k = top_k, min_tokens_to_keep = 1)
-        self._terminal_re = re.compile(r'。+$')
         self._splitter = re.compile(r'。+')
 
     def __call__(self, input_ids, scores):
