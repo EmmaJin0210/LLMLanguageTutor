@@ -133,13 +133,13 @@ async def bot_chat(tutor_engine, tutor_prompt, student_engine, student_prompt,
     tutor = LogTruncationKani(
         engine = tutor_engine,
         system_prompt = tutor_prompt,
-        desired_response_tokens = 8196
+        desired_response_tokens = 256
     )
     
     student = LogTruncationKani(
         engine = student_engine,
         system_prompt = student_prompt,
-        desired_response_tokens= 8196
+        desired_response_tokens= 256
     )
     
     conversation_history = []
@@ -165,22 +165,6 @@ async def bot_chat(tutor_engine, tutor_prompt, student_engine, student_prompt,
             "tutor": tutor_msg_text
         })
 
-        # student_completion = await student.engine.predict(messages = student.chat_history)
-        # student_msg_text = student_completion.message.content
-        # student.chat_history.append(ChatMessage.assistant(student_msg_text))
-        # tutor.chat_history.append(ChatMessage.user(student_msg_text))
-        # print("Student:", student_msg_text)
-        
-        # tutor_completion = await tutor.engine.predict(messages = tutor.chat_history)
-        # tutor_msg_text = tutor_completion.message.content.replace("<|im_end|>", "").strip()
-        # tutor.chat_history.append(ChatMessage.assistant(tutor_msg_text))
-        # student.chat_history.append(ChatMessage.user(tutor_msg_text))
-        # print("Tutor:", tutor_msg_text)
-        
-        # conversation_history.append({
-        #     "student": student_msg_text,
-        #     "tutor": tutor_msg_text
-        # })
     logs = read_json_to_dict(logfile_path)
     logs["conversations"].append({
         "tutor_level" : tutor_level,

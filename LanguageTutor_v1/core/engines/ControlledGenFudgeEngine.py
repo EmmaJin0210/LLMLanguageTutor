@@ -48,6 +48,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
             lamda = self.lamda,
             base_tokenizer = self.tokenizer,
             prompt_token_len = prompt_token_len,
+            top_p = 0.7,
             top_k = top_k
         )
         
@@ -59,9 +60,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
             attention_mask=attention_mask,
             logits_processor=logits_processor,
             max_new_tokens = max_new_tokens,
-            do_sample = True,
-            top_p = 0.7,
-            top_k = top_k
+            do_sample = True
         )
         # Decode the generated tokens.
         generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=False)
