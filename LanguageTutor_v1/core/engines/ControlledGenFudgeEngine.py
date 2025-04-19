@@ -22,10 +22,10 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
         )
         self.target_difficulty = target_difficulty
         self.difficulty_map = {"n1": 0, "n2": 1, "n3": 2, "n4": 3, "n5": 4}
-        # Load the binary predictor (BP) separately.
+        # Load the predictor
         self.bp_model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID_PREDICTOR)
         self.bp_tokenizer = AutoTokenizer.from_pretrained(MODEL_ID_PREDICTOR)
-        # Assign BP to a specific GPU: if more than one GPU is available, use "cuda:1"
+        # Assign predictor to first GPU
         self.bp_device = torch.device("cuda:0") if torch.cuda.device_count() > 1 else torch.device("cuda")
         self.bp_model.to(self.bp_device)
         self.lamda = lamda
@@ -34,7 +34,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
                       top_k: int = 50, max_new_tokens: int = 256, **kwargs) -> Completion:
         
         prompt = self.build_prompt(messages, functions)
-        # Encode prompt as input IDs.
+        # Encode prompt as input IDs
         input_ids = self.tokenizer.encode(prompt, return_tensors = "pt").to(self.device)
         prompt_token_len = input_ids.size(1)
         attention_mask = torch.ones_like(input_ids)
@@ -62,9 +62,9 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
             max_new_tokens = max_new_tokens,
             do_sample = True
         )
-        # Decode the generated tokens.
+        # Decode
         generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens = False)
-        # Remove the original prompt from the generated text.
+        # Remove the original prompt
         final_text = generated_text[len(prompt):].strip()
         final_message = ChatMessage.assistant(final_text)
         return Completion(message = final_message, prompt_tokens = None, completion_tokens = None)
