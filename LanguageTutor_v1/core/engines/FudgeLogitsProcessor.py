@@ -1,6 +1,5 @@
 import re
 import torch
-import torch.nn.functional as F
 from transformers import LogitsProcessor, TopPLogitsWarper, TopKLogitsWarper
 
 class FudgeLogitsProcessor(LogitsProcessor):
@@ -18,7 +17,7 @@ class FudgeLogitsProcessor(LogitsProcessor):
         self._pre_top_p = TopPLogitsWarper(top_p = top_p, min_tokens_to_keep = 1)
         self._pre_top_k = TopKLogitsWarper(top_k = top_k, min_tokens_to_keep = 1)
         self._terminal_re = re.compile(r'。+$')
-        self._splitter    = re.compile(r'。+')
+        self._splitter = re.compile(r'。+')
 
     def __call__(self, input_ids, scores):
         if self.lamda == 0:
@@ -27,22 +26,22 @@ class FudgeLogitsProcessor(LogitsProcessor):
         scores = self._pre_top_p(input_ids, scores)
         scores = self._pre_top_k(input_ids, scores)
 
-        topk_logits, topk_indices = torch.topk(scores, self.top_k, dim=-1)
+        topk_logits, topk_indices = torch.topk(scores, self.top_k, dim = -1)
 
         decoded = self.base_tokenizer.decode(
-            input_ids[0][self.prompt_token_len:], skip_special_tokens=True
+            input_ids[0][self.prompt_token_len:], skip_special_tokens = True
         )
 
         bp_texts = []
         for tok_id in topk_indices[0]:
             pieces = self._splitter.split(decoded)
-            tok_str = self.base_tokenizer.decode([tok_id.item()], skip_special_tokens=True)
+            tok_str = self.base_tokenizer.decode([tok_id.item()], skip_special_tokens = True)
             bp_text = pieces[-1] + tok_str
             bp_texts.append(bp_text)
 
         # BP forward pass
         bp_in = self.bp_tokenizer(
-            bp_texts, return_tensors="pt", padding=True, truncation=True
+            bp_texts, return_tensors = "pt", padding = True, truncation = True
         )
         # move everything to the predictor's device
         bp_in = { k: v.to(self.bp_device) for k, v in bp_in.items() }

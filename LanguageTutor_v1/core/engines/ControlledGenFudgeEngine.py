@@ -35,7 +35,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
         
         prompt = self.build_prompt(messages, functions)
         # Encode prompt as input IDs.
-        input_ids = self.tokenizer.encode(prompt, return_tensors="pt").to(self.device)
+        input_ids = self.tokenizer.encode(prompt, return_tensors = "pt").to(self.device)
         prompt_token_len = input_ids.size(1)
         attention_mask = torch.ones_like(input_ids)
         
@@ -56,18 +56,18 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
         
         
         outputs = self.model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            logits_processor=logits_processor,
+            input_ids = input_ids,
+            attention_mask = attention_mask,
+            logits_processor = logits_processor,
             max_new_tokens = max_new_tokens,
             do_sample = True
         )
         # Decode the generated tokens.
-        generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=False)
+        generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens = False)
         # Remove the original prompt from the generated text.
         final_text = generated_text[len(prompt):].strip()
         final_message = ChatMessage.assistant(final_text)
-        return Completion(message=final_message, prompt_tokens=None, completion_tokens=None)
+        return Completion(message = final_message, prompt_tokens = None, completion_tokens = None)
 
 
 ################### OLD CODE WITHOUT THE LOGITS PROCESSOR ########################
