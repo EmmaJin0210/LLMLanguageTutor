@@ -15,16 +15,16 @@ class DifficultyCalculator:
             return True
         return False
     
-    def calc_difficulty_score(self, above, below):
+    def calc_difficulty_score(self, above, below, undetected_cnt):
         cnt_above, cnt_below = 0, 0
-        for level, tokens in above.items():
+        for level, tokens in above.items(): 
             cnt_above += len(tokens)
         for level, tokens in below.items():
             cnt_below += len(tokens)
         cnt_total = cnt_above + cnt_below
         if cnt_total == 0:
             return None
-        return cnt_above / cnt_total
+        return cnt_above / (cnt_total + undetected_cnt)
 
     def calc_difficulty_score_weighted(self, language, above, below):
         score = 0

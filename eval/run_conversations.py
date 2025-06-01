@@ -1,8 +1,11 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import asyncio
 import os
+import gc
 import torch
 import argparse
-from dotenv import load_dotenv
 from datetime import datetime
 from openai import AsyncOpenAI as OpenAIClient
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -16,7 +19,7 @@ from LanguageTutor_v1.core.sysprompts import get_sysprompt_student, \
     get_sysprompt_eval_baseline, get_sysprompt_eval_detailed
 from LanguageTutor_v1.core.core_utils.language_utils import get_all_levels
 from LanguageTutor_v1.core.models.model_constants import MODEL_ID_HF_DEFAULT, MODEL_ID_OPENAI_DEFAULT, \
-    LAMBDA
+    LAMBDA, MODEL_ID_LM_SMALL
 from LanguageTutor_v1.core.core_utils.misc_utils import read_json_to_dict, write_dict_to_json
 from LanguageTutor_v1.core.core_utils.language_utils import load_vocab_file_to_dict
 
@@ -43,8 +46,6 @@ engine_to_default_model = {
     "openai" : MODEL_ID_OPENAI_DEFAULT
 }
 
-load_dotenv()
-
 # Constants
 target_language = "japanese"
 all_levels = get_all_levels(target_language)
@@ -52,8 +53,12 @@ username = "emma"
 log_folder = "eval/conversation_logs/"
 prompts_folder = "eval/conversation_prompts/"
 descs_file = "level_descs.json"
-topics_file = "level_topics_single.json"
+topics_file = "level_topics.json"
 my_openai_key = os.getenv("OPENAI_API_KEY")
+
+def free_cuda():
+    torch.cuda.empty_cache()   # releases cached blocks back to the driver
+    torch.cuda.ipc_collect()   # cleans stale CUDA IPC handles
 
 
 def parse_args():
@@ -145,13 +150,14 @@ async def bot_chat(tutor_engine, tutor_prompt, student_engine, student_prompt,
     conversation_history = []
 
     student_msg_text = None
+    tutor_msg_text = None
     
     print("Starting conversation...\n")
     for round_num in range(1, num_rounds + 1):
         print(f"--- Round {round_num} ---")
 
         # ---- student speaks --------------------------------------------
-        student_reply = await student.chat_round(student_msg_text or "")
+        student_reply = await student.chat_round(tutor_msg_text if tutor_msg_text else "")
         student_msg_text = student_reply.content.strip()
         print("Student:", student_msg_text)
 
@@ -412,8 +418,13 @@ def main():
                         logfile_path = logfile_path
                     )
                 )
+                gc.collect()
+                free_cuda()
                 conversation_cnt += 1
                 print(f"Conversation {conversation_cnt} complete.")
+        del tutor_engine          # drop last strong refs
+        gc.collect()              # reclaim cyclic leftovers
+        free_cuda() 
     end_time = datetime.now()
     runtime = end_time - start_time
     logs = read_json_to_dict(logfile_path)

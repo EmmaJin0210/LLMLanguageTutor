@@ -11,7 +11,6 @@ from eval.eval_constants import CONVERSATION_LOGS_FOLDER, EvalType
 
 source_folder = "jlpt_anki_with_reading"
 
-
 target_language = "japanese"
 all_levels = get_all_levels(target_language)
 
@@ -47,37 +46,35 @@ def get_folder_path(eval_type):
 def evaluate_tutor_msgs_for_all_files(folder_path):
     filenames = os.listdir(folder_path)
     for filename in filenames:
-        if f"e_{filename}" in filenames:
-            continue
         file_path = os.path.join(folder_path, filename)
         if os.path.isdir(file_path):
             continue
-        evaluate_tutor_msgs_for_file(folder_path, filename)
-        print(f"Completed difficulty evaluation for {file_path}")
+        if filename.startswith("e_"):
+            evaluate_tutor_msgs_for_file(folder_path, filename)
+            print(f"Completed equal level evaluation for {file_path}")
 
 
 def evaluate_tutor_msgs_for_file(folder_path, filename):
-    num_valid_rounds = 0
-    total_score = 0.0
+    valid_rounds = 0
+    sum_score = 0.0
     raw_above_cnts, raw_total_cnts = 0, 0
+
     file_path = os.path.join(folder_path, filename)
-    start_time = datetime.now()
     logs = read_json_to_dict(file_path)
     conversations = logs.get("conversations", [])
     for ind, conversation in enumerate(conversations):
-        updated_conversation, valid_rnds, sum_score_conv, above_cnts, total_cnts = \
-            calc_difficulty_for_conversation(conversation)
-        num_valid_rounds += valid_rnds # so an N1 round is never valid because no level is above n1
-        total_score += sum_score_conv # so for N1 this is gonna be 0?
-        raw_above_cnts += above_cnts # so for N1 this is gonna be 0?
-        raw_total_cnts += total_cnts
-        logs["conversations"][ind] = updated_conversation
-    ave_diff_score_by_utterance = total_score / num_valid_rounds
-    logs[f"{source_folder}_ave_diff_score_by_utterance"] = ave_diff_score_by_utterance
-    logs[f"{source_folder}_ave_diff_score_overall"] = raw_above_cnts / raw_total_cnts
-    end_time = datetime.now()
-    runtime = end_time - start_time
-    logs[f"{source_folder}_runtime_difficulty_eval"] = str(runtime)
+        target_level = conversation.get("tutor_level", "")
+        if target_level in ['n5', 'n4']:
+            updated_conversation, valid_rnds, sum_score_conv, above_cnts, total_cnts = \
+                calc_difficulty_for_conversation(conversation)
+            valid_rounds += valid_rnds
+            sum_score += sum_score_conv
+            raw_above_cnts += above_cnts
+            raw_total_cnts += total_cnts
+            logs["conversations"][ind] = updated_conversation
+    ave_diff_score_by_utterance = sum_score / valid_rounds
+    logs["n5_n4_ave_diff_score_by_utterance"] = ave_diff_score_by_utterance
+    logs["n5_n4_ave_diff_score_overall"] = raw_above_cnts / raw_total_cnts
     new_file_path = file_path if filename.startswith("e_") else os.path.join(folder_path, f"e_{filename}")
     write_dict_to_json(logs, new_file_path)
 
@@ -97,12 +94,6 @@ def calc_difficulty_for_conversation(conversation):
         detected_cnts_total = sum(detected_cnts_to_log.values())
         above_cnts_total = sum(len(toks) for level, toks in detected.items() if level in levels_above)
         undetected_cnts = len(undetected)
-        conversation["script"][ind][f"{source_folder}_difficulty_score"] = utt_difficulty
-        conversation["script"][ind][f"{source_folder}_at_target_level"] = utt_at_target
-        conversation["script"][ind][f"{source_folder}_detected_counts"] = detected_cnts_to_log
-        conversation["script"][ind][f"{source_folder}_detected_counts_total"] = detected_cnts_total
-        conversation["script"][ind][f"{source_folder}_undetected_counts"] = undetected_cnts
-        conversation["script"][ind][f"{source_folder}_detected"] = detected
         
         at_target_cnt = (at_target_cnt + 1) if utt_at_target else at_target_cnt
 
@@ -111,18 +102,7 @@ def calc_difficulty_for_conversation(conversation):
             valid_rounds += 1
             sum_score += utt_difficulty
             raw_above_cnts += above_cnts_total
-            raw_total_cnts += detected_cnts_total
-
-    # only detected_cnts_total should be included for the token-level averaging
-    tutor_utterances_joined = " ".join([rnd.get("tutor", "").strip() 
-                                        for rnd in conversation.get("script", [])])
-    conv_at_target, conv_difficulty, detected, undetected = \
-        calc_difficulty_for_text(tutor_utterances_joined, target_level)
-    conversation[f"{source_folder}_difficulty_score"] = conv_difficulty
-    conversation[f"{source_folder}_at_target_level"] = conv_at_target
-    conversation[f"{source_folder}_num_rounds_at_target_level"] = at_target_cnt
-
-    # return the updated conversation dict
+            raw_total_cnts += detected_cnts_total + undetected_cnts
     return conversation, valid_rounds, sum_score, raw_above_cnts, raw_total_cnts
 
 

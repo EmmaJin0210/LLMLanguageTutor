@@ -1,11 +1,11 @@
 from openai import OpenAI
 import threading
-from pynput import keyboard
+# from pynput import keyboard
 from typing import Union
 ###### imports for audio ######
-import simpleaudio as sa
+# import simpleaudio as sa
 import soundfile as sf
-import pyaudio
+# import pyaudio
 import wave
 ###############################
 from LanguageTutor_v1.core.core_constants import TRANSCRIPTION_MODEL, TTS_MODEL
@@ -21,7 +21,7 @@ class AudioRecorder:
         self.is_recording = False
         self.stream = None
         self.recording_thread = None
-        self.listener = keyboard.Listener(on_press = self.on_press)
+        # self.listener = keyboard.Listener(on_press = self.on_press)
         self.stop_event = threading.Event()
         self.FORMAT = pyaudio.paInt16
         self.CHANNELS = 1
@@ -30,18 +30,18 @@ class AudioRecorder:
         self.WAVE_OUTPUT_FILENAME = f"{ROOT_TEMP_DATA}{FILENAME_AUDIO_INPUT}"
         self.quit = False
 
-    def on_press(self, key: Union[keyboard.Key, keyboard.KeyCode]) -> None:
-        if hasattr(key, 'char') and key.char == 'q':
-            self.quit = True
-            self.stop_recording()
-            self.listener.stop()
-        elif key == keyboard.Key.space:
-            if self.is_recording:
-                self.stop_recording()
-                print("stopped recording")
-                self.listener.stop()
-            else:
-                self.start_recording()
+    # def on_press(self, key: Union[keyboard.Key, keyboard.KeyCode]) -> None:
+    #     if hasattr(key, 'char') and key.char == 'q':
+    #         self.quit = True
+    #         self.stop_recording()
+    #         self.listener.stop()
+    #     elif key == keyboard.Key.space:
+    #         if self.is_recording:
+    #             self.stop_recording()
+    #             print("stopped recording")
+    #             self.listener.stop()
+    #         else:
+    #             self.start_recording()
 
     def start_recording(self) -> None:
         self.is_recording = True
@@ -83,15 +83,28 @@ class AudioRecorder:
         print(f"File saved as {self.WAVE_OUTPUT_FILENAME}")
 
     def run(self) -> None:
+        print("Press ENTER to start recording, ENTER again to stop, or type 'q' + ENTER to quit.")
         try:
-            self.listener.start()
-            self.listener.join()  # Blocks here until listener stops
-        except Exception as e:
-            print(f"An error occurred: {e}")
+            while True:
+                cmd = input("> ").strip().lower()
+                if cmd == 'q':
+                    self.quit = True
+                    # if mid-recording, stop and save
+                    if self.is_recording:
+                        self.stop_recording()
+                    break
+
+                # any blank input toggles recording
+                if not self.is_recording:
+                    self.start_recording()
+                else:
+                    self.stop_recording()
+
         finally:
+            # ensure cleanup
+            if self.is_recording:
+                self.stop_recording()
             self.audio.terminate()
-            if self.recording_thread and self.recording_thread.is_alive():
-                self.recording_thread.join()
 
 
 class ExitProgram(Exception):
@@ -100,13 +113,13 @@ class ExitProgram(Exception):
         super().__init__(self.message)
 
 
-def record_audio() -> None:
-    print("Press the space key to start/stop recording. Press 'q' to quit.")
+def record_audio() -> int:
+    """
+    CHANGED: return type is now int (0=ok, 1=quit).
+    """
     recorder = AudioRecorder()
     recorder.run()
-    if recorder.quit:
-        return 1
-    return 0
+    return 1 if recorder.quit else 0
 
 
 async def speech_to_text() -> str:

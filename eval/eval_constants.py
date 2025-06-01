@@ -3,6 +3,8 @@ import os
 CONVERSATION_LOGS_FOLDER = os.path.join("eval", "conversation_logs")
 PERPLEXITY_MODEL_ID = "CohereForAI/aya-expanse-8b"
 
+STANZA_RESOURCES_DIR =  "/home1/m/mqjin/stanza_resources"
+
 class EvalType:
     BASELINE = "baseline"
     PROMPTING = "prompting"

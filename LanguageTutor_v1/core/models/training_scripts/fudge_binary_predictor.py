@@ -10,7 +10,7 @@ from LanguageTutor_v1.core.models.model_constants import MODEL_ID_BP, \
     FILENAME_TRAIN_DATA, FILENAME_EVAL_DATA
 
 # Initialize WandB
-wandb.init(project="fudge-bp-training", name="modernbert-5")
+wandb.init(project="fudge-bp-training", name="modernbert-wjt")
 
 # Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID_BP)
@@ -73,7 +73,7 @@ train_loader = DataLoader(
 
 # Training arguments
 training_args = TrainingArguments(
-    output_dir=f"{ROOT_MODELS}modernbert_output_readable",
+    output_dir=f"{ROOT_MODELS}modernbert_wjt_endtok_readable",
     eval_strategy="epoch",
     save_strategy="epoch",
     logging_dir="/scratch/mqjin/.logs",

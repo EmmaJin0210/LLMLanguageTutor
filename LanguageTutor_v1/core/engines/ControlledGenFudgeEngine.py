@@ -25,6 +25,7 @@ class ControlledGenFudgeEngine(SharedHFModelEngine):
         # Load the predictor
         self.bp_model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID_PREDICTOR)
         self.bp_tokenizer = AutoTokenizer.from_pretrained(MODEL_ID_PREDICTOR)
+        print("!! predictor loaded")
         # Assign predictor to first GPU
         self.bp_device = torch.device("cuda:0") if torch.cuda.device_count() > 1 else torch.device("cuda")
         self.bp_model.to(self.bp_device)

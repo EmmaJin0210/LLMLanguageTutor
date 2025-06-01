@@ -1,27 +1,30 @@
-from core.core_utils.language_utils import load_grammar_file_to_dict, load_vocab_file_to_dict, \
+from LanguageTutor_v1.core.core_utils.language_utils import load_grammar_file_to_dict, load_vocab_file_to_dict, \
     filter_katakana, flatten_dict_for_tokenization, \
     get_desired_tokens_count, get_level_desc_word
-from core.core_utils.profile_utils import retrieve_user_interests_from_profile, \
+from LanguageTutor_v1.core.core_utils.profile_utils import retrieve_user_interests_from_profile, \
     retrieve_user_info_from_profile, retrieve_past_topics_from_profile, \
     retrieve_recent_grammar_learnt, write_updated_profile_to_file, \
     retrieve_profile_path_from_username, update_learning_log_in_profile
-from core.core_utils.chat_utils import summarize_user_interests, summarize_user_personal_info, \
+from LanguageTutor_v1.core.core_utils.chat_utils import summarize_user_interests, summarize_user_personal_info, \
     summarize_rounds_history, format_chat_history_for_summary
-from core.core_utils.learning_utils import pick_grammars_to_teach
-from core.core_utils.speech_utils import text_to_speech
-from core.core_utils.engine_utils import create_engine
-from core.core_utils.misc_utils import read_json_to_dict, write_dict_to_json
+from LanguageTutor_v1.core.core_utils.learning_utils import pick_grammars_to_teach
+from LanguageTutor_v1.core.core_utils.speech_utils import text_to_speech
+from LanguageTutor_v1.core.core_utils.engine_utils import create_engine
+from LanguageTutor_v1.core.core_utils.misc_utils import read_json_to_dict, write_dict_to_json
 
-from core.sysprompts import get_sysprompt_chat_mode, get_sysprompt_learning_mode
-from appstuff.data_classes import ConversationEndpointInfo, LearningEndpointInfo, GlobalSessionData
+from LanguageTutor_v1.core.sysprompts import get_sysprompt_chat_mode, get_sysprompt_learning_mode, \
+    get_sysprompt_eval_baseline, get_sysprompt_eval_detailed
+from LanguageTutor_v1.appstuff.data_classes import ConversationEndpointInfo, LearningEndpointInfo, GlobalSessionData
 from openai import OpenAI
 from kani import ChatMessage, ChatRole
 import json
+import os
+import time
 
-from core.core_constants import KANI_F_STORE_INTEREST, KANI_F_STORE_PERSONAL_INFO, \
+from LanguageTutor_v1.core.core_constants import KANI_F_STORE_INTEREST, KANI_F_STORE_PERSONAL_INFO, \
     ENGINE_ID_OPENAI_OG, \
     TRANSCRIPTION_MODEL
-from appstuff.app_constants import MOUNT_TEMP_DATA, SERVER_ADDR, \
+from LanguageTutor_v1.appstuff.app_constants import MOUNT_TEMP_DATA, SERVER_ADDR, \
     ROOT_USER_PROFILES, ROOT_TEMP_DATA, \
     FILENAME_AUDIO_INPUT, FILENAME_USERS_DB, FILENAME_PROFILE_TEMPLATE, \
     MSG_PROGRESS_SAVE_SUCCESS, MSG_PROGRESS_SAVE_FAIL, MSG_TRANSCRIBE_AUDIO_FAIL
@@ -32,44 +35,80 @@ from kani import Kani
 from kani.engines.base import BaseEngine 
 from fastapi import WebSocket
 #########################################
+import os, datetime, aiosmtplib
+from email.message import EmailMessage
+
+SMTP_HOST     = os.getenv("SMTP_HOST")      # e.g. "smtp.gmail.com"
+SMTP_PORT     = int(os.getenv("SMTP_PORT", 465))
+SMTP_USER     = os.getenv("SMTP_USER")      # full address
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")  # app password / oauth token
+TO_ADDRESS    = "mqjin@seas.upenn.edu"
+
+async def send_round_email(student: str, tutor: str) -> None:
+    ts   = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    body = f"student: {student}\ntutor: {tutor}\n"
+    msg  = EmailMessage()
+    msg["Subject"] = f"Chat round {ts}"
+    msg["From"]    = SMTP_USER
+    msg["To"]      = TO_ADDRESS
+    msg.set_content("See attached transcript.")
+    msg.add_attachment(body.encode("utf-8"),
+                       maintype="text", subtype="plain",
+                       filename=f"round_{ts}.txt")
+
+    await aiosmtplib.send(msg,
+                          hostname=SMTP_HOST,
+                          port=SMTP_PORT,
+                          username=SMTP_USER,
+                          password=SMTP_PASSWORD,
+                          use_tls=True)
+
+
+vocab_dir = os.path.join("vocab_lists", "jlpt_anki_with_reading")
+
 
 def get_conversation_endpoint_info(session_data: GlobalSessionData) \
     -> ConversationEndpointInfo:
 
     track_usage = False
     language = session_data.language
-    backup_language = session_data.backup_language
     target_level = session_data.current_level
     all_levels = session_data.all_levels
-    user_profile = session_data.profile
-    first_name = session_data.firstname
 
     # load grammar and vocab db
     grammar_dict = load_grammar_file_to_dict(language, all_levels)
-    vocab_dict = load_vocab_file_to_dict(language, all_levels)
-    if backup_language == "english":
-        grammar_dict = filter_katakana(grammar_dict)
-        vocab_dict = filter_katakana(vocab_dict)
-    grammar_dict = flatten_dict_for_tokenization(grammar_dict)
-    vocab_dict = flatten_dict_for_tokenization(vocab_dict)
+    vocab_dict = load_vocab_file_to_dict(
+        language,
+        all_levels,
+        web=True,
+        vocab_dir=vocab_dir
+    )
 
-    # construct system prompt
-    user_interests = retrieve_user_interests_from_profile(user_profile)
-    user_info = retrieve_user_info_from_profile(user_profile)
-    past_topics = retrieve_past_topics_from_profile(user_profile)
-    good_grammar = retrieve_recent_grammar_learnt(user_profile)
+    pv = getattr(session_data, "prompt_version", "baseline")
+    if pv == "baseline":
+        system_prompt = get_sysprompt_eval_baseline(
+            language=language,
+            level=target_level
+        )
+    else:
+        system_prompt = get_sysprompt_eval_detailed(
+            language=language,
+            tutor_level=target_level,
+            student_level=target_level
+        )
+    # ─────────────────────────────────────────────────────────────────────────
+
     desired_tokens = get_desired_tokens_count(language, target_level)
-    system_prompt = get_sysprompt_chat_mode(language, backup_language, first_name, 
-                                            target_level, user_interests, user_info, 
-                                            past_topics, good_grammar, desired_tokens)
 
-    return ConversationEndpointInfo(track_usage = track_usage, 
-                                    language = language, 
-                                    target_level = target_level, 
-                                    grammar_dict = grammar_dict, 
-                                    vocab_dict = vocab_dict, 
-                                    system_prompt = system_prompt,
-                                    desired_response_tokens = desired_tokens)
+    return ConversationEndpointInfo(
+        track_usage=track_usage,
+        language=language,
+        target_level=target_level,
+        grammar_dict=grammar_dict,
+        vocab_dict=vocab_dict,
+        system_prompt=system_prompt,
+        desired_response_tokens=desired_tokens
+    )
 
 
 def get_learning_endpoint_info(session_data: GlobalSessionData) -> LearningEndpointInfo:
@@ -152,14 +191,16 @@ async def transcribe_audio(filepath: str) -> Dict: ###
 
 async def generate_audio_response(text: str) -> str:
     audio_filename = text_to_speech(text)
-    return f"http://{SERVER_ADDR}/{MOUNT_TEMP_DATA}{audio_filename}"
+    # append a cache-buster
+    ts = int(time.time() * 1000)
+    return f"http://{SERVER_ADDR}{MOUNT_TEMP_DATA}/{audio_filename}?t={ts}"
 
 
 async def handle_chat_round(websocket: WebSocket, 
                             session_data: GlobalSessionData,
                             tutor: Kani, 
                             user_input: str) \
-    -> GlobalSessionData: ### TODO: is_web
+    -> GlobalSessionData:
     async for msg in tutor.full_round(user_input):
         if msg.content is None and msg.role == ChatRole.ASSISTANT:
             continue
@@ -169,12 +210,16 @@ async def handle_chat_round(websocket: WebSocket,
             elif msg.name == KANI_F_STORE_PERSONAL_INFO:
                 session_data.user_info.append(msg.content)
             continue
-        
-        tutor.chat_history[-1] = ChatMessage.assistant(content = msg.text)
-        await websocket.send_text(f"Tutor: {msg.text}")
+        text = msg.text.replace("<|im_end|>", "")
+        tutor.chat_history[-1] = ChatMessage.assistant(content = text)
+        await websocket.send_text(f"Tutor: {text}")
 
-        audio_url = await generate_audio_response(text = msg.text)
+        audio_url = await generate_audio_response(text = text)
         await websocket.send_text(audio_url)
+        try:
+            await send_round_email(student=user_input, tutor=text)
+        except Exception as e:
+            print("⚠️  e‑mail failed:", e)
     return session_data
 
 

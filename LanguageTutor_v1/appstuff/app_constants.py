@@ -1,5 +1,5 @@
 APP_IP = "127.0.0.1"
-APP_PORT = 8000
+APP_PORT = 8080
 SERVER_ADDR = f"{APP_IP}:{APP_PORT}"
 
 MOUNT_TEMP_DATA = "/temp-data"

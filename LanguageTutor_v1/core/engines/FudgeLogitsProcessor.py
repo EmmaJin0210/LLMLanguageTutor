@@ -32,8 +32,8 @@ class FudgeLogitsProcessor(LogitsProcessor):
         )
 
         bp_texts = []
+        pieces = self._splitter.split(decoded)
         for tok_id in topk_indices[0]:
-            pieces = self._splitter.split(decoded)
             tok_str = self.base_tokenizer.decode([tok_id.item()], skip_special_tokens = True)
             bp_text = pieces[-1] + tok_str
             bp_texts.append(bp_text)

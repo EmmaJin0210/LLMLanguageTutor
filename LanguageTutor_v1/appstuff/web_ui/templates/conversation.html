@@ -207,6 +207,12 @@
             <label>Show scripts?</label>
             <input type="checkbox" id="scriptToggle" onchange="toggleScripts()">
         </div>
+        <select id="modeSelect" onchange="changeMode()" style="font-size:14px;">
+            <option value="A" {% if mode == 'A' %}selected{% endif %}>A</option>
+            <option value="B" {% if mode == 'B' %}selected{% endif %}>B</option>
+            <option value="C" {% if mode == 'C' %}selected{% endif %}>C</option>
+            <option value="D" {% if mode == 'D' %}selected{% endif %}>D</option>
+        </select>
     </div>
     <div id="chat-container">
         <div id="image-overlay"></div>
@@ -395,6 +401,18 @@
         } else {
             console.error('No recording in progress to stop.');
         }
+    }
+
+    function changeMode() {
+        const mode = document.getElementById('modeSelect').value;
+        fetch('/set-mode', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({mode})
+        }).then(resp => {
+            if (resp.ok) window.location.reload();   // wipes chat & opens new WS
+            else resp.json().then(x => alert(x.detail));
+        });
     }
     </script>
 </body>

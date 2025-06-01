@@ -58,27 +58,39 @@ def evaluate_tutor_msgs_for_all_files(folder_path):
 
 def evaluate_tutor_msgs_for_file(folder_path, filename):
     num_valid_rounds = 0
-    total_score = 0.0
-    raw_above_cnts, raw_total_cnts = 0, 0
-    file_path = os.path.join(folder_path, filename)
+    total_score      = 0.0
+    raw_above_cnts   = 0
+    raw_total_cnts   = 0
+
+    file_path  = os.path.join(folder_path, filename)
     start_time = datetime.now()
-    logs = read_json_to_dict(file_path)
-    conversations = logs.get("conversations", [])
-    for ind, conversation in enumerate(conversations):
-        updated_conversation, valid_rnds, sum_score_conv, above_cnts, total_cnts = \
-            calc_difficulty_for_conversation(conversation)
-        num_valid_rounds += valid_rnds # so an N1 round is never valid because no level is above n1
-        total_score += sum_score_conv # so for N1 this is gonna be 0?
-        raw_above_cnts += above_cnts # so for N1 this is gonna be 0?
-        raw_total_cnts += total_cnts
-        logs["conversations"][ind] = updated_conversation
-    ave_diff_score_by_utterance = total_score / num_valid_rounds
-    logs[f"{source_folder}_ave_diff_score_by_utterance"] = ave_diff_score_by_utterance
-    logs[f"{source_folder}_ave_diff_score_overall"] = raw_above_cnts / raw_total_cnts
-    end_time = datetime.now()
-    runtime = end_time - start_time
-    logs[f"{source_folder}_runtime_difficulty_eval"] = str(runtime)
-    new_file_path = file_path if filename.startswith("e_") else os.path.join(folder_path, f"e_{filename}")
+    logs       = read_json_to_dict(file_path)
+
+    for idx, conv in enumerate(logs.get("conversations", [])):
+
+        updated_conv, valid_rnds, sum_score_conv, above_cnts, total_cnts = \
+            calc_difficulty_for_conversation(conv)
+        print(f"For conversation {idx}: ")
+        print(f"valid rounds = {valid_rnds}, sum_score = {sum_score_conv}, above cnts = {above_cnts}, total cnts = {total_cnts}")
+        logs["conversations"][idx] = updated_conv
+
+        if conv.get("tutor_level", "").lower() == "n1":
+            continue
+
+        num_valid_rounds += valid_rnds
+        total_score      += sum_score_conv
+        raw_above_cnts   += above_cnts
+        raw_total_cnts   += total_cnts
+
+    ave_by_utt  = total_score    / num_valid_rounds if num_valid_rounds else 0.0
+    ave_overall = raw_above_cnts / raw_total_cnts   if raw_total_cnts   else 0.0
+
+    logs[f"{source_folder}_ave_diff_score_by_utterance_fixed"] = ave_by_utt   #  TMR-U
+    logs[f"{source_folder}_ave_diff_score_overall_fixed"]      = ave_overall  #  TMR
+    logs[f"{source_folder}_runtime_difficulty_eval"]     = str(datetime.now() - start_time)
+
+    new_file_path = file_path if filename.startswith("e_") \
+        else os.path.join(folder_path, f"e_{filename}")
     write_dict_to_json(logs, new_file_path)
 
 
@@ -113,7 +125,6 @@ def calc_difficulty_for_conversation(conversation):
             raw_above_cnts += above_cnts_total
             raw_total_cnts += detected_cnts_total
 
-    # only detected_cnts_total should be included for the token-level averaging
     tutor_utterances_joined = " ".join([rnd.get("tutor", "").strip() 
                                         for rnd in conversation.get("script", [])])
     conv_at_target, conv_difficulty, detected, undetected = \
@@ -122,25 +133,19 @@ def calc_difficulty_for_conversation(conversation):
     conversation[f"{source_folder}_at_target_level"] = conv_at_target
     conversation[f"{source_folder}_num_rounds_at_target_level"] = at_target_cnt
 
-    # return the updated conversation dict
     return conversation, valid_rounds, sum_score, raw_above_cnts, raw_total_cnts
 
 
 def calc_difficulty_for_text(text, target_level):
     tokens = tdm.tokenize(text, tokenizer='Sudachi', sudachi_mode='C', strip = True)
     detected, undetected = tdm.detect_tokens_at_levels(tokens, all_levels, scope = ['v'])
-    print("Detected tokens by level:")
-    for level in all_levels:
-        print(f"  {level}: {sorted(detected.get(level, []))}")
-    print("Undetected tokens:", sorted(undetected))
-    
+    undetected_cnt = len(undetected)
     above_levels = get_levels_above_exclusive(target_language, target_level)
     below_levels = get_levels_below_inclusive(target_language, target_level)
     above = {level: tokens for level, tokens in detected.items() if level in above_levels}
     below = {level: tokens for level, tokens in detected.items() if level in below_levels}
     is_at_target = dc.at_target_level(above, below)
-    difficulty_score = dc.calc_difficulty_score(above, below)
-    print(f"At target level ({target_level})? {is_at_target}")
+    difficulty_score = dc.calc_difficulty_score(above, below, undetected_cnt)
     return is_at_target, difficulty_score, detected, undetected
 
 

@@ -4,6 +4,7 @@ ROOT_HF_CACHE_PERSONAL = "/nlpgpu/data/mqjin/huggingface_cache"
 
 LIST_LEVELS_LABEL_JPN = ["n5", "n4", "n3", "n2", "n1"]
 LIST_FILENAMES_SENTENCES_JPN = ["n5.txt", "n4.txt", "n3.txt", "n2.txt", "n1.txt"]
+LIST_FILENAMES_SENTENCES_WJT = ["wjt_n5.txt", "wjt_n4.txt", "wjt_n3.txt", "wjt_n2.txt", "wjt_n1.txt"]
 LIST_FILENAMES_PREFIX_JPN = ["prefix_n5.txt", "prefix_n4.txt", "prefix_n3.txt", 
                              "prefix_n2.txt", "prefix_n1.txt"]
 

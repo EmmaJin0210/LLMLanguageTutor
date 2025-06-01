@@ -19,6 +19,7 @@ def get_level_desc_word(language: str, level: str) -> str:
 
 
 def get_all_levels(language: str) -> List[str]:
+    language = language.lower()
     return LIST_ALL_LEVELS[language]
 
 
@@ -64,8 +65,8 @@ def load_vocab_file_to_dict(language: str, levels: List[str], web: bool = False,
     to_return = {}
     for level in levels:
         to_return[level] = {}
-        root = ROOT_STATIC if web else ROOT_STATIC_DB
-        vocab_dir = vocab_dir if vocab_dir else DIRNAME_VOCAB
+        root = ROOT_STATIC_DB
+        # vocab_dir = vocab_dir if vocab_dir else DIRNAME_VOCAB
         file_path = f"{root}{language}/{vocab_dir}/{level}.json"
         json_obj = read_json_to_dict(file_path)
         to_return[level].update(json_obj)
@@ -84,11 +85,20 @@ def filter_katakana(dic: Dict) -> Dict:
     return dic
 
 
-def get_level_desc_detailed(language: str, level: str, web: bool = False) -> str:
-    root = ROOT_STATIC if web else ROOT_STATIC_DB
-    path = f"{root}{language}/{DIRNAME_LEVEL_DESCS}/{level}.txt"
-    return read_txt_file_to_string(path)
+# def get_level_desc_detailed(language: str, level: str, web: bool = False) -> str:
+#     root = ROOT_STATIC if web else ROOT_STATIC_DB
+#     path = f"{root}{language}/{DIRNAME_LEVEL_DESCS}/{level}.txt"
+#     return read_txt_file_to_string(path)
 
+def get_level_desc_detailed(language: str, level: str, web: bool = False) -> str:
+    desc_map = {
+        "n5": "absolute beginner student learning Japanese who knows only a few basic expressions",
+        "n4": "beginner student learning Japanese who understands simple daily expressions and conversations",
+        "n3": "early intermediate student learning Japanese who can handle everyday conversations",
+        "n2": "intermediate student learning Japanese who understands most daily and work-related conversations",
+        "n1": "advanced student learning Japanese who can discuss a wide range of topics fluently"
+    }
+    return desc_map[level]
 
 def retrieve_shots(language: str, function: str, web: bool = False) -> Dict:
     root = ROOT_STATIC if web else ROOT_STATIC_DB

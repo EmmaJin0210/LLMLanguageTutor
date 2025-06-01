@@ -72,18 +72,13 @@ def generate_and_store_prefixes(filename: str, n_filename: str) -> None:
          open(outfile_path, "w", encoding="utf-8") as outfile:
         for line in infile:
             sentence = line.strip()
-            # 1) Convert to token IDs
-            token_ids = tt.tokenizer.encode(sentence, add_special_tokens=False)
-
-            # 2) Append the actual Qwen EOS token
-            token_ids.append(tt.tokenizer.eos_token_id)
-
-            # 3) For each partial prefix
-            for i in range(1, len(token_ids) + 1):
-                prefix_ids = token_ids[:i]
-                # Now decode back to text
-                prefix_str = tt.tokenizer.decode(prefix_ids, skip_special_tokens=False)
-                outfile.write(prefix_str + "\n")
+            # Tokenize the sentence and then append the special end token as one token.
+            tokens = tt.sentence_to_tokens(sentence=sentence)
+            tokens.append("<|im_end|>")
+            # Generate every prefix by joining tokens.
+            for i in range(1, len(tokens) + 1):
+                # Using "".join(tokens[:i]) assuming no separator is needed for Japanese.
+                outfile.write("".join(tokens[:i]) + "\n")
 
 # Generate prefix files from the training sentence files.
 for filename in LIST_FILENAMES_SENTENCES_JPN:

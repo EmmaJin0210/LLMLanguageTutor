@@ -5,9 +5,9 @@ from typing import Dict, List
 #########################################
 
 
-def write_dict_to_json(dic: Dict, file_path: str) -> None:
+def write_dict_to_json(dic: Dict, file_path: str, indent = 4) -> None:
     with open(file_path, "w", encoding = "utf-8") as outfile:
-        json.dump(dic, outfile, indent = 4, ensure_ascii = False)
+        json.dump(dic, outfile, indent = indent, ensure_ascii = False)
 
 
 def read_json_to_dict(file_path: str) -> Dict:

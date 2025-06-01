@@ -9,6 +9,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from eval.eval_constants import CONVERSATION_LOGS_FOLDER, PERPLEXITY_MODEL_ID, EvalType
 from LanguageTutor_v1.core.core_utils.misc_utils import read_json_to_dict, write_dict_to_json
 
+# e_filename -> e_filename
 
 load_dotenv()
 
@@ -43,8 +44,10 @@ def get_folder_path(eval_type):
 
 def calc_perplexity_for_all_files(folder_path):
     for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+        if os.path.isdir(file_path):
+            continue
         if filename.startswith("e_"):
-            file_path = os.path.join(folder_path, filename)
             calc_perpleixity_for_file(file_path)
 
 

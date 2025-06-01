@@ -1,8 +1,8 @@
 import random
 from LanguageTutor_v1.core.modules.TokenTokenizer import TokenTokenizer
 from LanguageTutor_v1.core.core_utils.misc_utils import write_dict_to_json
-from LanguageTutor_v1.core.models.model_constants import MODEL_ID_LM, LIST_FILENAMES_SENTENCES_JPN, \
-    LIST_FILENAMES_PREFIX_JPN, LIST_LEVELS_LABEL_JPN, ROOT_SENTENCES_JPN, \
+from LanguageTutor_v1.core.models.model_constants import MODEL_ID_LM, LIST_FILENAMES_SENTENCES_WJT, \
+    LIST_LEVELS_LABEL_JPN, ROOT_SENTENCES_JPN, \
     FILENAME_TRAIN_DATA, FILENAME_EVAL_DATA, FILENAME_TEST_DATA
 from LanguageTutor_v1.core.core_constants import JPN
 
@@ -18,7 +18,7 @@ def count_sentences(filename: str) -> int:
         return sum(1 for line in f if line.strip())
 
 # Determine the minimum number of sentences across all sentence files.
-min_count = min(count_sentences(filename) for filename in LIST_FILENAMES_SENTENCES_JPN)
+min_count = min(count_sentences(filename) for filename in LIST_FILENAMES_SENTENCES_WJT)
 print("Minimum sentence count across levels:", min_count)
 
 def split_sentences_train_eval_test(filename: str, train_ratio: float = 0.8, eval_ratio: float = 0.1) -> None:
@@ -55,7 +55,7 @@ def split_sentences_train_eval_test(filename: str, train_ratio: float = 0.8, eva
             f.write(sentence + "\n")
 
 # Apply train-eval-test split on each original sentence file.
-for filename in LIST_FILENAMES_SENTENCES_JPN:
+for filename in LIST_FILENAMES_SENTENCES_WJT:
     split_sentences_train_eval_test(filename, train_ratio=0.8, eval_ratio=0.1)
 
 #############################################
@@ -86,16 +86,16 @@ def generate_and_store_prefixes(filename: str, n_filename: str) -> None:
                 outfile.write(prefix_str + "\n")
 
 # Generate prefix files from the training sentence files.
-for filename in LIST_FILENAMES_SENTENCES_JPN:
+for filename in LIST_FILENAMES_SENTENCES_WJT:
     train_filename = f"train_{filename}"
     generate_and_store_prefixes(filename=train_filename, n_filename=f"sampled_prefix_{filename}")
 
 # Optionally, generate prefixes from the evaluation and test files:
-for filename in LIST_FILENAMES_SENTENCES_JPN:
+for filename in LIST_FILENAMES_SENTENCES_WJT:
     eval_filename = f"eval_{filename}"
     generate_and_store_prefixes(filename=eval_filename, n_filename=f"sampled_evalprefix_{filename}")
     
-for filename in LIST_FILENAMES_SENTENCES_JPN:
+for filename in LIST_FILENAMES_SENTENCES_WJT:
     test_filename = f"test_{filename}"
     generate_and_store_prefixes(filename=test_filename, n_filename=f"sampled_testprefix_{filename}")
 
@@ -109,7 +109,7 @@ def load_all_prefix_data(prefix_type="sampled_prefix_"):
     """
     prefix_label_pairs = []
     for level in LIST_LEVELS_LABEL_JPN:
-        filepath = f"{ROOT_SENTENCES_JPN}{prefix_type}{level}.txt"
+        filepath = f"{ROOT_SENTENCES_JPN}{prefix_type}wjt_{level}.txt"
         with open(filepath, "r", encoding="utf-8") as f:
             prefixes = [line.strip() for line in f if line.strip()]
             prefix_label_pairs.extend([{"prefix": p, "label": level} for p in prefixes])
