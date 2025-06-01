@@ -1,0 +1,59 @@
+[
+    {
+      "speaking_hours": "0",
+      "speaking_category": "0",
+      "listening_hours": "1",
+      "listening_category": "1-3",
+      "level": "N5"
+    },
+    {
+      "speaking_hours": "<1",
+      "speaking_category": "0-1",
+      "listening_hours": "2-3",
+      "listening_category": "1-3",
+      "level": "N5"
+    },
+    {
+      "speaking_hours": "0",
+      "speaking_category": "0",
+      "listening_hours": "8",
+      "listening_category": ">3",
+      "level": "N2"
+    },
+    {
+      "speaking_hours": "1 hour/wk",
+      "speaking_category": "1-3",
+      "listening_hours": "1 hour/wk",
+      "listening_category": "1-3",
+      "level": "N3"
+    },
+    {
+      "speaking_hours": "2",
+      "speaking_category": "1-3",
+      "listening_hours": "2",
+      "listening_category": "1-3",
+      "level": "N2"
+    },
+    {
+      "speaking_hours": "1 hr",
+      "speaking_category": "1-3",
+      "listening_hours": "2-3 hrs",
+      "listening_category": "1-3",
+      "level": "N4"
+    },
+    {
+      "speaking_hours": "Less than an hour per week",
+      "speaking_category": "0-1",
+      "listening_hours": "1-2 hours",
+      "listening_category": "1-3",
+      "level": "N5"
+    },
+    {
+      "speaking_hours": "0",
+      "speaking_category": "0",
+      "listening_hours": "4",
+      "listening_category": ">3",
+      "level": "N5"
+    }
+  ]
+  
