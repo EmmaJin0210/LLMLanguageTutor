@@ -12,8 +12,8 @@ from stanza import DownloadMethod
 # stanza.download('ja')
 nlp = stanza.Pipeline(
     lang="ja",
-    processors="tokenize,pos,lemma,depparse",   # or just "tokenize,depparse"
-    use_gpu=True,                               # set True if you have a CUDA GPU
+    processors="tokenize,pos,lemma,depparse",
+    use_gpu=True,
     dir=STANZA_RESOURCES_DIR,
     download_method=DownloadMethod.REUSE_RESOURCES
 )
@@ -113,18 +113,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-# argparse
-
-# MDD
-
-
-
-# N-gram diversity
-
-
-# JReadability?

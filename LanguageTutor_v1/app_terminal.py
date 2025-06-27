@@ -68,7 +68,7 @@ engine_to_default_model = {
     "openai" : MODEL_ID_OPENAI_DEFAULT
 }
 
-username = "emma"
+username = "anon"
 student_level = "n5"
 track_usage = False
 target_language = "japanese"

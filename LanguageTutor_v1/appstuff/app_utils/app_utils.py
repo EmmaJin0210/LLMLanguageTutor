@@ -38,11 +38,11 @@ from fastapi import WebSocket
 import os, datetime, aiosmtplib
 from email.message import EmailMessage
 
-SMTP_HOST     = os.getenv("SMTP_HOST")      # e.g. "smtp.gmail.com"
+SMTP_HOST     = os.getenv("SMTP_HOST")
 SMTP_PORT     = int(os.getenv("SMTP_PORT", 465))
-SMTP_USER     = os.getenv("SMTP_USER")      # full address
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")  # app password / oauth token
-TO_ADDRESS    = "mqjin@seas.upenn.edu"
+SMTP_USER     = os.getenv("SMTP_USER")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+TO_ADDRESS    = "anon@example.com"
 
 async def send_round_email(student: str, tutor: str) -> None:
     ts   = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")

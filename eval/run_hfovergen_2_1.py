@@ -19,7 +19,7 @@ from LanguageTutor_v1.core.sysprompts import get_sysprompt_student, \
     get_sysprompt_eval_baseline, get_sysprompt_eval_detailed
 from LanguageTutor_v1.core.core_utils.language_utils import get_all_levels
 from LanguageTutor_v1.core.models.model_constants import MODEL_ID_HF_DEFAULT, MODEL_ID_OPENAI_DEFAULT, \
-    LAMBDA, MODEL_ID_LM_SMALL
+    LAMBDA, MODEL_ID_LM_SMALL, MODEL_ID_LM_TINY
 from LanguageTutor_v1.core.core_utils.misc_utils import read_json_to_dict, write_dict_to_json
 from LanguageTutor_v1.core.core_utils.language_utils import load_vocab_file_to_dict
 
@@ -382,7 +382,7 @@ def main():
         shared_tokenizer = shared_tokenizer
     )
     conversation_cnt = 0
-    for bot_level in all_levels:
+    for bot_level in ['n1']:
         tutor_engine = setup_tutor_engine(
             engine_id = t_engine_id,
             model_id = t_model_id,
@@ -391,7 +391,7 @@ def main():
             bot_level = bot_level,
             lamda = lamda
         )
-        for student_level in all_levels:
+        for student_level in ['n2', 'n1']:
             tutor_system_prompt = setup_tutor_system_prompt(
                 bot_level = bot_level,
                 student_level = student_level,

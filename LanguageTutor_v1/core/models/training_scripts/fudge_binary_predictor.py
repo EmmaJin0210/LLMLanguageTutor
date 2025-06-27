@@ -73,10 +73,10 @@ train_loader = DataLoader(
 
 # Training arguments
 training_args = TrainingArguments(
-    output_dir=f"{ROOT_MODELS}modernbert_wjt_endtok_readable",
+    output_dir=f"{ROOT_MODELS}modernbert-predictor",
     eval_strategy="epoch",
     save_strategy="epoch",
-    logging_dir="/scratch/mqjin/.logs",
+    logging_dir="/scratch/anon/.logs",
     logging_steps=10,
     per_device_train_batch_size=16,
     per_device_eval_batch_size=16,

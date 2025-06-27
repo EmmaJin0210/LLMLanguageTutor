@@ -1,6 +1,6 @@
 ROOT_SENTENCES_JPN = "LanguageTutor_v1/db/static_database/japanese/sentences/"
 ROOT_MODELS = "LanguageTutor_v1/core/models/models/"
-ROOT_HF_CACHE_PERSONAL = "/nlpgpu/data/mqjin/huggingface_cache"
+ROOT_HF_CACHE_PERSONAL = "/anon/huggingface_cache"
 
 LIST_LEVELS_LABEL_JPN = ["n5", "n4", "n3", "n2", "n1"]
 LIST_FILENAMES_SENTENCES_JPN = ["n5.txt", "n4.txt", "n3.txt", "n2.txt", "n1.txt"]
@@ -26,9 +26,7 @@ MODEL_ID_LM_TINY = "Qwen/Qwen2.5-0.5B-Instruct"
 MODEL_ID_HF_DEFAULT = MODEL_ID_LM
 MODEL_ID_OPENAI_DEFAULT = "gpt-4-turbo"
 
-# MODEL_ID_PREDICTOR = "emmajin0210/fudge-binary-predictor-modernbert"
-# MODEL_ID_PREDICTOR = "emmajin0210/fudge-predictor-modernbert-2"
-MODEL_ID_PREDICTOR = "emmajin0210/modernbert_output_endtok_readable"
+MODEL_ID_PREDICTOR = "anon/modernbert-predictor"
 
 
 LAMBDA = 0.2

@@ -3,8 +3,8 @@ from huggingface_hub import upload_folder
 from dotenv import load_dotenv
 from LanguageTutor_v1.core.models.model_constants import ROOT_MODELS
 
-model_output_dir = f"{ROOT_MODELS}modernbert_output_endtok_readable/checkpoint-280710"
-repo_id = "emmajin0210/modernbert_output_endtok_readable"
+model_output_dir = f"{ROOT_MODELS}modernbert-predictor/checkpoint-280710"
+repo_id = "anon/modernbert-predictor"
 
 load_dotenv()
 hf_token = os.getenv("HF_TOKEN")
