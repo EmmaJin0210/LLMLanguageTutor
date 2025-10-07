@@ -1,6 +1,4 @@
-# ChatLingual
-
-This repository contains code and data for our research on token-level difficulty control for language learning, enabling a chatbot to adapt to different learner levels.
+# LLM Tutor
 
 ## Repository Structure
 
