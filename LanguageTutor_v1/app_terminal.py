@@ -1,5 +1,6 @@
 import warnings
 import asyncio
+import importlib
 from kani import ChatMessage, ChatRole
 
 from LanguageTutor_v1.core.kanis.ConversationKani import ConversationKani
@@ -60,7 +61,6 @@ class ChatbotLevel:
 
 # if model is not specified, fall to default model of the engine
 engine_to_default_model = {
-    # "fudge" : MODEL_ID_HF_DEFAULT,
     "fudge" : MODEL_ID_HF_DEFAULT,
     "overgen" : MODEL_ID_OPENAI_DEFAULT,
     "hfovergen" : MODEL_ID_HF_DEFAULT,
@@ -106,8 +106,21 @@ def parse_args():
         help="Interpolation weight for FUDGE (0.0 = pure LM, 1.0 = pure predictor)"
     )
 
+    parser.add_argument(
+        "--engine",
+        type=str,
+        required=False,
+        help="Engine as <module>:<Class>"
+    )
+
     return parser.parse_args()
 
+
+def load_engine(engine_spec: str):
+    module_path, class_name = engine_spec.split(":")
+    module = importlib.import_module(f"LanguageTutor_v1.core.engines.{module_path}")
+    engine_class = getattr(module, class_name)
+    return engine_class()
 
 def prep_overgen_engine(model_id, target_level):
     vocab_dict = load_vocab_file_to_dict(
@@ -283,63 +296,6 @@ def main():
 
     write_updated_profile_to_file(user_profile, profile_path)
 
-
-
-# import os
-# import asyncio
-# from kani import ChatMessage, ChatRole
-# from kani.engines.openai import OpenAIEngine
-# from core.kanis.LearningKani import LearningKani
-# from core.utils.utils import *
-# from core.utils.profile_utils import *
-# from core.utils.frontend_utils import *
-
-
-# async def language_chat(tutor, user_profile):
-#     while (True):
-#         user_input = input("You: ")
-#         if user_input.lower() in ["quit", "q"]:
-#             await clean_up(tutor.engine)
-#             break
-#         async for msg in tutor.full_round(user_input):
-#             if msg.content is None and msg.role == ChatRole.ASSISTANT:
-#                 continue
-#             if msg.role == ChatRole.FUNCTION:
-#                 continue
-#             print("Tutor: ", msg.text)
-    
-
-# async def clean_up(engine):
-#     await engine.client.close()
-#     await engine.close()
-
-# def main():
-#     target_language = get_target_language()
-#     instruction_language = get_learning_instruction_language()
-#     target_level = get_learning_target_level()
-#     learning_schema = get_learning_schema()
-
-#     username = retrieve_username()
-#     profile_path = retrieve_profile_path_from_username(username)
-#     user_profile = read_json_to_dict(profile_path)
-#     name = retrieve_user_name(user_profile)
-
-#     grammar_dict_target = load_grammar_file_to_dict(target_language, [target_level])
-#     grammar_to_teach = pick_grammars_to_teach(learning_schema, grammar_dict_target, user_profile)
-
-#     system_prompt = construct_learning_sys_prompt(name, "elementary", target_language, instruction_language, grammar_to_teach)
-
-
-#     my_key = os.getenv("OPENAI_API_KEY")
-#     engine = OpenAIEngine(my_key, model="gpt-4")
-#     tutor = LearningKani(user_profile=user_profile, engine=engine, system_prompt=system_prompt)
-#     asyncio.run(language_chat(tutor, user_profile))
-
-#     # update learning log
-#     user_profile = update_learning_log_in_profile(grammar_to_teach, user_profile)
-
-#     write_updated_profile_to_file(user_profile, profile_path)
-#     return
 
 if __name__ == "__main__":
     warnings.filterwarnings("ignore", category=DeprecationWarning)
