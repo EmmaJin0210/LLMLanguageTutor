@@ -16,7 +16,3 @@ This repository contains code and data for our research on token-level difficult
 
 - **`eval/`**  
   Evaluation pipeline scripts, including automatic metric evaluation and user study analysis.
-
-## Usage
-
-> ⚠️ Code cleanup and detailed instructions are ongoing. Please stay tuned for future updates with setup guides and example runs.
